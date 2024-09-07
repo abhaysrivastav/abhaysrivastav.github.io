@@ -1,5 +1,5 @@
 - [Home](/)
-- [Blog](/blogs/)
+- [Blog](/blog.md)
 
 #  Software Architect | PhD Research Scholar
 
