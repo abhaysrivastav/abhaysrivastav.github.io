@@ -13,21 +13,24 @@ Convert the interface of a class into another interface that client expect. Adap
 **Adaptee** : Define an existing interface that is incompatible with target interface. The Adapter uses this class and translate its interface so that it can work with target. 
 
 **Client** : Collaborates with objects that implement the Target interface. 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Composite Design Patterns (Structural)
 ### Intent
 Compose the object into the tree like structures to represent the part-whole hierarchies. Composite lets clients treat individual object and composition of the object in the same way.
 
 ### Participants 
 
-**Component** : 
+**Component** : Declares the interface for objects in composition, which can be treated uniformly.
 
-**Leaf**
+**Leaf** : Represent the leaf object in composition. It implements the Component Interface.
 
-**Composite**
+**Composite** :  Container of child component, and it also implements Component Interface. 
 
-**Client**
+**Client** : It interact with the composite object using Component interface. Client need not to know whether its working with leaf object or composite object.
+![Composite Pattern : Source Head First ](/assets/Composite.jpg)
 
+
+ 
 
 
 
