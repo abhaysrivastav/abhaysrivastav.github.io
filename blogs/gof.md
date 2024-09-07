@@ -27,7 +27,7 @@ Compose the object into the tree like structures to represent the part-whole hie
 **Composite** :  Container of child component, and it also implements Component Interface. 
 
 **Client** : It interact with the composite object using Component interface. Client need not to know whether its working with leaf object or composite object.
-![Composite Pattern : Source Head First ](/assets/Composite.jpg)
+![Composite Pattern : Source Head First ](assets/Composite.JPG)
 
 
  
