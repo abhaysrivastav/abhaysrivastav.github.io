@@ -1,0 +1,33 @@
+# Design Patterns from GoF
+
+## Adapter Design Patterns (Structural)
+
+### Intent
+Convert the interface of a class into another interface that client expect. Adapter lets classes work together that coult not otherwise because of incompatible interface.
+
+### Participants 
+**Target** : Interface that is visible to the client.
+
+**Adapter** : It implements the Target interface and translate the client request to the "Adaptee" in a way it can understand. 
+
+**Adaptee** : Define an existing interface that is incompatible with target interface. The Adapter uses this class and translate its interface so that it can work with target. 
+
+**Client** : Collaborates with objects that implement the Target interface. 
+
+## Composite Design Patterns (Structural)
+### Intent
+Compose the object into the tree like structures to represent the part-whole hierarchies. Composite lets clients treat individual object and composition of the object in the same way.
+
+### Participants 
+
+**Component** : 
+
+**Leaf**
+
+**Composite**
+
+**Client**
+
+
+
+
