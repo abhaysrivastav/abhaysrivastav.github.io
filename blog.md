@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blogs
-permalink: /profile/blogs/
+permalink: /
 ---
 
 # My Blogs
