@@ -1,6 +1,3 @@
-- [Home](/)
-- [Blog](/blog.md)
-
 #  Software Architect | PhD Research Scholar
 
 -  Competent, diligent and result-oriented professional with an experience of 12+ years. currently spearheading as Software Architect with Siemens Technologies.
