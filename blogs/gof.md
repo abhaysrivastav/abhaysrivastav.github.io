@@ -13,7 +13,7 @@ Convert the interface of a class into another interface that client expect. Adap
 **Adaptee** : Define an existing interface that is incompatible with target interface. The Adapter uses this class and translate its interface so that it can work with target. 
 
 **Client** : Collaborates with objects that implement the Target interface. 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Composite Design Patterns (Structural)
 ### Intent
 Compose the object into the tree like structures to represent the part-whole hierarchies. Composite lets clients treat individual object and composition of the object in the same way.
@@ -29,6 +29,25 @@ Compose the object into the tree like structures to represent the part-whole hie
 **Client** : It interact with the composite object using Component interface. Client need not to know whether its working with leaf object or composite object.
 
 ![Composite Pattern : Source Head First ](assests/Composite.JPG)
+
+
+## Decorator Pattern  (Structural)
+
+### Intent 
+
+Attach additional responsibilities to an object dynamically Decorators provide a flexible alternative to subclassing for extending functionality. 
+
+### Participants 
+
+**Component**  : Objects that can have responsibilites added to them dynamically. 
+
+**ConcreteComponent** : Implements the Component interface and define the core behavior. 
+
+**Decorator** : Implement the Component interface and contains the reference to a Component Object.
+
+**Concrete Decorator** : Extende the decorator class to add responsibilities. 
+
+
 
 
 
