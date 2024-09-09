@@ -28,7 +28,7 @@ Compose the object into the tree like structures to represent the part-whole hie
 
 **Client** : It interact with the composite object using Component interface. Client need not to know whether its working with leaf object or composite object.
 
-![Composite Pattern : Source Head First ](assests/Composite.JPG)
+![Composite Pattern : Source Head First ](assests/Composite.JPG) Source : Head First 
 
 
 ## Decorator Pattern  (Structural)
@@ -46,6 +46,9 @@ Attach additional responsibilities to an object dynamically Decorators provide a
 **Decorator** : Implement the Component interface and contains the reference to a Component Object.
 
 **Concrete Decorator** : Extende the decorator class to add responsibilities. 
+
+![Composite Pattern : Source Head First ](assests/Decorator.JPG) Source : Head First 
+
 
 
 
