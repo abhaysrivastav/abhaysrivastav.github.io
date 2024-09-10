@@ -1,4 +1,8 @@
-<h2 style="color: blue; text-align: center;">This is an HTML header with custom styling</h2>
+<p style="text-align: center;">
+  <a href="blogs.md" style="text-decoration: none; color: #4CAF50; font-size: 1.5em; border: 2px solid #4CAF50; padding: 10px; border-radius: 5px;">
+    Blogs
+  </a>
+</p>
 #  Software Architect | PhD Research Scholar
 
 -  Competent, diligent and result-oriented professional with an experience of 12+ years. currently spearheading as Software Architect with Siemens Technologies.
