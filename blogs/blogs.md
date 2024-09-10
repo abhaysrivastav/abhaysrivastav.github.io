@@ -3,6 +3,18 @@ layout: page
 title: Blog
 ---
 
+<div style="background-color: #3A77B7; color: white; padding: 20px; text-align: center; width: 100%; margin-bottom: 30px;">
+  <h1>Welcome to My Blog</h1>
+</div>
+
+<p style="text-align: center; font-size: 1.2em; color: #333;">
+  Hi there, <br>
+  Thank you for visiting my blog! Here, you'll find notes, insights, and reflections on a variety of topics, curated from different resources, personal experiences, and ongoing learning. Whether you're new to these subjects or looking to dive deeper, I hope you find something valuable and interesting.<br><br>
+  Feel free to explore the posts below, and I hope you enjoy the journey through the world of knowledge as much as I do!
+</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 20px;">
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 20px;">
   
   <!-- Card 1 -->
