@@ -1,3 +1,4 @@
+<h2 style="color: blue; text-align: center;">This is an HTML header with custom styling</h2>
 #  Software Architect | PhD Research Scholar
 
 -  Competent, diligent and result-oriented professional with an experience of 12+ years. currently spearheading as Software Architect with Siemens Technologies.
