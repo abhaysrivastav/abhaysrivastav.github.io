@@ -1,8 +1,10 @@
-<p style="text-align: center;">
-  <a href="blogs.md" style="text-decoration: none; color: #4CAF50; font-size: 1.5em; border: 2px solid #4CAF50; padding: 10px; border-radius: 5px;">
+<div style="background-color: black; color: white; text-align: center; padding: 15px 0; width: 100%;">
+
+  <a href="blogs.md" style="color: white; text-decoration: none; font-size: 1.5em;">
     Blogs
   </a>
-</p>
+
+</div>
 #  Software Architect | PhD Research Scholar
 
 -  Competent, diligent and result-oriented professional with an experience of 12+ years. currently spearheading as Software Architect with Siemens Technologies.
