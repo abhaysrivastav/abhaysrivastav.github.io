@@ -1,9 +1,10 @@
-<div style="background-color: black; text-align: right; padding: 20px 0; width: 100%;">
-  <a href="blogs/blogs" style="color: white; text-decoration: none; font-size: 1.5em; padding: 10px 20px; background-color: #87CEEB; border-radius: 5px; border: 2px solid #87CEEB; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin-right: 20px;">
+<div style="background-color: lightblue; text-align: right; padding: 20px 0; width: 100%;">
+  <a href="blogs.md" style="color: white; text-decoration: none; font-size: 1.5em; padding: 10px 20px; background-color: black; border-radius: 5px; border: 2px solid black; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin-right: 20px;">
     Blog
   </a>
-
 </div>
+<br>
+
 
 #  Software Architect | PhD Research Scholar
 
