@@ -26,23 +26,23 @@ title: Blog
 
   <!-- Card 2 -->
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-    <h2 style="color: #2F5C8C;">Another Blog</h2>
+    <h2 style="color: #2F5C8C;">GoF</h2>
     <p>Summary GoF</p>
     <a href="gof.md" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
 
   <!-- Card 3 -->
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-    <h2 style="color: #2F5C8C;">Third Blog</h2>
+    <h2 style="color: #2F5C8C;">Interprocess Communication</h2>
     <p>Interprocess Communication</p>
-    <a href="ipc.md" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
+    <a href="ipc" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
 
    <!-- Card 4 -->
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-    <h2 style="color: #2F5C8C;">Third Blog</h2>
+    <h2 style="color: #2F5C8C;">Generative Adversarial Network</h2>
     <p>Generative Adversarial Network</p>
-    <a href="gan.md" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
+    <a href="gan" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
 
   <!-- Add more cards as needed -->
