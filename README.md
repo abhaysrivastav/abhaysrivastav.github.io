@@ -1,7 +1,7 @@
 
 <div style="background-color: black; text-align: center; padding: 20px 0; width: 100%;">
 
-  <a href="blogs.md" style="color: white; text-decoration: none; font-size: 1.5em; padding: 10px 20px; background-color: #4CAF50; border-radius: 5px; border: 2px solid #4CAF50; box-shadow: 2px 2px 5px rgba(0,0,0,0.3);">
+  <a href="blogs/blogs.md" style="color: white; text-decoration: none; font-size: 1.5em; padding: 10px 20px; background-color: #4CAF50; border-radius: 5px; border: 2px solid #4CAF50; box-shadow: 2px 2px 5px rgba(0,0,0,0.3);">
     Blog
   </a>
 </div>
