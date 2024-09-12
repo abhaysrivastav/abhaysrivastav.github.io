@@ -60,7 +60,7 @@ Provide a unified interface to a set of interfaces in a subsystem. It defines a 
 
 **Subsystem Classes** : These classes implement the subsystem's functionality. Subsystem classes are complex and handle the actual work but it dont directly interact with the client. 
 
-
+![Composite Pattern : Source Head First ](assests/facade.JPG) Source : Head First 
 
 
 
