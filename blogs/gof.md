@@ -50,6 +50,16 @@ Attach additional responsibilities to an object dynamically Decorators provide a
 ![Composite Pattern : Source Head First ](assests/Decorator.JPG) Source : Head First 
 
 
+## Facade Design Pattern
+
+Provide a unified interface to a set of interfaces in a subsystem. It defines a higher level interface that makes the subsystems earier to use. 
+
+### Participants 
+
+**Facade** : A simple interface to complex subsystem. It delegates the client request to approprate subsystem. 
+
+**Subsystem Classes** : These classes implement the subsystem's functionality. Subsystem classes are complex and handle the actual work but it dont directly interact with the client. 
+
 
 
 
