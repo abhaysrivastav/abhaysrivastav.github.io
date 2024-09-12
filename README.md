@@ -80,13 +80,13 @@
 
 ### 🎓 Educational Background
 
-| **Degree/Qualification**                          | **Institution**                                      | **Year** | **Percentage** |
-|---------------------------------------------------|------------------------------------------------------|----------|----------------|
-| PhD Research Scholar (Deep Learning & AI)         | PES University, Bangalore                            | Ongoing  | -              |
-| MTech Software Engineering                        | BITS Pilani                                          | 2023     | 76%            |
-| B.Tech Computer Science & Engineering             | University Institute of Engineering and Technology   | 2010     | 67.7%          |
-| XII (High School)                                 | OSVN Inter College, Kanpur                           | 2004     | 76.40%         |
-| X (Secondary School)                              | OSVN Inter College, Kanpur                           | 2002     | 70.04%         |
+| **Degree/Qualification**                          | **Institution**                                      | **Year** 
+|---------------------------------------------------|------------------------------------------------------|----------|
+| PhD Research Scholar (Deep Learning & AI)         | PES University, Bangalore                            | Ongoing  |
+| MTech Software Engineering                        | BITS Pilani                                          | 2023     |
+| B.Tech Computer Science & Engineering             | University Institute of Engineering and Technology   | 2010     |
+| XII (High School)                                 | OSVN Inter College, Kanpur                           | 2004     |
+| X (Secondary School)                              | OSVN Inter College, Kanpur                           | 2002     |
 
 ## 📈 Educational Projects
 
