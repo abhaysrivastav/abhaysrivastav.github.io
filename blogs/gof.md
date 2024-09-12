@@ -1,3 +1,13 @@
+---
+layout: blog_layout
+title: Design Patterns from GoF
+---
+
+<!-- Blue Strip at the Top -->
+<div style="background-color: #3A77B7; color: white; padding: 20px; text-align: center; width: 100%; margin-bottom: 30px;">
+  <h1>Transformer Model</h1>
+</div>
+
 # Design Patterns from GoF
 
 ## Adapter Design Patterns (Structural)
