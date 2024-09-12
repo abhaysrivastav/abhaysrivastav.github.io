@@ -62,8 +62,25 @@ Provide a unified interface to a set of interfaces in a subsystem. It defines a 
 
 ![Composite Pattern : Source Head First ](assests/facade.JPG) Source : Head First 
 
+## State Design Pattern
 
+### Intent 
+Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
 
+### Participants 
+
+**Context**:
+ - Context holds a reference to  a state object, which represent the current state of the context.
+ - It delegates state-specific behavior to current state object.
+ - It can also transition to another state by changing the reference to a different State object.
+
+**State** (Abstract State):
+ - The State interface declares the methods that all concrete state must implement . These methods encapsulate the behavior associated with perticular state of context.
+
+**ConcreteState**: 
+ - Each ConcreteState corresponds to a specific state of the context and define its specific behavior. These classes handle requests from Context and also decide the transition the Context to a different state.  
+
+![Composite Pattern : Source Head First ](assests/state.JPG) Source : Head First 
 
  
 
