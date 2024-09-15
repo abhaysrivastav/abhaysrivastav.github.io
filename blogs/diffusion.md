@@ -7,3 +7,26 @@ Diffusion Model is a Generative model , that means It is capable of generating t
 
 ## Reverse Diffusion Process:
    The main task of Diffusion Model is to learn the reverese process that means denoising the data step by step. Typicallly. a neural network (often a U-Net) is trained to perform this denoising task. 
+
+## Training Process 
+
+![ Training Process Diffusion Model:Source Coursera](assests/DiffusionTraning.JPG) Source : Diffusion Model Training 
+
+**Step1** : 
+The Training process is repeated untill model the converges. 
+
+**Step2**: 
+A clean image is sampled from the dataset , this is the image before any noise is added. 
+
+**Step3**:
+A random timestamp t is selected from 1 to **T** where T is total number of diffusion steps. 
+
+**Step4**: 
+A noise sample is 𝜖 is drawn from standard normal distribution. This noise will be added to the clean image. 
+
+**Step5**: Gradient Descent
+The model, represented by 𝜖𝜃 , is trained to predict the noise 𝜖 added to the clean image. The following components are involved:
+Noisy Image: 
+Loss Function:  Gradient Descent is used to minimize the difference between the predicted noise and true noise. Goal is to make them as close as possible. 
+Target Noise: True noise will be target for the model's prediction. 
+
