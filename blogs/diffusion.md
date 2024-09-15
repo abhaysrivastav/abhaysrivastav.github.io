@@ -30,3 +30,5 @@ Noisy Image:
 Loss Function:  Gradient Descent is used to minimize the difference between the predicted noise and true noise. Goal is to make them as close as possible. 
 Target Noise: True noise will be target for the model's prediction. 
 
+- Training process involves learning to predict the noise added to clean image. Then model is optimized by minimizing the difference between predicted noise and actual noise. 
+
