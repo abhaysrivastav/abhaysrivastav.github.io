@@ -35,5 +35,26 @@ Target Noise: True noise will be target for the model's prediction.
 ## Diffusion Sampling 
 ![ Training Process Diffusion Model:Source Coursera](assests/DiffusionSampling.JPG) Source : Diffusion Model Sampling
 
+In this step, we process noise and generates new data. 
+
 **Step1**: 
+We will start with pure gaussian noise which is sampled from Normal distribution with mean 0 and idenity covariance. 
+
+**Step2**:
+Loop over timestamp T ... 1 and in each step we gradually reduces the noise and moving close to the original data. 
+
+**Step3**:
+for t>1 , we keep on adding the random noise , so that we can generate the variety of data. 
+
+**Step4**: 
+
+This is core reverse diffusion steps:
+  - x_t  is the current noisy sample.
+  - The term 𝜖𝜃(𝑥𝑡,𝑡) is the model's prediction of the noise added to 𝑥𝑡 at time step t.
+  - This prediction is adjusted by subtracting a fraction based on 𝛼𝑡(which controls the noise scale) to denoise the sample.
+  - σ_t z adds a small amount of noise 𝑧scaled by 𝜎_𝑡 ​to the result, introducing some randomness.
+
+
+
+This process will continuously reduce the noise and will retrun the final outpur x_0.
 
