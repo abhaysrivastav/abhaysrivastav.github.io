@@ -45,9 +45,7 @@ title: Blog
     <a href="gan" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
 
-  <!-- Add more cards as needed -->
-
-  <!-- Card 5 -->
+   <!-- Card 5 -->
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
     <h2 style="color: #2F5C8C;">Diffusion Model</h2>
     <p>Diffusion Model</p>
@@ -60,4 +58,8 @@ title: Blog
     <p> RAG</p>
     <a href="rag" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
+
+  <!-- Add more cards as needed -->
+
+ </div>
 </div>
