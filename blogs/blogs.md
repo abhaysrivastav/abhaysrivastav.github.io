@@ -51,7 +51,9 @@ title: Blog
     <p>Diffusion Model</p>
     <a href="diffusion" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
-
+  <div>
+    <br>
+  </div>
    <!-- Card 6 -->
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
     <h2 style="color: #2F5C8C;">RAG</h2>
