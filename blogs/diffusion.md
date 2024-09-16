@@ -58,3 +58,11 @@ This is core reverse diffusion steps:
 
 This process will continuously reduce the noise and will retrun the final outpur x_0.
 
+## Different Use Cases
+  - Image Generation based on the text given in prompt
+  - Image to Image Translation
+  - Denoising & Deblurring
+  - Improving the quality of medical image or for anamoly detection
+  - Data Augmentation means for generating synthetic data. 
+    
+
