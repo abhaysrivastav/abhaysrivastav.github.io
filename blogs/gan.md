@@ -1,9 +1,3 @@
----
-layout: page
-title: " Generative Models"
-permalink: /blogs/gan
----
-
 
 # Generative Models
 
