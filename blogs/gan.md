@@ -11,8 +11,8 @@
 
 ## Autoencoder & Variational Autoencoders:
 
-**Autoencoder** 
-  It basically consist of 2 parts:
+**Autoencoder**:  
+It basically consist of 2 parts:
         - **Encoder**: It maps the input data into latent space, which is basically the comppressed representation of the data.
         - **Decoder**: It reconstruct the input data from latent space.
     - This latent space is deterministic and does not have a probabilistic interpretation. It means that it does not capture any randomness or uncertainty. If I will give any image X then we will always get the same latent vector.
