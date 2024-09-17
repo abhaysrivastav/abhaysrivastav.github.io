@@ -9,7 +9,7 @@ title: Blog
 
 <p style="text-align: center; font-size: 1.2em; color: #333;">
   Hi there, <br>
-  Thank you for visiting my blog! Here, you'll find notes, insights, and reflections on a variety of topics, curated from different resources, personal experiences, and ongoing learning. Whether you're new to these subjects or looking to dive deeper, I hope you find something valuable and interesting.<br><br>
+  Thank you for visiting my blog! Here, you'll find notes, insights, and reflections on a variety of topics, curated from different resources, personal experiences, and ongoing learning.<br><br>
   Feel free to explore the posts below, and I hope you enjoy the journey through the world of knowledge as much as I do!
 </p>
 
@@ -51,9 +51,7 @@ title: Blog
     <p>Diffusion Model</p>
     <a href="diffusion" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
-  <div>
-    <br>
-  </div>
+
    <!-- Card 6 -->
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
     <h2 style="color: #2F5C8C;">RAG</h2>
