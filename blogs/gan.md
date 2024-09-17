@@ -6,12 +6,13 @@
   - These models take random noise as input and generate a set of features that represents a class. These models can generate the different examples of the same class.
   - **Discriminative models** are used in classification task, They learn basically how to distinguish between different classes.
   - They take a set of features as input and determine the probability of a certain class for given features.
-    
- 
+  
 # Popular Generative Models:
 
 ## Autoencoder & Variational Autoencoders:
-**Autoencoder** basically consist of 2 parts:
+
+**Autoencoder** 
+  It basically consist of 2 parts:
         - **Encoder**: It maps the input data into latent space, which is basically the comppressed representation of the data.
         - **Decoder**: It reconstruct the input data from latent space.
     - This latent space is deterministic and does not have a probabilistic interpretation. It means that it does not capture any randomness or uncertainty. If I will give any image X then we will always get the same latent vector.
@@ -21,7 +22,10 @@
 It also consist of the same 2 blocks : **Encoder** & **Decoder**. In VAE, the encoder outputs parameters of a probability distribution instead of fixed latent space. The Encoder maps the input data to a distribution and represented by a *Mean* and a *Standard Deviation*. 
 
 The decoder takes the sampled latent variable and reconstruct the input data from it. Because of this VAE is capable of generating the new samples from latent space. 
-    
+Papers : https://arxiv.org/pdf/1804.00891   
+
+![Variational Autoencoder ](assests/variational.JPG) Source : Coursera deeplearning.io 
+
 ## Generative Adversarial Networks 
 
 
