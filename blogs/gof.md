@@ -83,6 +83,31 @@ Allow an object to alter its behavior when its internal state changes. The objec
 ![Composite Pattern : Source Head First ](assests/state.JPG) Source : Head First 
 
  
+## Command Design Patterns 
 
+### Intent 
+Encapsulate request as an object, thereby letting you parameterize clients with different requests, queue or log requests and support undoable operation. 
+
+**It Means** : Wrap the request in an object, so that we can give it to a different part of the program. 
+
+### Participants
+
+### Command (Interface)
+ -  Its an interface for executing an operation. It includes an **execute()** method, which is implemented by concrete command classes to perform specific actions. 
+
+### ConcreteCommand
+ - Implements the **Command** interface and define the binding between receiver object and an action. It calls methods on the Receiver to perform an specific an action. 
+
+### Receiver 
+ - It knows actually how to perform an operation for any request. 
+
+### Invoker:
+ - It asks the command to carry out the request. It stores a command object and and invokes Command's trigger() method. 
+
+### Client
+ - Creates a **ConcreteCommand** and set its **Receiver**.
+ - Configure the **Invoker** with the **ConcreteCommand** object. 
+
+![Composite Pattern : Source Head First ](assests/command.JPG) Source : Head First 
 
 
