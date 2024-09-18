@@ -34,7 +34,17 @@ GAN is composed of the 2 models one is **Generator** and **Discriminator**, Gene
 
 ![Variational Autoencoder ](assests/gan.JPG) Source : Coursera deeplearning.io 
 
+### How Discriminator works ?
 
+This is nothing but a classifier , instead of classifying the input data into many classes , it classifies the data into 2 classes either *fake* or *real*. 
+It takes the features and feed it into neural network and learns set of parameters , these weights learns overtime that how cat looks like or dogs looks like. These parameters tries to map lernt parameters to the output Y^. Goal is to minimize the difference between the output label and true label. For that we need to use cost function. Based on that cost function we need to update the parameters. In GAN context, it gives the probability of input being fake given input features X. This probabilities are the feedback for the generator.  
 
+During the training process, the discriminator and generator are optimized  in an adversarial manner:
 
+  -The discriminator is trained to maximize its ability to correctly classify real and fake data.
+  -Meanwhile, the generator is trained to produce data that can fool the discriminator, minimizing the discriminator's ability to distinguish between real and fake.
+
+### How Generator works ?
+
+Final goal of Generator is to produce the data from a certain class. It takes a random noise vector as input and it returns some variables(like an Image) that looks like that class. Once we received the generator in training processes that looks good we need to save the parameters of generator. So that will be a saved generator and when we will input different noise to  this saved generator it will produce different data from the same class. 
 
