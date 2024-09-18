@@ -32,7 +32,7 @@ Papers : https://arxiv.org/pdf/1804.00891
 
 GAN is composed of the 2 models one is **Generator** and **Discriminator**, Generator takes some kind of noise as input and generates images as output. Discriminator looks at images output from generator and discriminate that which one is fake and which one is real. These models compete each other, that is why these called adversarial. This process continues untill we dont need the discriminator model anymore and Generator is capable of generating good images. 
 
-
+![Variational Autoencoder ](assests/gan.JPG) Source : Coursera deeplearning.io 
 
 
 
