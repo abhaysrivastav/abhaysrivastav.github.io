@@ -48,3 +48,17 @@ During the training process, the discriminator and generator are optimized  in a
 
 Final goal of Generator is to produce the data from a certain class. It takes a random noise vector as input and it returns some variables(like an Image) that looks like that class. Once we received the generator in training processes that looks good we need to save the parameters of generator. So that will be a saved generator and when we will input different noise to  this saved generator it will produce different data from the same class. 
 
+### BCE 
+
+Binary cross entropy is general loss function used in GAN model. 
+![Binary Cross Entropy](assests/bce.JPG)
+
+But other cost funtions also :
+  - Wasserstein Distance
+  - Least Squares Loss
+  - Hinge Loss
+  - Adversarial Loss
+    [To be added]
+
+
+
