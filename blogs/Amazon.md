@@ -1,14 +1,13 @@
-System :
-	- Amazon online shopping system.
+# Amazon online shopping system.
 
-Actors:
-	- Primary Actors
-		- Authenticated User
-		- Guest User
+## Actors:
+	### Primary Actors
+	- Authenticated User
+	- Guest User
 
-	- Secondry User:
-		- Admin	
-		- System
+	### Secondry User:
+	- Admin	
+	- System
 	
 
 	
