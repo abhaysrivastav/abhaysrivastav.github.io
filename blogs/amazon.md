@@ -41,13 +41,16 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
 	- Guest
 	- AuthenticatedUser
  - Admin
+   
  	```
 	+ blockUser(account):bool
   	+ addNewProductCategory(category):bool
   	+ modifyProductCategory(category):bool
  	+ deleteProductCategory(category):bool 	
-  	```   
+  	```
+    
  - Account
+   
    ```
    - userName: string
    - password: string
@@ -61,6 +64,7 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
    + deleteProductReview(review): bool
    + resetPassword():bool   
    ```
+   
  - Product
  - ProductCategory
  - ProductReview
