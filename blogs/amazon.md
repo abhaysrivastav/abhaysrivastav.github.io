@@ -27,8 +27,7 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
 
 - Admin
 	- Login/Logout
-  
- 	- Block/Unblock/Update/Delete Account : It will manage the user account. Admin shall be able able to block/unblock user in case of policy violation. 
+   	- Block/Unblock/Update/Delete Account 
   	- Add, Modify, Delete Product Category
   	- Modify Product  	 
 - System
