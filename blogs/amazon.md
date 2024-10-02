@@ -44,11 +44,11 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
    
  	```
 	+ blockUser(account):bool
-  	+ addNewProductCategory(category):bool
-  	+ modifyProductCategory(category):bool
- 	+ deleteProductCategory(category):bool 	
+	+ addNewProductCategory(category):bool
+	+ modifyProductCategory(category):bool
+	+ deleteProductCategory(category):bool
   	```
-    
+  
  - Account
    
    ```
