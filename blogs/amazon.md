@@ -26,9 +26,9 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
 ### Secondry Actors
 
 - Admin
-	- Login/Logout
-   	- Block/Unblock/Update/Delete Account 
+	- Login/Logout   	
   	- Add, Modify, Delete Product Category
+	- Block/Unblock/Update/Delete Account
   	- Modify Product  	 
 - System
 	- For sending Notifications like order notification, shipping notifications.  
