@@ -4,18 +4,18 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
 
 ## Actors & Use Cases
 
-### Primary Actors
+### Primary Actors 
 
 - Authenticated Users
 	- Register Account
- 	- Login/Logout
-  	- Update/Delete the account
-  	- Search Product
-  	- Add Item to the shopping list
-  	- Update the Shopping
-  	- Checkout Shopping Cart
-  	- Add Shipping Address
-  	- Add Credit Card
+	- Login/Logout
+	- Update/Delete the account
+	- Search Product
+	- Add Item to the shopping list
+	- Update the Shopping
+	- Checkout Shopping Cart
+	- Add Shipping Address
+	- Add Credit Card
   	     
 - Guest Users
 	- Register Account
@@ -27,9 +27,9 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
 
 - Admin
 	- Login/Logout   	
-  	- Add, Modify, Delete Product Category
+	- Add, Modify, Delete Product Category
 	- Block/Unblock/Update/Delete Account
-  	- Modify Product  	 
+	- Modify Product  	 
 - System
 	- For sending Notifications like order notification, shipping notifications.  
 
