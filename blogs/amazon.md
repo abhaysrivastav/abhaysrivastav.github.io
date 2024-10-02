@@ -1,12 +1,11 @@
----
-layout: page
-title: Blog
----
-# Amazon online shopping system 
+# Amazon online shopping system
+
 In this blog, I am sharing my learnings from various resources, focusing on the high-level and low-level design of Amazon. In this section, I have captured my key takeaways.
 
-## Actors & Use Cases 
+## Actors & Use Cases
+
 ### Primary Actors
+
 - Authenticated Users
 	- Register Account
  	- Login/Logout
@@ -16,15 +15,19 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
   	- Update the Shopping
   	- Checkout Shopping Cart
   	- Add Shipping Address
-  	- Add Credit Card  	 	 
+  	- Add Credit Card
+  	     
 - Guest Users
 	- Register Account
 	- Search Product
 	- Add Item to Shopping Cart
  	- Update Shopping Cart
+    
 ### Secondry Actors
+
 - Admin
 	- Login/Logout
+  
  	- Block/Unblock/Update/Delete Account : It will manage the user account. Admin shall be able able to block/unblock user in case of policy violation. 
   	- Add, Modify, Delete Product Category
   	- Modify Product  	 
@@ -33,7 +36,8 @@ In this blog, I am sharing my learnings from various resources, focusing on the 
 
 ## LLD 
 
-### Components  
+### Components 
+
 - Customer
 	- Guest
 	- AuthenticatedUser
