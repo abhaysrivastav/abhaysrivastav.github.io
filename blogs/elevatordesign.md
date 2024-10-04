@@ -15,7 +15,7 @@
 ## Actors
 
 ### Primary Actors
--Passenger
+- Passenger
 
 ### Secondry Actors
 - System
