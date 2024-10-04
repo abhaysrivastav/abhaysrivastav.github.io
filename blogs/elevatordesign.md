@@ -34,6 +34,11 @@
 10) Building
 11) ElevatorSystem
 
+### Enumerations
+1) ElevatorState: Idle, Up, Down
+2) Direction : Up, Down
+3) DoorState: Open, Close 
+
 ## Relations 
 
 
