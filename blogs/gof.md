@@ -156,7 +156,7 @@ Responsibility: These are the classes that implement the Strategy interface. Eac
 Example: A QuickSort class that implements the SortStrategy interface and provides the logic for quicksort, or a MergeSort class that implements merge sort.
 Key Role: Each concrete strategy encapsulates a specific algorithm or behavior and can be swapped with other strategies that implement the same interface.
 
-
+![Strategy Pattern : Wiki ](assests/strategy.png) Source : Head First 
 
 
 
