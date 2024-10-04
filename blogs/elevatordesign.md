@@ -50,5 +50,8 @@
 - HallPanel is composed of Hall Button.
 - ElevatorPanel is composed of ElevatorButton.
 
+### Inheritance
+- ElevatorButton & HallButton extends the Button class.
+
 
 
