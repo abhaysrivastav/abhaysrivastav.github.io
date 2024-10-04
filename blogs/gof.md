@@ -110,4 +110,23 @@ Encapsulate request as an object, thereby letting you parameterize clients with 
 
 ![Composite Pattern : Source Head First ](assests/command.JPG) Source : Head First 
 
+## Proxy Pattern
+
+### Intent 
+Provide a surrogate or placeholder for another object to control access to it.
+
+### Participants
+
+#### Subject
+First we have a Subject, which provides an interface for the RealSubject and the Proxy. By implementing the same interface, the Proxy can be substituted for the RealSubject anywhere it occurs.
+
+#### Proxy
+The Proxy holds a reference to the RealSubject. In some cases, the Proxy may be responsible for creating and destroying the RealSubject. Clients interact with the RealSubject through the Proxy. Because the Proxy and RealSubject implement the same interface (Subject), the Proxy can be substituted anywhere the subject can be used. The Proxy also controls access to the RealSubject; this control may be needed if the Subject is running on a remote machine, if the Subject is expensive to create in some way or if access to the subject needs to be protected in some way.
+
+#### RealSubject:
+The RealSubject is the object that does the real work. It’s the object that the Proxy represents and controls access to.
+
+![Proxy Pattern : Source Head First ](assests/proxy.JPG) Source : Head First 
+
+
 
