@@ -130,5 +130,36 @@ The RealSubject is the object that does the real work. It’s the object that th
 
 ![Proxy Pattern : Source Head First ](assests/proxy.JPG) Source : Head First 
 
+## Strategy Design Pattern
+
+### Intent 
+
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+
+### Participants
+
+#### Context
+
+Responsibility: The Context maintains a reference to a Strategy object. It is the main object that interacts with the strategy and delegates the work to the strategy. The Context doesn't implement the algorithm itself but relies on the strategy to do so.
+Example: A SortingContext class might use a SortStrategy object to sort data. The Context is responsible for accepting the data and deciding when to call the strategy, but it doesn't know or care how the sorting is done.
+Key Role: Encapsulates and uses a Strategy. The context typically provides an interface for clients to interact with, and behind the scenes, it delegates the task to the selected strategy.
+
+#### Strategy
+
+Responsibility: This declares the interface for all the algorithms (strategies) that can be used interchangeably. Each concrete strategy will implement this interface.
+Example: A SortStrategy interface might define a method like sort(), which concrete sorting strategies (e.g., QuickSort, MergeSort) will implement.
+Key Role: The common interface that allows the client to interact with different strategies in a uniform way.
+
+#### ConcreteStrategy
+
+Responsibility: These are the classes that implement the Strategy interface. Each class provides a specific algorithm or behavior.
+Example: A QuickSort class that implements the SortStrategy interface and provides the logic for quicksort, or a MergeSort class that implements merge sort.
+Key Role: Each concrete strategy encapsulates a specific algorithm or behavior and can be swapped with other strategies that implement the same interface.
+
+
+
+
+
+
 
 
