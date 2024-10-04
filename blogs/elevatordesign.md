@@ -53,5 +53,14 @@
 ### Inheritance
 - ElevatorButton & HallButton extends the Button class.
 
+## Design Patterns useful for this problem:
+1) **Singleton Pattern** :  We need a single instance of elevator controller which will manage the all the elevators.
+2) **Observer Design Pattern**: Display will show the current state of an elevator , so elevator will be a subject and display will be observer.
+3) **State Pattern**:  Elevator has different states like Idel, Moving etc , so these different states can be managed by State patterns.
+4) **Command Pattern** :  There are several commands for elevator that can be triggered through the button press, so Command Pattern can be used.
+5) **Facoty Pattern**: Can be used for creating different types of button like HallButton, ElevatorButton.
+6) **Strategy Pattern** : For different dispatcher algorithm. 
+
+
 
 
