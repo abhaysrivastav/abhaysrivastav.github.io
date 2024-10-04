@@ -14,6 +14,8 @@ Convert the interface of a class into another interface that client expect. Adap
 
 **Client** : Collaborates with objects that implement the Target interface. 
 
+![Adapter Pattern : Source Head First ](assests/adapter.JPG) Source : Head First 
+
 ## Composite Design Patterns (Structural)
 ### Intent
 Compose the object into the tree like structures to represent the part-whole hierarchies. Composite lets clients treat individual object and composition of the object in the same way.
