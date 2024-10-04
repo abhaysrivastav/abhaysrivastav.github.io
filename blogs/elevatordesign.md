@@ -40,8 +40,15 @@
 3) DoorState: Open, Close 
 
 ## Relations 
+### Aggregation
+- ElevatorSystem has an aggregation relationship with Building
 
-
+### Composition
+- Building is composed of ElevatorCar & Floor.
+- ElevatorCar is composed of Door, ElevatorPanel, Display.
+- Floor is composed of Display & HallPanel.
+- HallPanel is composed of Hall Button.
+- ElevatorPanel is composed of ElevatorButton.
 
 
 
