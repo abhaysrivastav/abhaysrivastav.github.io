@@ -53,6 +53,7 @@
 ### Inheritance
 - ElevatorButton & HallButton extends the Button class.
 
+![Elevator System Class Diagram](assests/elevator.JPG) Source: Educative
 ## Design Patterns useful for this problem:
 1) **Singleton Pattern** :  We need a single instance of elevator controller which will manage the all the elevators.
 2) **Observer Design Pattern**: Display will show the current state of an elevator , so elevator will be a subject and display will be observer.
