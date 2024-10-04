@@ -55,12 +55,13 @@
 
 ![Elevator System Class Diagram](assests/elevator.JPG) Source: Educative
 ## Design Patterns useful for this problem:
-1) **Singleton Pattern** :  We need a single instance of elevator controller which will manage the all the elevators.
-2) **Observer Design Pattern**: Display will show the current state of an elevator , so elevator will be a subject and display will be observer.
-3) **State Pattern**:  Elevator has different states like Idel, Moving etc , so these different states can be managed by State patterns.
-4) **Command Pattern** :  There are several commands for elevator that can be triggered through the button press, so Command Pattern can be used.
-5) **Facoty Pattern**: Can be used for creating different types of button like HallButton, ElevatorButton.
-6) **Strategy Pattern** : For different dispatcher algorithm. 
+
+**Singleton Pattern**: We need a single instance of the elevator controller, which will manage all the elevators.
+**Observer Design Pattern**: The display will show the current state of an elevator, so the elevator will be a subject and the display will be an observer.
+**State Pattern**: The elevator has different states like Idle, Moving, etc., so these different states can be managed by State patterns.
+**Command Pattern**: There are several commands for the elevator that can be triggered through button presses, so the Command Pattern can be used.
+**Factory Pattern**: Can be used for creating different types of buttons like HallButton, ElevatorButton.
+**Strategy Pattern**: For different dispatcher algorithms.
 
 
 
