@@ -20,6 +20,22 @@
 ### Secondry Actors
 - System
 
+## Classes:
+
+1) Button
+2) ElevatorButton
+3) HallButton
+4) ElevatorPanel
+5) HallPanel
+6) Display
+7) Door
+8) ElevatorCar
+9) Floor
+10) Building
+11) ElevatorSystem
+
+## Relations 
+
 
 
 
