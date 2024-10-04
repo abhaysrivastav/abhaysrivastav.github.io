@@ -112,9 +112,10 @@
 ### 📚 Certifications & Training
 -  Medical Image Processing and Algorithm Training | IIT Bombay
 -  Computer Vision Nanodegree | Udacity [Certificate](https://confirm.udacity.com/NZMKY2LX)  
--  Computer Vision Expert Nanodegree | Udacity [Certificate](https://confirm.udacity.com/TVANSTHS)  
+-  Computer Vision Expert Nanodegree | Udacity [Certificate](https://confirm.udacity.com/TVANSTHS)
+-  Advance Design Patterns | LinkedIn [https://www.linkedin.com/learning/certificates/3235a890288b90bc22ddfef8543d3473bb0458b682a532723a9ac75c97e814af?u=73045713]
+-  C++ Design Patterns | LinkedIn [https://www.linkedin.com/learning/certificates/89ca765f33df6ea467af57cd6dbaeab768faf21e5bd9177a67f449681a7350a1?u=73045713]
   
-
 ### 🌐 Online Presence
 -  LinkedIn: linkedin.com/in/sriabhay
 -  GitHub: [abhaysrivastava0505](https://github.com/abhaysrivastav)
