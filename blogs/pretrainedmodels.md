@@ -97,5 +97,58 @@
 
 ### ResNet
 
+#### ResNet-50 Architecture
+In deep networks, as the number of layers increases, the vanishing gradient problem can cause the network to stop learning or degrade performance. ResNet’s key innovation is the residual block, which introduces skip connections (also called shortcuts). These connections allow the network to "skip" one or more layers, which helps to maintain strong gradients and avoid degradation in performance even with very deep networks.
+The input is added directly to the output of the two convolutional layers. This is known as a skip connection.The intuition behind residual blocks is that they allow the network to learn a "residual function" (the difference between the input and the desired output), which is easier to optimize than learning the full mapping directly.
+The most commonly used variant is ResNet-50, which has 50 layers in total. Here's the breakdown of its architecture:
+
+- Input: 224x224x3 RGB image (ImageNet standard).
+
+- First Convolutional Layer:
+  7x7 filters, stride 2, 64 filters.
+  Output size: 112x112x64.
+  Followed by max-pooling (3x3, stride 2).
+  Output size after max-pooling: 56x56x64.
+  
+- Residual Block 1:
+
+  3 layers with 1x1, 3x3, and 1x1 convolutions.
+  The number of filters increases to 64, and the output size remains 56x56.
+  These residual blocks (using bottleneck blocks) reduce the dimensionality using the 1x1 convolutions and keep the number of computations efficient.
+
+- Residual Block 2:
+
+  The number of filters increases to 128.
+  Output size: 28x28x128 (after the first block).
+  The spatial dimensions are reduced by a stride-2 convolution in the first layer of the block.
+
+- Residual Block 3:
+
+  Filters increase to 256.
+  Output size: 14x14x256 (after the first block).
+  Similar structure with bottleneck blocks.
+
+- Residual Block 4:
+
+  Filters increase to 512.
+  Output size: 7x7x512 (after the first block).
+  Again, dimensionality reduction happens through convolution with stride 2.
+
+ -  Global Average Pooling:
+   
+   The output is 7x7x512 and is reduced to 1x1x512 using global average pooling.
+
+- Fully Connected Layer:
+
+Finally, a fully connected layer reduces the output to 1000 dimensions (for ImageNet classification), followed by a Softmax for the output probabilities.
+
+Residual Block in ResNet-50 (Bottleneck Design)
+
+The residual block in ResNet-50 uses a bottleneck design, which consists of three layers:
+
+1x1 Convolution: This reduces the dimensionality (e.g., from 256 filters to 64 filters).
+3x3 Convolution: This processes the feature maps.
+1x1 Convolution: This increases the dimensionality back to its original size.
+
 ### Inception 
 
