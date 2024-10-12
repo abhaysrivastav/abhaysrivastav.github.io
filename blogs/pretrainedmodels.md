@@ -152,3 +152,11 @@ The residual block in ResNet-50 uses a bottleneck design, which consists of thre
 
 ### Inception 
 
+In traditional CNN architectures like AlexNet or VGG, each convolutional layer uses a fixed-size filter (e.g., 3x3 or 5x5) to capture features. However, it's hard to know which filter size is the best for a given task. The Inception module solves this by applying multiple filters of different sizes (1x1, 3x3, 5x5) to the same input and then concatenating their outputs. This allows the network to capture features at different scales without needing to choose a specific filter size.
+
+#### Inception Module 
+
+- 1x1 convolution : Helps in dimentionality reduction
+- 3x3 & 5x5 convolutions capture medium & large patterns in an input.
+- Max Pooling helps in downsampling and for capturing the important spatial information.
+- The output of these operations are concatenated and passed to the next layer. 
