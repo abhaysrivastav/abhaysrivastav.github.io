@@ -1,3 +1,8 @@
+---
+layout: page
+title: Blog
+---
+
 # Pre-Trained Model Architectures
 
 ### AlexNet
