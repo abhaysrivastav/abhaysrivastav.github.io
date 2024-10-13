@@ -26,6 +26,7 @@
 | FC2               | 4096                  |
 | FC3               | 1000 (Softmax Output) |
 
+![AlexNet](assests/alexnet.JPG) Source : Coursera deeplearning.io 
 
 ### VGG16
 
@@ -94,13 +95,18 @@
 | Fully Connected (FC2)           | 4096                    |
 | Output Layer (Softmax, 1000)    | 1000                    |
 
+![VGG16](assests/vgg16.JPG) 
 
 ### ResNet
 
 #### ResNet-50 Architecture
 In deep networks, as the number of layers increases, the vanishing gradient problem can cause the network to stop learning or degrade performance. ResNet’s key innovation is the residual block, which introduces skip connections (also called shortcuts). These connections allow the network to "skip" one or more layers, which helps to maintain strong gradients and avoid degradation in performance even with very deep networks.
 The input is added directly to the output of the two convolutional layers. This is known as a skip connection.The intuition behind residual blocks is that they allow the network to learn a "residual function" (the difference between the input and the desired output), which is easier to optimize than learning the full mapping directly.
+
+![VGG16](assests/resnet50.JPG) 
+
 The most commonly used variant is ResNet-50, which has 50 layers in total. Here's the breakdown of its architecture:
+
 
 - Input: 224x224x3 RGB image (ImageNet standard).
 
@@ -150,9 +156,12 @@ The residual block in ResNet-50 uses a bottleneck design, which consists of thre
 3x3 Convolution: This processes the feature maps.
 1x1 Convolution: This increases the dimensionality back to its original size.
 
+![VGG16](assests/resnet.JPG) 
+
 ### Inception 
 
 In traditional CNN architectures like AlexNet or VGG, each convolutional layer uses a fixed-size filter (e.g., 3x3 or 5x5) to capture features. However, it's hard to know which filter size is the best for a given task. The Inception module solves this by applying multiple filters of different sizes (1x1, 3x3, 5x5) to the same input and then concatenating their outputs. This allows the network to capture features at different scales without needing to choose a specific filter size.
+
 
 #### Inception Module 
 
