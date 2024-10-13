@@ -159,4 +159,28 @@ In traditional CNN architectures like AlexNet or VGG, each convolutional layer u
 - 1x1 convolution : Helps in dimentionality reduction
 - 3x3 & 5x5 convolutions capture medium & large patterns in an input.
 - Max Pooling helps in downsampling and for capturing the important spatial information.
-- The output of these operations are concatenated and passed to the next layer. 
+- The output of these operations are concatenated and passed to the next layer.
+
+#### Inception Architecture 
+The Inception v1 architecture consists of **9 inception** modules stacked on top of each other, followed by fully connected layers. It has a total of **22 layers**, including convolutional layers, pooling layers, and fully connected layers.
+
+- Initial Layers:
+
+  7x7 convolution, stride 2 → Max pooling
+  3x3 convolution → Max pooling
+
+- Inception Modules:
+  
+  Several Inception modules are stacked together, where each module contains branches with 1x1, 3x3, 5x5 convolutions, and max pooling.
+  These modules process the input at different scales and aggregate the features.
+
+- Auxiliary Classifiers:
+
+  GoogLeNet also includes auxiliary classifiers. These are side branches in the network that are used during training to prevent the network from vanishing gradient issues.
+  They apply softmax loss to intermediate layers to improve gradient flow. The final prediction is done using the last fully connected layer.
+
+- Fully Connected Layer:
+
+  After the final inception module, a global average pooling layer is applied, which reduces the spatial dimensions to 1x1.
+  The output is then passed through a fully connected layer with softmax activation for classification (typically 1000 classes for ImageNet).
+
