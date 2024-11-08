@@ -45,3 +45,10 @@ Mount directory for mounting filesystems: Temporarily mounted filesystems.
 
 ### 15. /srv
 Service data: Directory for site-specific data which is served by the system.
+
+### ~ : Home Directory
+### / " Root Directory
+### .. : Parent of current directory 
+### . : Current directory
+
+
