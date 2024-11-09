@@ -109,6 +109,13 @@ Or: ["Do", "n't", "you", "love", "AI", "?"]
 ### Character based tokenization
 
 Character-based tokenization is a technique where each character in the input text is treated as an individual token. Unlike word-based tokenization, this method does not split text into words or subwords but breaks it down into its smallest unit: characters.
-### Subword based tokenization
 
+```
+Input: "Transformers!"
+Output: ["T", "r", "a", "n", "s", "f", "o", "r", "m", "e", "r", "s", "!"]
+
+```
+
+### Subword based tokenization
+Subword tokenization algorithms rely on the principle that frequently used words should not be split into smaller subwords, but rare words should be decomposed into meaningful subwords.
      
