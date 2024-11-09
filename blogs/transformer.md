@@ -82,6 +82,33 @@ Normal Seq2Seq models (RNN or LSTM or GRU) suffers from the problem of Vanishing
 
 - **Objective2 : Next Sentence Prediction**: Predicts whether two sentences in a pair are consecutive or not. This model is trained to determine if the second sentence follows the first sentence in the original text.
 
-- After the pre-training, we have to fine-tune it for different task. For example, we can use it for Named Entity Recognition, Paraphrasing, Sequence Tagging, classification etc.   
+- After the pre-training, we have to fine-tune it for different task. For example, we can use it for Named Entity Recognition, Paraphrasing, Sequence Tagging, classification etc.
+
+
+## Summery of the tokenizers 
+### Word based tokenization 
+Word-based tokenization is a technique where text is split into individual words, treating each word as a token. It is one of the simplest and most intuitive tokenization methods, where spaces or specific delimiters are used to separate words.
+
+```
+Input: "I love Transformers!"
+Output: ["I", "love", "Transformers!"]
+```
+Tokenizers may either keep punctuation attached to the word or split it into separate tokens.
+
+```
+With punctuation: ["Transformers!"]
+Without punctuation: ["Transformers", "!"]
+```
+Contractions like "don't" or "it's" can either be treated as a single token or split into multiple tokens.
+```
+Input: "Don't you love AI?"
+Output: ["Don't", "you", "love", "AI", "?"] 
+Or: ["Do", "n't", "you", "love", "AI", "?"]
+```
+
+### Character based tokenization
+
+Character-based tokenization is a technique where each character in the input text is treated as an individual token. Unlike word-based tokenization, this method does not split text into words or subwords but breaks it down into its smallest unit: characters.
+### Subword based tokenization
 
      
