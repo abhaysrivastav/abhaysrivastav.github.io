@@ -118,4 +118,21 @@ Output: ["T", "r", "a", "n", "s", "f", "o", "r", "m", "e", "r", "s", "!"]
 
 ### Subword based tokenization
 Subword tokenization algorithms rely on the principle that frequently used words should not be split into smaller subwords, but rare words should be decomposed into meaningful subwords.
+
+#### Byte-Pair Encoding
+
+Byte-Pair Encoding (BPE) tokenization is a popular and effective method used in Natural Language Processing (NLP) for creating subword tokens. It's particularly useful for handling large vocabularies and out-of-vocabulary words. Here's an overview of BPE tokenization:
+
+Basic Concept: BPE starts with a vocabulary of individual characters and iteratively merges the most frequent pair of consecutive bytes or characters to form new tokens.
+
+Process: a. Initialize the vocabulary with individual characters. b. Count the frequency of adjacent pairs in the corpus. c. Merge the most frequent pair to create a new token. d. Repeat steps b and c for a predetermined number of merge operations or until a desired vocabulary size is reached.
+
+I understood the concept from following video thanks to Huggingface : 
+![Watch this YouTube video](https://www.youtube.com/watch?v=HEikzVL-lZU)
+
+
+
+#### Wordpiece 
+#### Unigram
+#### SentencePiece
      
