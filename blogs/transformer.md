@@ -128,7 +128,9 @@ Basic Concept: BPE starts with a vocabulary of individual characters and iterati
 Process: a. Initialize the vocabulary with individual characters. b. Count the frequency of adjacent pairs in the corpus. c. Merge the most frequent pair to create a new token. d. Repeat steps b and c for a predetermined number of merge operations or until a desired vocabulary size is reached.
 
 I understood the concept from following video thanks to Huggingface : 
-![Watch this YouTube video](https://www.youtube.com/watch?v=HEikzVL-lZU)
+
+[![BPE](https://img.youtube.com/vi/HEikzVL-lZU/0.jpg)](https://www.youtube.com/watch?v=HEikzVL-lZU)
+
 
 
 
