@@ -51,4 +51,20 @@ Service data: Directory for site-specific data which is served by the system.
 ### .. : Parent of current directory 
 ### . : Current directory
 
+# Upgrading and installing packages
+Before installing or upgrading any packages on your Linux system, it's best practice to first update your package list index.
+```
+sudo apt update
+```
+Running apt with the update option ensures all of your package dependencies are up-to-date and correctly specified prior to making any changes to your system's packages.
 
+Now lets say we want to upgrade the nano:
+
+```
+sudo apt upgrade nano
+```
+
+I want to to install the nano:
+```
+sudo apt install vim
+```
