@@ -63,8 +63,33 @@ Now lets say we want to upgrade the nano:
 ```
 sudo apt upgrade nano
 ```
-
+To install any deb package :
+```
+sudo apt install <package-name>
+```
 I want to to install the nano:
 ```
 sudo apt install vim
 ```
+#### whoami : username 
+#### uname : operating system name 
+#### ps : running process 
+#### top : resource usage 
+#### df : mounted file systemcount 
+#### man : reference manual 
+#### cp: copy file 
+#### mv : change file name or path
+#### rm : remove file
+#### touch : create empty file 
+#### chmod : change/modify file permissions
+#### wc : get count of lines, words, chars in file
+#### grep : return lines in file matching pattern
+#### find : find files in directory tree
+#### pwd : current working directory
+#### cat : print all content in a file 
+#### more : print file content page by page
+#### head : print first N lines of file 
+#### curl : display content of a file at a url.
+#### wget : download file from a url.
+
+
