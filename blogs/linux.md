@@ -72,7 +72,10 @@ I want to to install the nano:
 sudo apt install vim
 ```
 #### whoami : username 
-#### uname : operating system name 
+#### uname (-s, -r) :
+  - return OS information
+  - Identify system and diagnose issues
+  - -v : more detailed information 
 #### ps : running process 
 #### top : resource usage 
 #### df : mounted file systemcount 
@@ -91,5 +94,6 @@ sudo apt install vim
 #### head : print first N lines of file 
 #### curl : display content of a file at a url.
 #### wget : download file from a url.
-
+#### df :
+  - Shows disk usage
 
