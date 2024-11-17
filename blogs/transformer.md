@@ -131,10 +131,40 @@ I understood the concept from following video thanks to Huggingface :
 
 [![BPE](https://img.youtube.com/vi/HEikzVL-lZU/0.jpg)](https://www.youtube.com/watch?v=HEikzVL-lZU)
 
-
-
-
 #### Wordpiece 
+
+##### Training Strategy
+Initial Vocabulary Creation:
+
+1)  Starts with an elementary vocabulary composed of individual characters (letters).
+  Words in the training corpus are split into individual letters, and:
+  Prefix "##" is added to letters not starting a word.
+  Only unique units are kept to create the initial vocabulary.
+
+2) Pair List and Scoring:
+  All possible adjacent pairs of tokens are listed from the corpus.
+  Each pair is scored based on this formula:
+```
+  Score = Frequency of the pair ÷ (Frequency of the first token × Frequency of the second token).
+```
+4) Pair Selection and Merging:
+
+  The pair with the highest score is selected.
+  This pair is merged to form a new token, which is added to the vocabulary.
+  The split corpus is updated with the merged token.
+  
+4) Iterative Process:
+  Steps (2) and (3) are repeated until the vocabulary reaches the desired size.
+  Over time, the vocabulary evolves, and token splits become shorter and more meaningful.
+
+##### Tokenization Process
+Longest Match First:
+To tokenize a word (e.g., "huggingface"), the algorithm looks for the longest possible token at the beginning of the word from the vocabulary.
+It repeats this process for the remaining part of the word until the entire word is tokenized.
+
+Above discription is summery of the following video : 
+
+[![BPE](https://img.youtube.com/vi/HEikzVL-lZU/0.jpg)](https://www.youtube.com/watch?v=qpv6ms_t_1A)
 #### Unigram
 #### SentencePiece
      
