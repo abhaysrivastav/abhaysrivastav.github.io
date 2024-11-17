@@ -147,7 +147,7 @@ Initial Vocabulary Creation:
 ```
   Score = Frequency of the pair ÷ (Frequency of the first token × Frequency of the second token).
 ```
-4) Pair Selection and Merging:
+3) Pair Selection and Merging:
 
   The pair with the highest score is selected.
   This pair is merged to form a new token, which is added to the vocabulary.
