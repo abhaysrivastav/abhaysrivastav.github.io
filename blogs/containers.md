@@ -44,8 +44,13 @@
 
         - Docker has some management commands : 
 
-        - Container Management commad : 
-            - 
-# How to install the Docker in CentOS: 
+        - Container Management commad : <>
+### How to install the Docker in CentOS: 
+
+### Managing the Docker Containers 
+
+### Managing the Docker Images 
+
+### Save and Load images
 
 
