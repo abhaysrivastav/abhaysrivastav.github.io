@@ -34,5 +34,6 @@
         - Public Registry for images , having collection of images for different use cases.
         - Images can have one or more versions. 
         - To push the images we should be registered user. 
+        - Official repo is called "library". 
         
     
