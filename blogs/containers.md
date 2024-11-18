@@ -13,12 +13,26 @@
 ### Type- II 
 - Provides with Host OS
 
-### CRI (Container Runtime Interface)
+### CRI (Container Runtime Interface): 
+
     - Manages containers life cycle.  
     - Docker , Podman, Containered , CRI-o
     - Runs on HOST OS. 
     - Dont have GUEST OS, means they share underlying HOST OS.
     - All container runs as a processes and control is provided by CRI. 
     - Container need container's images that contains application related binaries/libs. It share the packages from HOST OS as well.
-
-
+    - It uses 2 kernal features cgroup and namespace and its not there in windows kernal so its developed for linux. Recommended host is Linux. 
+    - If Host OS is linux then it will only run the linux comptible application same with windows , cross platform is not supported in containers.
+    - Docker has 2 editions : 
+        - COmmunity Edition
+        - Enterprise Edition called MKE 
+    - 3 Terminology 
+        - Dockerfile : Docker instuctions to run application.
+        - Image : Outcome of the build
+        - Container : Using docker image , we can create one or more containers.
+    - Dockerhub :
+        - Public Registry for images , having collection of images for different use cases.
+        - Images can have one or more versions. 
+        - To push the images we should be registered user. 
+        
+    
