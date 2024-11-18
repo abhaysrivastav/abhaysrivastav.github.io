@@ -35,5 +35,17 @@
         - Images can have one or more versions. 
         - To push the images we should be registered user. 
         - Official repo is called "library". 
-        
-    
+
+        - docker system info 
+
+        -  docker image : list the images from  ls  : /var/lib/docker 
+
+        - /etc/docler/daemon.json is the file when we need to change some default configuration 
+
+        - Docker has some management commands : 
+
+        - Container Management commad : 
+            - 
+# How to install the Docker in CentOS: 
+
+
