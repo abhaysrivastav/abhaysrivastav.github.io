@@ -53,4 +53,7 @@
 
 ### Save and Load images
 
+### How to commit the container state as an image
+
+### Building an Image using Dockerfile
 
