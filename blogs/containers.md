@@ -59,7 +59,13 @@
 
 ###  Docker Container (App) Export as a Tar ball and Import as an Image
 
+
+
 ### Docker Registry 
 
 ### Docker Volumes
 
+
+# Kubernetes 
+
+## Architecture
