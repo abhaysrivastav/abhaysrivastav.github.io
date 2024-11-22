@@ -69,3 +69,13 @@
 # Kubernetes 
 
 ## Architecture
+
+## Setup & Configuration
+
+## Working with POD & Multi-Container Pod
+
+## kubectl 
+
+## Kubernetes Pattern 
+
+## ReplicaSet
