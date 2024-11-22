@@ -53,17 +53,21 @@
 
 ### Save and Load images
 
-### How to commit the container state as an image
+### Managing Docker Containers
+
+### Commit the container state as an image
 
 ### Building an Image using Dockerfile
 
 ###  Docker Container (App) Export as a Tar ball and Import as an Image
 
-
-
 ### Docker Registry 
 
 ### Docker Volumes
+
+### Docker COmpose
+
+### Docker Networking
 
 
 # Kubernetes 
@@ -83,7 +87,6 @@
 ## Nodeport 
 
 ## ClustureIP 
-
 
 ## Deployment
 
