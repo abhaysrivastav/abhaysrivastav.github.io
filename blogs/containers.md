@@ -79,3 +79,39 @@
 ## Kubernetes Pattern 
 
 ## ReplicaSet
+
+## Nodeport 
+
+## ClustureIP 
+
+
+## Deployment
+
+## Blue Green Deployment 
+
+
+## Autoscaler
+
+## MetricsServer
+
+## DaemonSet
+
+## Taint and Tolerations
+
+## Scheduler with nodeSelector 
+
+## Nolume 
+
+### hostPth
+
+### emptyPath
+
+### NFSStatic
+
+## Readiness and Liveness Probes
+
+## Screts and ConfigMaps
+
+## Helm Package Manager
+
+### HELM Chart 
