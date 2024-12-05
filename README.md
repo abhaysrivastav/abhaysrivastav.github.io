@@ -4,7 +4,7 @@
   </a>
 </div>
 <br>
-#  Software Architect | PhD Research Scholar
+#  Software Architect
 
 -  Competent, diligent and result-oriented professional with an experience of 12+ years. currently spearheading as Software Architect with Siemens Technologies.
 -  Good hands-on experience in C++ 11, Algorithms, Multithreading etc. 
@@ -80,13 +80,11 @@
 
 ### 🎓 Educational Background
 
-| **Degree/Qualification**                          | **Institution**                                      | **Year** 
-|---------------------------------------------------|------------------------------------------------------|----------|
-| PhD Research Scholar (Deep Learning & AI)         | PES University, Bangalore                            | Ongoing  |
-| MTech Software Engineering                        | BITS Pilani                                          | 2023     |
-| B.Tech Computer Science & Engineering             | University Institute of Engineering and Technology   | 2010     |
-| XII (High School)                                 | OSVN Inter College, Kanpur                           | 2004     |
-| X (Secondary School)                              | OSVN Inter College, Kanpur                           | 2002     |
+| **Degree/Qualification**                          | 
+|---------------------------------------------------|
+| MTech Software Engineering                        |
+| B.Tech Computer Science & Engineering             | 
+
 
 ## 📈 Educational Projects
 
