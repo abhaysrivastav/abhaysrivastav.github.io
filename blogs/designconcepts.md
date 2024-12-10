@@ -16,8 +16,8 @@ There are 2 types of replication :
     *  In primary-secondary replication, data is replicated across multiple nodes. One node is designated as the primary. It’s responsible for processing any writes to data stored on the cluster. It also sends all the writes to the secondary nodes and keeps them in sync. This strategy is good when our workload is read heavy, if its write heavy then its not a good option.
     *  Its read resilient means seondary nodes can still can handle read request if primary node fails.
     *  If we use aynchronous replication, it may lead to inconsistency.
-   ![Data replication](assests/.png) source : Educative
-    
+   ![Data replication](assests/first.png) source : Educative
+    * In case of failure of primary node there are 2 ways by which primary nodes are decided first one manual approach , in which pamary node is decided manually and notified to all other nodes. Second approch is automatic approach , where selection happens through the leader election process. 
   - Multi-leader replication
   - Peer-to-peer or leaderless replication
 
