@@ -39,6 +39,31 @@ There are 2 types of replication :
 
     ![Data replication](assests/third.png)
 
-    * **Quorums**
+    * **Quorums**:
+  - In distributed system, quorum means minimum number of replicas on which a distributed operation (commit/abort) must be completed before claiming the operation's success.
 
-  - 
+## Data Partitioning:
+
+To divide load among multiple nodes, we need to partition the data by a phenomenon known as partitioning or sharding. In this approach, we split a large dataset into smaller chunks of data stored at different nodes on our network.
+
+There are 2 ways to shard the data:
+  * **Verticle Sharding** : 
+  We can different tables in various database instances, which might be running on different physical servers.We might break the a table into multiple tables so that some columns are in one table while the rest in another.
+
+  It increases the speed of data retrieval from a table. 
+  * **Horizontal Sharding**:
+
+  In this approach, partitioning is used to divide the table into multiple tables, by splitting the data row-wise. There are 2 strategies available :
+    1) Key-range based sharding : 
+    2) Hash based sharding: It uses a hash function on an attribute, this hash function produces a hash value that is used for partitioning.
+
+
+**If we want to read a specific key, how do we know which IP address we need to connect to read ?**
+
+This problem is called **service discovery** and there are couple of approches for that:
+  1) Allow the client to request any node in the network, if that node doesn't have requested data then it forward the request to the node that contains the related data.
+  2) The second approach contains a routing tier, and all the request are first forwarded to the routing tier and it determines which node to connect to fulfill the request. 
+  3) The client already have the information about the partitions, so they can directly contact the node that contain the data. 
+
+
+  **How these components know about updates in the partitioning of the nodes ?** 
