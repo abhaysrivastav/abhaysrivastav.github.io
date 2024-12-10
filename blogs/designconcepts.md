@@ -17,7 +17,9 @@ There are 2 types of replication :
     *  Its read resilient means seondary nodes can still can handle read request if primary node fails.
     *  If we use aynchronous replication, it may lead to inconsistency.
    ![Data replication](assests/first.png) source : Educative
-    * In case of failure of primary node there are 2 ways by which primary nodes are decided first one manual approach , in which pamary node is decided manually and notified to all other nodes. Second approch is automatic approach , where selection happens through the leader election process. 
+    * In case of failure of primary node there are 2 ways by which primary nodes are decided first one manual approach , in which pamary node is decided manually and notified to all other nodes. Second approch is automatic approach,where selection happens through the leader election process.
+    * There are  different methods for primary secondary replication:
+
   - Multi-leader replication
   - Peer-to-peer or leaderless replication
 
