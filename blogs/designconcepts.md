@@ -80,3 +80,17 @@ This problem is called **service discovery** and there are couple of approches f
  There are 2 approches:
   - Partition secondary indexes by document.
   - Partition secondary indexes by tern.
+    
+## Distributed Cache:
+Its a caching system where multiple cache servers co-ordinate to store frequently access data. Its required where a single cache server is not enough to store all the data. Its scalable and provide higher degree of availibility. Cache uses **loyality of reference** principle. 
+
+* They minimize user-perceived latency by precalculating results and storing frequently accessed data.
+* They pre-generate expensive queries from the database.
+* They store user session data temporarily.
+* They serve data from temporary storage even if the data store is down temporarily.
+* Finally, they reduce network costs by serving data from local resources.
+
+### Writing Policies:
+  * Write-through Cache
+  * Write-back Cache
+  * Write-arround Cache
