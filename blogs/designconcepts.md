@@ -53,8 +53,7 @@ There are 2 ways to shard the data:
   It increases the speed of data retrieval from a table. 
   * **Horizontal Sharding**:
 
-  In this approach, partitioning is used to divide the table into multiple tables, by splitting the data row-wise. There are 2 strategies available :
-
+  In this approach, partitioning is used to divide the table into multiple tables, by splitting the data row-wise. There are 2 strategies available:
     1) Key-range based sharding : 
        In key-range based sharding, the data is divided into ranges based on the values of the sharding key. Each range is assigned to a different shard. For example, if we are sharding based on user ID, users with IDs from 1 to 1000 might be stored in one shard, while users with IDs from 1001 to 2000 might be stored in another shard. This approach makes it easy to perform range queries.
 
@@ -67,8 +66,20 @@ This problem is called **service discovery** and there are couple of approches f
   1) Allow the client to request any node in the network, if that node doesn't have requested data then it forward the request to the node that contains the related data.
 
   2) The second approach contains a routing tier, and all the request are first forwarded to the routing tier and it determines which node to connect to fulfill the request. 
-  
+
   3) The client already have the information about the partitions, so they can directly contact the node that contain the data. 
 
 
   **How these components know about updates in the partitioning of the nodes ?** 
+
+    Rebalacing of the partitions :
+      - Avoid the hash  mod n.
+      - Fixed number of partitions.
+      - Dynamic Partitions.
+      - Partition proportionally to node.
+
+ **what if we have to access the records through secondary indexes?**
+
+ There are 2 approches:
+  - Partition secondary indexes by document.
+  - Partition secondary indexes by tern.
