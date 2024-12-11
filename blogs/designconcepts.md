@@ -94,3 +94,9 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * Write-through Cache
   * Write-back Cache
   * Write-arround Cache
+
+### Eviction Policy 
+  * LRU (Least recently used)
+  * MRU (Most Recently Used)
+  * LFU (Least Frequently Used)
+  * MFU (Most Frequently Used)
