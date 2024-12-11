@@ -54,10 +54,12 @@ There are 2 ways to shard the data:
   * **Horizontal Sharding**:
 
   In this approach, partitioning is used to divide the table into multiple tables, by splitting the data row-wise. There are 2 strategies available:
-    1) Key-range based sharding : 
+    1) **Key-range based sharding :**
        In key-range based sharding, the data is divided into ranges based on the values of the sharding key. Each range is assigned to a different shard. For example, if we are sharding based on user ID, users with IDs from 1 to 1000 might be stored in one shard, while users with IDs from 1001 to 2000 might be stored in another shard. This approach makes it easy to perform range queries.
 
-    2) Hash based sharding: It uses a hash function on an attribute, this hash function produces a hash value that is used for partitioning.
+    2) **Hash based sharding:**
+    
+     It uses a hash function on an attribute, this hash function produces a hash value that is used for partitioning.
 
 **If we want to read a specific key, how do we know which IP address we need to connect to read ?**
 
