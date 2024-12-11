@@ -100,3 +100,12 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * MRU (Most Recently Used)
   * LFU (Least Frequently Used)
   * MFU (Most Frequently Used)
+
+ ![Distributed Cache](assests/cache.png)
+
+   * The client requests reach the service hosts through the load balancers where the client reside.
+   * Cache client uses consistent hashing to identify the cache server.
+   * Cache client will forward the request to the cache server.
+   * Each server has primary & replica server. Internally every server uses the same mechanism storing and eviction of cache entries.
+   * Configuration service ensure that all the clients see the updated and consistent view of cache servers.
+   * Monitoring services can be additionally used to log and report different metrics of the caching service
