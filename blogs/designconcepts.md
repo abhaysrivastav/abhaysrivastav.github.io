@@ -126,3 +126,4 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * It provides built-in replication mechanism, automatic failover, and different level of persistence.
   * It seperates data access from clusture management.
   * It *doen not provide strong consistency* due to the use of asynchronous replication.
+ ![Redis](assests/redis.png)
