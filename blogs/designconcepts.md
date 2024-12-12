@@ -134,3 +134,7 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * Each clusture is maintained by a *clusture manager*. Clusture Manager's job is to detect failure and perform automatic failover. 
 
  ![Architecture of Redis clusters](assests/redis2.png)
+ 
+  * Redis uses the pipelining to speed up the request-response model. Pipelining is the process of combining multiple request from client side without waiting for the response.
+
+**Memcached is prefered for smaller, simple read-heavy systems, whereas Redis is useful for systems that are complex and are both read-write heavy**
