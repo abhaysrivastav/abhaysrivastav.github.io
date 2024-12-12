@@ -108,4 +108,21 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
    * Cache client will forward the request to the cache server.
    * Each server has primary & replica server. Internally every server uses the same mechanism storing and eviction of cache entries.
    * Configuration service ensure that all the clients see the updated and consistent view of cache servers.
-   * Monitoring services can be additionally used to log and report different metrics of the caching service
+   * Monitoring services can be additionally used to log and report different metrics of the caching service.
+
+#### Memcached:
+  * It store the data in form of key-value pair. Key and value both are string.
+  * It does not support and cann't manipulate different data structures.
+  * It has a client and server component.
+  * It follows shared-nothing architecture means servers are unaware of each other, and there is no sync, data sharing and communication between the servers.
+  * This is the reason why it is fast.
+  * It scales horizontally. 
+
+#### Redis
+  * Its a data structure store, that can be used as a cache, database, message broker.
+  * Redis understand the different data strucrtures, so for any change we dont need to retrieve data and then change and then save. We can make in-house changes that save both time and effort.
+  * It can persist all in-memory blobs on the secondary storage.
+  * Redis can also act as a Message Broker and can translate millions of messages per second from one component to another in the system.
+  * It provides built-in replication mechanism, automatic failover, and different level of persistence.
+  * It seperates data access from clusture management.
+  * It *doen not provide strong consistency* due to the use of asynchronous replication.
