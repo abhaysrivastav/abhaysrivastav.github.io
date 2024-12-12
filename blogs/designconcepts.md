@@ -127,3 +127,8 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * It seperates data access from clusture management.
   * It *doen not provide strong consistency* due to the use of asynchronous replication.
  ![Redis](assests/redis.png)
+
+  * A clusture has one or more redis databases that are queried using multithreaded proxies.
+  * Redis clusture perform automatic sharding where each shard has primary and secondary node.
+  * Number of shards in a database is configurable.
+  * Each clusture is maintained by a *clusture manager*. Clusture Manager's job is to detect failure and perform automatic failover. 
