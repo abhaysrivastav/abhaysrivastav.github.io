@@ -132,3 +132,5 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * Redis clusture perform automatic sharding where each shard has primary and secondary node.
   * Number of shards in a database is configurable.
   * Each clusture is maintained by a *clusture manager*. Clusture Manager's job is to detect failure and perform automatic failover. 
+
+ ![Architecture of Redis clusters](assests/redis2.png)
