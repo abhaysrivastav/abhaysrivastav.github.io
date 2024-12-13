@@ -175,14 +175,21 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
       * We use partitions to store messages in the local storage for persistence.
       * Partitions contain messages encapsulated in **segments**.
       * Using segments, consumer consume the message of their choice from a partition by reading from a specific offset.
-      * The data belonging to a single topic can be present in numerous partitions.         
-    
-       
+      * The data belonging to a single topic can be present in numerous partitions.  
+
     * **Clusture Manager**:
-      We need a clusture manager to supervise broker's health. If broker fails it will notify. 
+      * We need a clusture manager to supervise broker's health. If broker fails it will notify.
+      * **Broker and Topic Registry**: This stores the list of topic for each broker.
+      * **Manage Replication**: Clusture Manager manages the replication by using the leader follower approach.
+      * **Authorization** : It handles authorization for broker and topic access. 
     * **Storage**:
       It is used to store consumer's details such as subscription information, and retention period.
+      
     * **Consumer Manager**:
-      This manages consumers. For example, It will verify, that consumer is authorized to read a message from certain topic or not. 
+      This manages consumers. For example, It will verify, that consumer is authorized to read a message from certain topic or not.
+      * Verify the consumer.
+      * Retention Time Management
+      * Message Receiving option management
+      * Allow multiple read.
   
     
