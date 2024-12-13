@@ -138,3 +138,51 @@ Its a caching system where multiple cache servers co-ordinate to store frequentl
   * Redis uses the pipelining to speed up the request-response model. Pipelining is the process of combining multiple request from client side without waiting for the response.
 
 **Memcached is prefered for smaller, simple read-heavy systems, whereas Redis is useful for systems that are complex and are both read-write heavy**
+
+# Pub-Sub Model:
+
+  * Its an asynchronous service to service communication method thats is popular in serverless and microservice architecture.
+  * Messages can be sent asynchronously to different subsystem of a system using the pub-sub system.
+  * It enables the push based distribution that allevate the need for message recipients to check for the new information and changes regularly.It lowers the delivery latency.
+    
+## Functional Requirments:
+  * Create/Delete a topic
+    * create(topic_id, topic_name) , delete_topic(topic_ID)
+  * Write a message
+    * write(topic_ID, message)
+  * Subscription
+    * subscribe(topic_ID) , unsubscribe(topic_ID)
+  * Read Message
+    * read(topic_ID)
+  * Specify Retention Time
+  * Delete Message
+
+## Non-functional Requirements:
+  * Scalable
+  * Available
+  * Durable
+  * Fault Tolerance
+  * Concurrent
+
+### Architecture Design:
+
+![Pub Sub Model](assests/pubsub.png)
+  * At a high Level, pub-sub system will have following components:
+    * **Broker**:
+      * This server will handle the messages. It will store the messages sent from the producer and allow the consumer to read them.
+      * It will handle the write and read request.
+      * A broker will have multiple topics, where each topic can have multiple partitions associated with it.
+      * We use partitions to store messages in the local storage for persistence.
+      * Partitions contain messages encapsulated in **segments**.
+      * Using segments, consumer consume the message of their choice from a partition by reading from a specific offset.
+      * The data belonging to a single topic can be present in numerous partitions.         
+    
+       
+    * **Clusture Manager**:
+      We need a clusture manager to supervise broker's health. If broker fails it will notify. 
+    * **Storage**:
+      It is used to store consumer's details such as subscription information, and retention period.
+    * **Consumer Manager**:
+      This manages consumers. For example, It will verify, that consumer is authorized to read a message from certain topic or not. 
+  
+    
