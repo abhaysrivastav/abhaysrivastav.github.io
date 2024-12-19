@@ -61,7 +61,7 @@
 ## Trie
 
 ## HashMap
-
+ * It stores the key-value pairs. It provide a way to efficiently map keys to values, allowing for quick retrieval of value associated with given key.
 
 ## Knowing what to track
 
