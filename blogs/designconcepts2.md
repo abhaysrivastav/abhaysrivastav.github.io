@@ -5,6 +5,8 @@ There are 3 main component in a search system:
   * An Indexer : Creates a searchable index. 
   * A Searcher : It responds to search queries by running the search query on indexes.
 
+ ![ Component of Distributed Search System](assests/search1.png) 
+
 ## Functional Requirement:
  * Search
 
@@ -38,8 +40,14 @@ Running the search queries on billions of documents that are **document-level in
 
  There are 2 phases of such systems 
   1) **Online Phase** : consist of searching for results against the search query by the user.
-  2) **Offline Phase** : It involves data crawling and indexing 
+  2) **Offline Phase** : It involves data crawling and indexing
 
+ ![High Level Design of Distributed Search System ](assests/search2.png) 
+
+  * **Crawler** : It collect the content from intended resources. From the extracted content from resources it generates the JSON document and store it into the storage.
+  * **Indexer**: It fetches the document from a distributed storage and index them using MapReduce.
+  * Distributed storage is used to store the document and its idexes.
+  * The **Searcher** parses the search string and searches for mapping from the index that are stored in distributed storage. 
 
   
 
