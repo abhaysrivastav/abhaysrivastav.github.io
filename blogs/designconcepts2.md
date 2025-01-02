@@ -34,3 +34,12 @@ Running the search queries on billions of documents that are **document-level in
  * There is storage overhead  for maintaining the inverted index along with the actual document.
  * Maintenance overhead (while adding or deleting the document we need to update the inverted index)
 
+## High-level design:
+
+ There are 2 phases of such systems 
+  1) **Online Phase** : consist of searching for results against the search query by the user.
+  2) **Offline Phase** : It involves data crawling and indexing 
+
+
+  
+
