@@ -69,4 +69,6 @@ This process requires us to partition or split the input data among these nodes.
  * Sorted list of document is returned to the user.
 We can make replicas of the indexing nodes that produce inverted index for assigned partition. We continue using the same architecture but instead of having only one group of nodes , we can have R group of nodes.The number of replicas can expand or shrink. 
 
-
+#### Problem with this design ?
+ 1) Colocated indexing and searching
+ 2) Index recomputation 
