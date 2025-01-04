@@ -71,4 +71,19 @@ We can make replicas of the indexing nodes that produce inverted index for assig
 
 #### Problem with this design ?
  1) Colocated indexing and searching
- 2) Index recomputation 
+ 2) Index recomputation
+
+# The Key-Value Store
+
+Key-value stores are distributed hash tables (DHT). Key bind to a specific value and does not assume anything about the structure of value. A value can be a blob, image, server name, or anything the user wants to store against a unique key. It is preferred to keep the size of value relatively smaller. We can put the large data in blob store and its link to value field. 
+
+## Non-Functional Requirement:
+
+1) Scalability
+2) Fault Tolerance
+
+## Functional Requirement:
+
+1) get(key)
+2) put(key, value)
+
