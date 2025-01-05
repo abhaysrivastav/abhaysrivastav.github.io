@@ -87,3 +87,6 @@ Key-value stores are distributed hash tables (DHT). Key bind to a specific value
 1) get(key)
 2) put(key, value)
 
+### Consistent Hashing:
+
+In consistent hashing, we consider that we have conceptual ring of hashes from 0 to n-1 , where n is the number of available hash values. We use each node's id, calculate its hash and then map it to the ring. We apply the same process to the requests. Wherever a new node is added to the ring, the immediate next node is affected. It has to share its data with the newly added node and other nodes are unaffected. 
