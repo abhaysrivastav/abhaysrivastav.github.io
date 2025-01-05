@@ -93,4 +93,6 @@ In consistent hashing, we consider that we have conceptual ring of hashes from 0
 
 The primary benefit of consistent hashing is that as nodes joins or leave, it ensures that minimum number of keys need to move but the problem is request load is not equally dividied in practice.
 
+We'll use *virtual nodes* to ensure more evenly distributed load across the nodes. Instead of applying the single hash function we apply the multiple hash function onto the same key. 
 
+ ![Consistent Hashing](assests/consistenthashing.png) 
