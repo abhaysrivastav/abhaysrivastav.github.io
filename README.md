@@ -10,8 +10,6 @@
 -  Good hands-on experience in C++ 11, Algorithms, Multithreading etc. 
 -  Strong experience in Object oriented Analysis and Design, UML Design and Design Patterns. 
 -  Understanding with different Architecture Patterns like Microservices, Service Oriented Architecture, MVVC, MVVM etc.
--  Awareness with Machine Learning, Deep Learning and NLP. (Currently exploring under my PHD).
-
 
 ### 🛠 Technical Skills
 
