@@ -96,3 +96,14 @@ The primary benefit of consistent hashing is that as nodes joins or leave, it en
 We'll use *virtual nodes* to ensure more evenly distributed load across the nodes. Instead of applying the single hash function we apply the multiple hash function onto the same key. 
 
  ![Consistent Hashing](assests/consistenthashing.png) 
+
+### Data Versioning 
+
+When network partitions and node failures occur during an update, an object version history might become fragmented. As a result system meen reconcillation effort. In distribted systems, based on timestampo resoling the conflicts is not a good appraoch thats why we follow the **Vector Clock**. A vector clock is list of (node, counter) pairs. For all the versions of an object will have the same vector clock. 
+Modify the API Design:
+1) get(key)
+2) put(key, context, value)
+
+
+
+ 
