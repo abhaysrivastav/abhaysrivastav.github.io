@@ -105,5 +105,24 @@ Modify the API Design:
 2) put(key, context, value)
 
 
+*How it handle the temporary failure?*
 
+It uses a sloppy quorum instead of strict quorum membership. In sloppy quorum, the first n healthy nodes from preference list handle all read and write operations. The n healthy nodes may not always be the first n nodes discovered when moving clockwise in consistent hashing. 
+
+ Source : https://www.educative.io/courses/grokking-the-system-design-interview/enable-fault-tolerance-and-failure-detection#Handle-temporary-failures
+
+ This article talk about *hinted handoff* method to achieve availibility, but this technique has a drawback is that hinted replica may become unavailable before being restores to the original replica node in certain circumstances. 
+
+ *How to handle the permanent failure?*
+
+ In the event of permanent failure of nodes, we should keep our replicas synchronized to make our system more durable. We need to speed up the detection of inconsistencies between replicas and resuce the quantity of transferred data. We use *Merkle Tree* for that. Markle tree is a mechanism to implement anti-entropy, which means to keep all the data consistent. 
+
+ Source: https://www.educative.io/courses/grokking-the-system-design-interview/enable-fault-tolerance-and-failure-detection#Handle-permanent-failures
  
+ Each node keeps a dictinct Merkle tree for the range of keys. The root of Merkle Tree defines the range of keys that is exchanged between two nodes. Thats awesome technique, it follows the below steps :
+
+ 1) Compare the hashes of the root node of Merkle trees.
+ 2) Do not proceed if they'are the same.
+ 3) Traverse left and right childred using recursion. The nodes identify if they have any differences and need synchronization.
+
+The main advantage of using Merkle tree is that each branch of Merkle tree can be examined independently without requiring nodes to download the tree or complete dataset.It reduces the quantity of data that must be exchanged for sync and number of disc access that are required. The disadvantage is that when a node joins or departs the system, the tree’s hashes are recalculated because multiple key ranges are affected.
