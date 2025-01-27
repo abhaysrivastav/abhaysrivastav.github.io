@@ -16,5 +16,15 @@ A CDN is a group of geographically distributed proxy servers.A proxy server is a
 3) Scalibility
 4) Reliability and Security
 
+## CDN Components and workflow:
 
+![CDN](assests/cdn.jpg)
 
+1) The origin server provide the URI namespace delegation of all objects cached in CDN.
+2) Origin server publishes the content to the distributed system, which then distribute the data to proxy servers.
+3) The distribution system distribute the content among the proxy server and provide feedback to the request routing system.
+4) The client request the routing system for a suitable proxy server from request routing system.
+5) Request routing system will return the IP address of nearest proxy server.
+6) Client request the routes through the scrubber server.
+7) Scrubber server forward good traffic to the proxy server.
+8) Proxy server provides accounting information to Management System periodically.  
