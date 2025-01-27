@@ -28,3 +28,8 @@ A CDN is a group of geographically distributed proxy servers.A proxy server is a
 6) Client request the routes through the scrubber server.
 7) Scrubber server forward good traffic to the proxy server.
 8) Proxy server provides accounting information to Management System periodically.  
+
+
+There are 2 strategies for Content Cashing in CDN :
+* Push CDN : In this content is pushed by origin server to the proxy server. It is usefull for static content like images.
+* Pull CDN : In this content is pulled by proxy servers from origin server. It is usefull when the content is changing very fast.
