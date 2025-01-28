@@ -33,3 +33,9 @@ A CDN is a group of geographically distributed proxy servers.A proxy server is a
 There are 2 strategies for Content Cashing in CDN :
 * Push CDN : In this content is pushed by origin server to the proxy server. It is usefull for static content like images.
 * Pull CDN : In this content is pulled by proxy servers from origin server. It is usefull when the content is changing very fast.
+
+## Mult-tier CDN Architecture
+
+CDN follows a tree-like structure to ease the data distribution process for the origin server. The edge proxy servers have some peer servers that belong to the same hierarchy. This set of servers receives the data from parent node in the tree and eventually receive the data from origin node. 
+
+Whenever a new proxy server enters the tree of a CDN, it request the control core, which maintains information on all the proxy servers in the CDN. 
