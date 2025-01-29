@@ -39,3 +39,9 @@ There are 2 strategies for Content Cashing in CDN :
 CDN follows a tree-like structure to ease the data distribution process for the origin server. The edge proxy servers have some peer servers that belong to the same hierarchy. This set of servers receives the data from parent node in the tree and eventually receive the data from origin node. 
 
 Whenever a new proxy server enters the tree of a CDN, it request the control core, which maintains information on all the proxy servers in the CDN. 
+
+Different consistency mechanisms can be used to ensure the consistency of data based on push or pull model. 
+
+1) Periodic polling
+2) Time-to-live
+3) Leases 
