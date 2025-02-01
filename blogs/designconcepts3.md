@@ -44,4 +44,14 @@ Different consistency mechanisms can be used to ensure the consistency of data b
 
 1) Periodic polling
 2) Time-to-live
-3) Leases 
+3) Leases
+
+## Logical Clocks 
+
+### Lamport Timestamp: 
+A logical clock algorithm that assign timestamps  to events in a distributed system to preserve casuality. In Lamport clocks, each nodes has its counter. All of the system's node are equipped with a numeric counter that begins at zero when first activated. Before executing an event, the numeric counter is incremented by one. The message sent from this event to another node has this counter value. When other node receive this message, it first update its logical clock by taking the mx of clock value and increment by 1. 
+
+It provide a unique partial ordering of events using happened before relationship. 
+
+### Vector clock: 
+A generalization of Lamport timestamp, that captures cauality across multiple nodes. vector clock maintain casual history that means all the information about happened-before relationship.
