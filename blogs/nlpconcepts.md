@@ -9,3 +9,11 @@ The process of breaking down these documents into set of sentences and each sent
 
 Besides these pre-processing steps there are many more pre-processing steps, such as creating Bi-grams that is instead of considering New Delhi as two words, we consider it as single word. Then we have Tri-grams etc. Part of speech tagging, which is useful for name entity recognition application.
 
+# Numericalization 
+
+Now that, we have the tokens and have performed the pre-processing steps, we need to encode or numericalize the output tokens into numbers. There are various ways of encoding the token:
+
+- One-Hot Encoding
+- Count Vectorization
+- TF-IDF (Term Frequency Inverse Document Frequency) Vectorization
+- Word Embedding
