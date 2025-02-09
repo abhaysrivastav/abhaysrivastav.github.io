@@ -17,3 +17,6 @@ Now that, we have the tokens and have performed the pre-processing steps, we nee
 - Count Vectorization
 - TF-IDF (Term Frequency Inverse Document Frequency) Vectorization
 - Word Embedding: Learning word embeddings involves using algorithms like Word2Vec and GloVe 
+
+### Word2Vec
+Word2Vec Model has two different variants. Continuous Bag-of-Words that is CBOW and Skip-Gram.In CBOW architecture the input layer is the context, that is the surrounding words that is both to the left and the right of the target word and is used to predict the target that is the middle word.In Skip-Gram Architecture, the input layer is the middle word and is used to predict the context that is the words to the left and the right of the target word.
