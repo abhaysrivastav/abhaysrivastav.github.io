@@ -26,4 +26,4 @@ Word2Vec Model has two different variants. Continuous Bag-of-Words that is CBOW 
 -  Typically, the embeddings are represented in 50 or higher dimensions, which makes it difficult to visualize the embeddings.However, we could use the **dimension reduction** technique and reduce the dimension to 2
 or 3 and plot it to check, whether we can observe any relationship between the words.
 
-### GloVe  GloVe that is, Global Vectors for Word Representation
+### GloVe Global Vectors for Word Representation
