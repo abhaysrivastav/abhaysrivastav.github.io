@@ -27,3 +27,14 @@ Word2Vec Model has two different variants. Continuous Bag-of-Words that is CBOW 
 or 3 and plot it to check, whether we can observe any relationship between the words.
 
 ### GloVe Global Vectors for Word Representation
+
+
+## Sequential Data
+
+In sequential data, input values are independent of each other but there is a time relationship between these data points. This relationship can not be leveraged by multi layer perceptron architecture and we lose the temporal information. Beside that in multilayer perceptron network the input and the output size are expected to be fixed for every data instance. 
+
+### RNN
+
+A Recurrent Neural Network (RNN) is a type of neural network designed for processing sequential data. It features loops that allow information to be retained across time steps, making it effective at capturing temporal patterns. This capability makes RNNs particularly useful for applications such as time series forecasting, speech recognition, and natural language processing. More advanced variants, like Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks, have been developed to overcome the limitations of traditional RNNs, such as difficulty in learning long-term dependencies.
+
+- Regular neuron which has only one weight Wx to represent its contribution, a recurrent neuron has two weights Wx and Wy to represent the contribution of the input and previous output respectively.
