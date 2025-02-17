@@ -85,7 +85,7 @@ title: Blog
   <div style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
     <h2 style="color: #2F5C8C;">Sequence Modelling</h2>
     <p> </p>
-    <a href="pretrainedmodels" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
+    <a href="sequence_modelling" style="color: white; background-color: #2F5C8C; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read More</a>
   </div>
  </div>
 </div>
