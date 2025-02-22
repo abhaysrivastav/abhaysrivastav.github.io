@@ -71,3 +71,36 @@ Each gate above is fully connected neural network.
 - Input Gate figures out the important part of the input and concatenates that to the long-term state.
 
 - Output Gate decides how much of the updated long-term memory should be considered as part of the output cell.
+
+![alt text](assests/lstm1.jpg)
+
+
+### GRU (Gated Recurrent Unit)
+
+- Unlike in LSTM, which had two different states that is long-term and short-term state, GRU merges the two states and hence has just one state c of t.
+
+- Unlike in LSTM, where we have two separate neural networks to control the input gate 
+and forget gate, in GRU only one neural network is used.
+
+![alt text](assests/gru.jpg)
+
+- LSTM which has the main neural network with n number of neurons and tanh activation 
+function, GRU also has a similar main neural network, but the inputs are slightly 
+different.
+
+- The input Xt is the same and the second input that is the previous state term Ct-1 is 
+controlled by the Reset gate output and is not fed directly. The Reset gate neural network with n number of neurons takes an input as Xt and the previous state Ct-1 and sigmoid activation function is applied on the output to produce r(t).
+
+- Unlike the LSTM cell which has an output gate the GRU cell has no such gate.
+
+### Stacked and Bi-Directional RNNs
+
+-  The limitation of a Standard RNN is that, it takes inputs only from one direction that is left to right and does not consider words in future time steps.
+
+- Bi-directional RNN has two LSTM GRU cells instead of one, and uses the same input sequence as the input for both.
+
+- However one of them processes the input sequence from the first to the last word, that is left to right direction and other one computes the input in reverse direction that is from last to first word.
+
+![Bi-Directional RNN](assests/bdrnn.jpg)
+
+- The state in forward layer and backward layer at a particular time step is considered to produce the output for the corresponding time step.
