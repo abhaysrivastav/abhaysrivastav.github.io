@@ -3,7 +3,7 @@ layout: page
 title: Blog
 ---
 
-<div style="background-color: #3A77B7; color: white; padding: 10px; text-align: center; width: 80%; margin: 0 auto 30px;">
+<div style="background-color: #3A77B7; color: white; padding: 10px; text-align: center; width: 100%; margin: 0 auto 30px;">
   <h1 style="margin: 5px 0;">Welcome to My Blog</h1>
 </div>
 
