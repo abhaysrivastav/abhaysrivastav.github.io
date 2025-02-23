@@ -3,8 +3,8 @@ layout: page
 title: Blog
 ---
 
-<div style="background-color: #3A77B7; color: white; padding: 20px; text-align: center; width: 100%; margin-bottom: 30px;">
-  <h1> Design Problems & Concepts </h1>
+<div style="background-color: #3A77B7; color: white; padding: 10px; text-align: center; width: 100%; margin: 0 auto 30px;">
+  <h1 style="margin: 5px 0;">Design Concepts & Problems</h1>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 20px;">
