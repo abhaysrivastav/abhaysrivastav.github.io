@@ -104,3 +104,22 @@ controlled by the Reset gate output and is not fed directly. The Reset gate neur
 ![Bi-Directional RNN](assests/bdrnn.jpg)
 
 - The state in forward layer and backward layer at a particular time step is considered to produce the output for the corresponding time step.
+
+
+*The issue with the standard RNN architecture with many to many cardinality is that it anticipates the input and the output sequence to be of similar size or length. And besides that fetching output at each time step would not have enough context for the model to predict the correct word, especially for the initial few words of the sentence.And in some languages we might need to know the complete sentence before starting the translation and in some case the subject of the sentence could be at the end of the sentence. In such cases these architectures would not perform well.*
+
+### Encoder-Decoder Model
+
+![alt text](assests/encoderdecoder.jpg)
+
+
+- The encoder model is a RNN model typically an LSTM as it can learn long term 
+dependency between input and output sequence and the input is the English sentence.
+
+- The *state vector* represents the information of the whole input English sentence. The decoder model which is also a RNN model typically LSTM as well is the second part of the architecture which decodes the encoded information stored in the state vector to other language.
+
+- *Start* in angular brackets as the input for the first time step and for the next time steps we could use the predicted output of the previous time step as the input at each time step. 
+
+- **Since the output sequence length could vary in machine translation how do we decide on the number of time steps in the decoder model?** To address this we fix a certain number of steps generally by taking the average length of the documents and introduce a token *End* in the angular brackets to indicate the end of a sentence.
+
+- To avoid erroneous, Teacher forcing technique is utilized.  we provide the first word of the translated language text as input for the second time step instead of the previous predicted output at each time step as shown.This ensures that even if the prediction is wrong correction happens at that time step itself.
