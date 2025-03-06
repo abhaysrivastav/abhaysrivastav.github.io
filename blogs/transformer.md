@@ -19,10 +19,12 @@
 ## Transformer Encoder
 
 Normal Seq2Seq models (RNN or LSTM or GRU) suffers from the problem of Vanishing Gradient Problem or Loss of information. Including Attention to these model is the way to tackel this problem.
-- Transformer architecture uses **Scaled Dot-Product Attention** . We also use **Multi-head Attention** layer , this layer runs in parallel and it has multiple Scaled dot product attention mechanism and multiple linear transformations of input **Query, Keys and Values**.  In this layer, Linear transformations has learnable paramaters.
-- Encoder starts with multi-head attention module that performs **Self Attention** mechanism in the input sequence. This is followed by residual connection and normalization layer and then one more feedforward and residual connection and normalization. This entire block is one encoder layer and repeated N times. This Encoder gives a textual representation of each item in inout sequence.
+- Transformer architecture uses **Scaled Dot-Product Attention** . Any transformer model uses **Multi-head Attention** layer , this layer runs in parallel and it has multiple Scaled dot product attention mechanism and multiple linear transformations of input **Query, Keys and Values**.  In this layer, Linear transformations has learnable paramaters.
+- Encoder starts with multi-head attention module that performs **Self Attention** mechanism in the input sequence. This is followed by residual connection and normalization layer and then one more feedforward and residual connection and normalization. This entire block is one encoder layer and repeated N times. This Encoder gives a contextual representation of each item in input sequence.
+![alt text](assests/encoderpart.jpg)
+
 - Decoder is constructued similarly to encoder. First attention Module is masked multi-head attention so that every position attends to previous position. Second step  **Multi-Head Attention** Every position from the decoder attents to output from the encoder. 
-- It also encorporates a positional encoding , in positional encoding , there are values , that are added to the embeddings so that for very words that have information about its order and positions.
+- It also encorporates a **positional encoding** , in positional encoding , there are values , that are added to the embeddings so that for very words that have information about its order and positions.
   
 ![Transformer Architecture](assests/transformer.JPG)
 
