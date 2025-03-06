@@ -33,5 +33,12 @@ or 3 and plot it to check, whether we can observe any relationship between the w
 
 In sequential data, input values are independent of each other but there is a time relationship between these data points. This relationship can not be leveraged by multi layer perceptron architecture and we lose the temporal information. Beside that in multilayer perceptron network the input and the output size are expected to be fixed for every data instance. 
 
+*One of the problems with these embeddings is that for any word, we get only 
+one fixed representation, which is context independent and which combines all the 
+different senses of the word*.
 
+## ELMo (Embedding from Language Model)
 
+ELMo (Embeddings from Language Models) generates context-dependent word embeddings using a bidirectional LSTM, allowing words to be understood based on their surrounding context. This approach improves performance in various NLP tasks by capturing both syntactic and semantic nuances.
+
+## Bidirectional Language Models
