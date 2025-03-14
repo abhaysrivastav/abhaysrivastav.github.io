@@ -42,3 +42,20 @@ different senses of the word*.
 ELMo (Embeddings from Language Models) generates context-dependent word embeddings using a bidirectional LSTM, allowing words to be understood based on their surrounding context. This approach improves performance in various NLP tasks by capturing both syntactic and semantic nuances.
 
 ## Bidirectional Language Models
+
+Bidirectional Language Models process text in both directions (left-to-right and right-to-left), providing a comprehensive understanding of context, which is essential for accurate language modeling and enhancing the quality of embeddings like ELMo.
+
+## ULMFiT (Universal Language Model Fine-tuning for Text Classification)
+
+ULMFiT is a Transfer Learning technique for NLP that involves pre-training a language model on a large corpus and fine-tune it for specific task. This approach allows for superior performance on specific task.
+
+- ULMFiT consists of three major steps; that is:
+    -  General domain language modeling pre_training. (LM Pre-training)
+    - Target task language modeling fine-tuning.(LM fine-tuning)
+    - Target task classifier fine-tuning.(Classifier fine-tuning)
+
+![alt text](assests/ulmfit.png)
+
+- Fine tuning was implemented by introducing the techniques such as 
+*discriminative fine-tuning* and *slanted triangular learning rates*.
+
