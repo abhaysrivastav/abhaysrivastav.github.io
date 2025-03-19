@@ -16,9 +16,23 @@ parameters to a target task using the corresponding supervised objective.
 
   - The reason to use only decoder is that, the feature of the self-attention layer preventing positions from attending to subsequent positions by masking fits well for language modeling task, in which we predict the next word using the previous words.
 
- 
+# LLMs – Characteristics
 
+  1. General purpose models :
+     - Handles a wide range of NLP tasks.
+     - Trained on diverse text datasets. 
 
+2. Learn and memorizes:
+    - LLMs understand syntax and semantics.
+    - Memorizes details from training data.
+    - Provides factual information based on learned data. 
+3. Stateless : 
+     - LLMs process each input independently.
+     - No memory of previous interaction.
+     - Each query is treated as seperate instance.
+  
+4. Stochastic:
+   - 
 
 
 ## N-gram Language Model
