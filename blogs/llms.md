@@ -30,11 +30,42 @@ parameters to a target task using the corresponding supervised objective.
      - LLMs process each input independently.
      - No memory of previous interaction.
      - Each query is treated as seperate instance.
-  
 4. Stochastic:
-   - 
+   - LLMs exhibit variability in their outputs.
+    - Responses can differe with the same input. 
+    - Ensures diverse and contextually appropriate responses. 
 
+# Parameters
 
+ Model Parameters
+These are learned during training and represent the actual "knowledge" of the model.
+
+**Weights and Biases**
+These are the primary parameters.
+Found in the layers of the neural network (attention layers, feedforward layers, etc.).
+For example, GPT-3 has 175 billion such parameters.
+
+**Hyperparameters**
+These are set before training and control the architecture and learning process:
+
+**1. Model Architecture Parameters**
+Number of layers (depth) – e.g., 12, 24, 96 transformer blocks.
+Hidden size (width) – e.g., 768, 1024, 12288 (dimensionality of embeddings).
+Number of attention heads – e.g., 12, 16, 96.
+Intermediate feedforward size – typically 4× hidden size.
+Vocabulary size – size of the token set (e.g., 50k tokens).
+Position embeddings – to capture word order.
+
+**2. Training Hyperparameters**
+Learning rate
+Batch size
+Optimizer type – e.g., Adam, AdamW
+Dropout rate
+Weight decay
+Gradient clipping
+**3. Tokenizer-related Parameters**
+Type of tokenizer – e.g., Byte-Pair Encoding (BPE), WordPiece, SentencePiece.
+Max sequence length – maximum number of tokens the model can process (e.g., 512, 2048, 8192).
 ## N-gram Language Model
   - Using a maximum likelihood estimation over an entire text is problematic due to sparsity.
   - Instead we model the individual words , allowing us to decompose the sequence into the product of conditional probabilities.
