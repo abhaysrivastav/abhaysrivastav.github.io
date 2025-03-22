@@ -123,3 +123,16 @@ dependency between input and output sequence and the input is the English senten
 - **Since the output sequence length could vary in machine translation how do we decide on the number of time steps in the decoder model?** To address this we fix a certain number of steps generally by taking the average length of the documents and introduce a token *End* in the angular brackets to indicate the end of a sentence.
 
 - To avoid erroneous, Teacher forcing technique is utilized.  we provide the first word of the translated language text as input for the second time step instead of the previous predicted output at each time step as shown.This ensures that even if the prediction is wrong correction happens at that time step itself.
+
+```
+Research Paper 1:
+Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation
+Kyunghyun Cho,Dzmitry Bahdanau ,Fethi Bougares,Holger Schwenk,Yoshua Bengio
+Link: https://arxiv.org/pdf/1406.1078v3
+
+Research Paper 2: 
+Exploding and Vanishing Gradient
+Roger Grose
+Link:https://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/readings/L15%20Exploding%20and%20Vanishing%20Gradients.pdf
+
+```

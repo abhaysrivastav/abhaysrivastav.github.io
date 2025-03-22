@@ -66,6 +66,59 @@ Gradient clipping
 **3. Tokenizer-related Parameters**
 Type of tokenizer – e.g., Byte-Pair Encoding (BPE), WordPiece, SentencePiece.
 Max sequence length – maximum number of tokens the model can process (e.g., 512, 2048, 8192).
+
+# Top-k Vs. Top-p Sampling:
+
+* At each step of text generation, the model predicts a probability distribution over the entire vocabulary (all possible words). Top-k sampling selects the k most likely words from this distribution and then resamples from only those k words.
+
+* Instead of selecting a fixed number of words (like Top-k), Top-p sampling selects the smallest set of most likely words whose cumulative probability exceeds a threshold p.
+
+
+# Temperature - Impact of Probabilities distribution
+
+* Its a hyperparameter that controls the **randomness** or **creativity** of a language model. It adjust the model confidence in selecting the next word in sequence.
+
+* Essentially, it modifies how "confident" the model is in its prediction. 
+
+* In case of Low Temperature Values the model becomes more confident and deteministic. 
+
+* In case of High Temperature Value model becomes more diverse and creative. 
+
+# GenAI Project life cycle
+
+1) Identify the use case.
+  - Text Generation.
+  - Coversational AI
+  - Text Summarization
+  - Sentiment Analysis
+  - Question Answering
+  - Machine Translation
+  - Text to Speech
+  - Code Generation
+  - Image Generation
+  - Audio Generation
+  - Text to Image
+
+
+2) Choose a foundation Model.
+3) Prompting or Tuning
+4) Evalution
+5) Deployment
+
+
+
+
+
+```
+Research Paper 1 : Language Models are Few-Shot Learners 
+Link :   https://arxiv.org/abs/2005.14165
+
+Research Paper 2 : GPT-4 Technical Report
+Link : https://arxiv.org/pdf/2303.08774
+
+Research Paper 3 : BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+Link : https://arxiv.org/pdf/1810.04805
+```
 ## N-gram Language Model
   - Using a maximum likelihood estimation over an entire text is problematic due to sparsity.
   - Instead we model the individual words , allowing us to decompose the sequence into the product of conditional probabilities.
