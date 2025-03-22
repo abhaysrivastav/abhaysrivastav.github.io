@@ -105,10 +105,58 @@ Max sequence length – maximum number of tokens the model can process (e.g., 51
 4) Evalution
 5) Deployment
 
+# RAG
+
+[Link to RAG Model](rag.md)
+
+
+# LangChain 
+
+  * Framework for building apps with large language models.
+  * Integrates with models like GPT.
+  * Enables context-aware, data-driven NLP application.
+
+### Key features of LangChain:
+
+  * Prompt Template
+  * Memory
+  * Agents
+  * Tools
+
+
+### LangChain works by:
+
+  * Building Blocks
+  * Combining Components
+  * Executing Chains
+
+
+The memory system in LangChain handles 2 actions:
+  
+  1) **Reading** : Retrieving relevent information from past interactions.
+  
+  2) **Writing** : Storing new information for future use.  
+
+These actions are integrated in **chain execution process**, ensuring that each interactions is performed by past events and future interactions can be build upon which has already been established.
+
+**Chunking Strategy** refers to the methods used to divide large piece of data into smaller chunks.It goal is to breakdown the text in such a way that each chunk is still meaningful and retain enough context for the model to process it effectively. **Chunk size** is no of tokens in each chunk. It determines how large each piece of text will be when it splits. **Chunk overlap** is no of characters or tokens that are repeated between consecutive chunks.
+**CharacterTextSplitter** is method of splitting text based on a Character.
+
+**Recursive Character Text Splitting Process** using the seperators breakdown a text into smaller chunks by applying these separators in order of significance. 
+
+1. First text split at paragraph and each paragraph becomes a chunk.
+
+2. Second, if any chunk is still too large, the process splits those chunks further inti lines.
+
+3. If the chunk is still large then , it divides based on spaces. 
+
+4. If still large then into characters. 
 
 
 
 
+
+-----------------------------------------------------------------
 ```
 Research Paper 1 : Language Models are Few-Shot Learners 
 Link :   https://arxiv.org/abs/2005.14165
@@ -119,7 +167,5 @@ Link : https://arxiv.org/pdf/2303.08774
 Research Paper 3 : BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 Link : https://arxiv.org/pdf/1810.04805
 ```
-## N-gram Language Model
-  - Using a maximum likelihood estimation over an entire text is problematic due to sparsity.
-  - Instead we model the individual words , allowing us to decompose the sequence into the product of conditional probabilities.
+
 
