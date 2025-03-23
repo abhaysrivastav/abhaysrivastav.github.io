@@ -35,7 +35,6 @@
 -  High-Level & Low-Level design for new features. 
 -  Design review, code review. 
 
-
 **Philips Healthcare | Software Technologist - II | April 2022 – July 2023**
 -  As this role, I worked for one of its X-Ray imaging Machine called “Allura”.
 -  Started participated mainly in bug fixes in existing product.
@@ -78,10 +77,10 @@
 
 ### 🎓 Educational Background
 
-| **Degree/Qualification**                          | 
+| **Degree/Qualification**                          |
 |---------------------------------------------------|
 | MTech Software Engineering                        |
-| B.Tech Computer Science & Engineering             | 
+| B.Tech Computer Science & Engineering             |
 
 
 ## 📈 Educational Projects
@@ -95,7 +94,7 @@
 - Designed User Interface using Qt Widgets.  
 - Performed unit testing using QtTestLib.
 
-**BITS PILANI | DICOM ON CLOUD | July-2023 to Dec-2023**
+**DICOM ON CLOUD | July-2023 to Dec-2023**
 - Designed and implemented a DICOM handling platform on the Cloud.  
 - Designed low-level and high-level architecture of the system.  
 - Created various use cases.  
