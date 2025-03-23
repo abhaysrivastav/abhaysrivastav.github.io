@@ -139,6 +139,18 @@ The memory system in LangChain handles 2 actions:
 
 These actions are integrated in **chain execution process**, ensuring that each interactions is performed by past events and future interactions can be build upon which has already been established.
 
+In Langchain, different types of memory systems used to manage and retain conversational context across interactions. These memory system decides how past interactions are stored. Each type of memory serves different purpose based on the need of the application. 
+
+**Conversation Buffer Memory** stores all messages in a session. Provides access to the entire conversation.Everytime user interacts with the system both user query and response are stored in a buffer. When the application need to follow a new input, it can access to entire conversation history. Entire history is available in a variable. 
+
+**Conversation Buffer Window Memory** stores the last K interactions. It is useful for recent context and discards older interactions. 
+
+**Coversation Token Buffer Memory** manages context based on token count. Idieal for controlling text length within token limits. 
+
+**Conversation Summary Memory** creates and maintains a summary of the conversation. Provides a condensed version of essential points.Avoid referencing every individual interactions.
+
+
+
 **Chunking Strategy** refers to the methods used to divide large piece of data into smaller chunks.It goal is to breakdown the text in such a way that each chunk is still meaningful and retain enough context for the model to process it effectively. **Chunk size** is no of tokens in each chunk. It determines how large each piece of text will be when it splits. **Chunk overlap** is no of characters or tokens that are repeated between consecutive chunks.
 **CharacterTextSplitter** is method of splitting text based on a Character.
 
