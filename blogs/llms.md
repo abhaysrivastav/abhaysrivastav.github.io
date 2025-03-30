@@ -165,6 +165,30 @@ In Langchain, different types of memory systems used to manage and retain conver
 4. If still large then into characters. 
 
 
+## Instruction Tuned Model 
+
+In LLMs primary training is unsupervised where the model learn from vast amount of text data without any specific task oriented guidance.LLMs may not be good in following the complex instructions unless they are not tuned in a specific way. Instruction tuned model are fine tuned model where they are trained on a specific instruction-response data. This process trained model to better follow the user's instructions. 
+
+These models are better in **following specific commands**, understand the intent behind the user's instructions. It provides more accurate and contextual appropriate responses. These are more user friendly, accurate and task oriented than their counter parts.
+
+These models are fine-tuned on supervised datasets, which contains instructions and correct responses. 
+
+Application of Instruction tuned model:
+  - Summerization
+  - Translation 
+  - Coding 
+  - Answering specific queries.  
+
+## Fine Tuned Model 
+
+It involves updating all the parameters of a pre-trained model for task-specific dataset. This process talors the model for a specific task. Updating all the parameters in large language model is computational expensive.**Catatrophic Forgetting** is a significant challenge in full fine-tuning, where it may loose previously acquired knowledge when adopted for new task. It may degrade its general abilities. To handle this we can perform **Parameter-Efficient Fine Tuning**.
+
+## Parameter-Efficient Fine Tuning
+
+Is it the method that fine-tunes only a small subset of a model's parameters, rather the entire model to reduce computational cost and memory usage.  
+
+[ Resources ](<resources/Mandatory Readings_ Week 6.pdf>)
+
 
 
 
@@ -178,6 +202,8 @@ Link : https://arxiv.org/pdf/2303.08774
 
 Research Paper 3 : BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 Link : https://arxiv.org/pdf/1810.04805
+
+
 ```
 
 
