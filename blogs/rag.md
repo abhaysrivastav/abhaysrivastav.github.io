@@ -43,4 +43,6 @@ Retrieval strategy is crucial because that will determine the quality of data th
 
 **Maximum Marginal Relevance(MMR)** balances relevance and diversity in selecting the documents. It prevents redundancy and brodens information coverage. 
 
+![alt text](assests/rag_arch.jpg)
+
 

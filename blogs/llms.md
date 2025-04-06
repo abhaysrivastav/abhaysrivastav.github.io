@@ -179,6 +179,18 @@ Application of Instruction tuned model:
   - Coding 
   - Answering specific queries.  
 
+### How does instruction tuned model work ?
+
+  - It works by fine-tuning LLMs on a labelled dataset of tasks that involve following instractions. Instruction datasets can be created by humans or another LLM.
+  - Each sample in the dataset has 3 parts:
+    - An instruction
+    - Additional Context
+    - Desired output
+  The model learns to match its answers with the target outputs.
+
+  - Adding more tasks to the instruction tuning process improves the model's performance, even on the task it has not seen before.
+
+
 ## Fine Tuned Model 
 
 It involves updating all the parameters of a pre-trained model for task-specific dataset. This process talors the model for a specific task. Updating all the parameters in large language model is computational expensive.**Catatrophic Forgetting** is a significant challenge in full fine-tuning, where it may loose previously acquired knowledge when adopted for new task. It may degrade its general abilities. To handle this we can perform **Parameter-Efficient Fine Tuning**.
@@ -244,9 +256,24 @@ Embedding layers or LayerNorm layers usually don’t benefit from LoRA because:
     of NLP. It compares the machine generated summeries to one or more reference summary (mainly created by human) and then find the overlap in term of words and its sequence.
     **ROUGE-N** measures the overlap of N-grams between the generated summary and reference summaries.
 
-
     * BLEU
     * METEOR 
+
+## Biases
+
+Biases in data, particularly in terms of data representation, refer to the issue where certain groups are depicted in a
+less favorable or inaccurate manner compared to others, even if there is a sufficient amount of data for each group.
+This means that while there may be ample data available for various groups, the way these groups are represented
+can still be skewed or biased, affecting the fairness and accuracy of analyses and outcomes
+
+
+## Hallucination
+
+AI hallucination refers to a phenomenon where a large language model (LLM), such as a generative AI chatbot or
+computer vision tool, produces outputs that are nonsensical or inaccurate because it perceives patterns or objects that
+don’t actually exist or are imperceptible to humans.
+
+AI hallucinations arise from issues like overfitting, data bias, or complex model behavior.
 
 
 ----------------

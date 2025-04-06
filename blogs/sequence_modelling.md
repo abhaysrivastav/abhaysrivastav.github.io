@@ -135,4 +135,7 @@ Exploding and Vanishing Gradient
 Roger Grose
 Link:https://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/readings/L15%20Exploding%20and%20Vanishing%20Gradients.pdf
 
+
+
+
 ```
