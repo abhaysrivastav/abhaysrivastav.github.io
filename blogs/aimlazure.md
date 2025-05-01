@@ -56,37 +56,39 @@ Azure offers several deployment options depending on your needs, including **Azu
 ## Data Sources & pipelines
 A data pipeline is a set of automated processes that take raw data from your sources, clean and transform it, and then ultimately deliver it to a destination.**Azure Data Factory** is cloud based data-integration service that allows to create, schedule and orchestrate data pipelines.It supports wide range of data sources and can handle both structured and unstructured data.  For more complex transformation **Azure Databricks** provides a collaborative platform that is optimized for big data analytics and machine learning applications.
 
+
 ### Key stages of data pipeline
+
 
 1) **Data Ingestion**
 
-    **Role**: This is the first stage of the pipeline, where raw data is collected from various sources. Data ingestion can happen in real time (streaming data) or in batches (bulk data transfers). The method you choose depends on the nature of your data and the requirements of your project.
+**Role**: This is the first stage of the pipeline, where raw data is collected from various sources. Data ingestion can happen in real time (streaming data) or in batches (bulk data transfers). The method you choose depends on the nature of your data and the requirements of your project.
 
-    **Tools**: In Azure, data ingestion is often managed by **Azure Data Factory**, which can connect to a wide range of data sources, including on-premises databases, cloud storage, and APIs. It allows you to schedule and automate data transfers, ensuring that your pipeline stays up to date.
+**Tools**: In Azure, data ingestion is often managed by **Azure Data Factory**, which can connect to a wide range of data sources, including on-premises databases, cloud storage, and APIs. It allows you to schedule and automate data transfers, ensuring that your pipeline stays up to date.
 
 2) **Data Processing/ Transformation**
 
-    **Role**: Once data is ingested, it must be processed and transformed to make it suitable for analysis or model training. This can involve cleaning (removing duplicates, filling in missing values), normalizing (scaling numerical values), or transforming (aggregating data, joining tables) the data.
+**Role**: Once data is ingested, it must be processed and transformed to make it suitable for analysis or model training. This can involve cleaning (removing duplicates, filling in missing values), normalizing (scaling numerical values), or transforming (aggregating data, joining tables) the data.
 
-    **Tools**: **Azure Databricks** is a powerful tool for this stage, offering a collaborative environment built on Apache Spark. It allows for large-scale data processing and complex transformations, making it ideal for preparing data for machine learning.
+**Tools**: **Azure Databricks** is a powerful tool for this stage, offering a collaborative environment built on Apache Spark. It allows for large-scale data processing and complex transformations, making it ideal for preparing data for machine learning.
 
 3) **Data Storage**:
 
-    **Role**: After processing, the data is stored in a location where it can be easily accessed by data analysts, data scientists, and AI/ML models. The choice of storage depends on the type of data and how it will be used.
+**Role**: After processing, the data is stored in a location where it can be easily accessed by data analysts, data scientists, and AI/ML models. The choice of storage depends on the type of data and how it will be used.
 
-    **Tools**: Azure offers several storage solutions: 
+**Tools**: Azure offers several storage solutions: 
 
-    **Azure Data Lake Storage** is optimized for storing vast amounts of raw, unstructured data.
+**Azure Data Lake Storage** is optimized for storing vast amounts of raw, unstructured data.
 
-    **Azure SQL Database** is ideal for storing structured data that requires advanced querying capabilities.
+**Azure SQL Database** is ideal for storing structured data that requires advanced querying capabilities.
 
-    **Azure Blob Storage** is a versatile storage solution for unstructured data like text files, images, and videos.
+**Azure Blob Storage** is a versatile storage solution for unstructured data like text files, images, and videos.
 
 4) **Data Access and utilization**
 
-    **Role**: The final stage involves making processed and stored data available for analysis or input into machine learning models. This is where data scientists and engineers interact with the data, using it to train models, generate reports, or drive decision-making processes.
+**Role**: The final stage involves making processed and stored data available for analysis or input into machine learning models. This is where data scientists and engineers interact with the data, using it to train models, generate reports, or drive decision-making processes.
 
-    **Tools**: Data can be accessed through various services, such as **Azure Machine Learning Service** for model training or Power BI for business analytics.
+**Tools**: Data can be accessed through various services, such as **Azure Machine Learning Service** for model training or Power BI for business analytics.
 
 
 
