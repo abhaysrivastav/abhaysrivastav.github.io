@@ -91,13 +91,3 @@ A data pipeline is a set of automated processes that take raw data from your sou
 **Tools**: Data can be accessed through various services, such as **Azure Machine Learning Service** for model training or Power BI for business analytics.
 
 
-
--------------------------------------------------------------------------------
-**Resources**
-
-1)[Data Sources & Pipeline](<resources/The structure and role of data sources and pipelines explained.pdf>)
-
-2)[In Depth understanding of Data Sources * Pipeline](<resources/In-depth exploration of data sources and pipelines .pdf>)
-
- 
-
