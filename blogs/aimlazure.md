@@ -91,3 +91,69 @@ A data pipeline is a set of automated processes that take raw data from your sou
 **Tools**: Data can be accessed through various services, such as **Azure Machine Learning Service** for model training or Power BI for business analytics.
 
 
+## Data Acquisition Method
+* Direct Data Collection
+* Third Party Data Soruces
+* Web Scraping
+* APIs 
+* Publicly available datasets
+
+## Step-by-step guide to configuring resources for AI/ML projects
+
+## Compute instances
+
+Compute instances in Azure are virtual machines specifically optimized for data science and machine learning tasks. They allow you to execute training jobs, run Jupyter notebooks, and develop models in an interactive environment. These compute instances are highly versatile and can be tailored to meet the unique needs of different AI/ML projects.
+
+### Types of compute
+
+**1) CPU-based instance**
+
+**2) GPU-based instance** 
+
+### Configuration Steps:
+
+1) Access Azure ML workspace
+
+2) Select the compute tab
+
+3) Create a new compute instance
+
+4) Choose the VM size
+
+5) Configure the scaling option
+
+6) Manage Access and Permission
+
+## Datastore 
+
+Datastores in Azure provide a simple and secure way to connect storage accounts to your machine learning workspace. Datastores act as a bridge between your ML workspace and the underlying data storage, making it easier to manage, maintain, and access the data required for AI/ML experiments. 
+
+### Storage Options
+
+1) Azure Blob Storage 
+2) Azure Data Lake
+3) Azure File Storage
+4) Azure SQL Database 
+5) Azure Cosmos DB
+
+[Storage Options](<resources/azureaiml/Explanation of storage solutions .pdf>)
+
+[Data Storage Solution](<resources/azureaiml/Implementing data storage solutions .pdf>)
+
+### Configuration steps
+
+1) Access the datastore section
+2) Register a new datastore 
+3) Provide the authentication details
+4) Set access permission
+
+### Data ingestion pipelines
+
+
+
+
+
+
+
+
+
