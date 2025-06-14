@@ -147,10 +147,38 @@ Datastores in Azure provide a simple and secure way to connect storage accounts 
 3) Provide the authentication details
 4) Set access permission
 
-### Data ingestion pipelines
+## Data ingestion pipelines
 
+The remaining of this reading will guide you through the following steps:
 
+Step 1: Identify data sources (Database, APIs, Flat files, logs or other types of structured & unstrctured data)
 
+Step 2: Choose an ingestion method (Batch ingestion, Streaming ingestion)
+
+Step 3: Extract data (API connectors, database queries, file readers)
+
+Step 4: Data transformation and quality checks (Cleaning, Deduplication, Enrichment, Restructuring)
+
+Step 5: Load data into storage (Either into data warehouse or datalake)
+
+Step 6: Schedule and monitor 
+
+## Data preprocessing 
+
+### Common data pre-processing techniques:
+
+1) Data Cleaning 
+2) Missing data handling 
+3) Feature Scaling 
+4) Data encoding 
+5) Feature selection and dimensionality reduction
+6) Outlier detection and handling
+7) Data transformation
+8) Data binning 
+9) Sythetic data generation 
+10) Data shuffling and splitting 
+
+[data pre-processing Resource](<resources/azureaiml/Explanation of preprocessing techniques.pdf>)
 
 
 
