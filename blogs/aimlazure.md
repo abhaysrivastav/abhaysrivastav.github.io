@@ -180,7 +180,27 @@ Step 6: Schedule and monitor
 
 [data pre-processing Resource](<resources/azureaiml/Explanation of preprocessing techniques.pdf>)
 
+## Deploy models with Azure Kubernetes Service
 
+Step 1: Access your workspace.
+
+Step 2: Open the deployment notebook.
+
+Step 3: Import and initialize.
+
+Step 4: Register a model.
+
+Step 5: Define the deployment environment.
+
+Step 6: Write the entry script.
+
+Step 7: Create inference configuration.
+
+Step 8: Provision the Azure Kubernetes Service cluster.
+
+Step 9: Deploy the model.
+
+Step 10: Clean up resources.
 
 
 
