@@ -202,6 +202,19 @@ Step 9: Deploy the model.
 
 Step 10: Clean up resources.
 
+## Options for authenticating in Azure Machine Learning
+This reading will guide you through the following methods:
+
+- Interactive login authentication
+
+- Azure CLI authentication
+
+- Managed service identity (MSI) authentication
+
+- Service principal authentication
+
+- Token authentication
+
 
 
 
