@@ -68,6 +68,7 @@
 
 | **Degree/Qualification**                          |
 |---------------------------------------------------|
+| PHD(ongoing)  AI                                  |
 | MTech Software Engineering                        |
 | B.Tech Computer Science & Engineering             |
 
@@ -94,6 +95,11 @@
   - Interact with DICOM Images.
 
 ### 📚 Certifications & Training
+
+- Introducing Multimodal Llama 3.2 | DeepLearning.AI [Certificate] (https://learn.deeplearning.ai/accomplishments/92acb1a0-3363-4f3e-b641-7300410a7baf?usp=sharing)
+
+- Microsoft Azure for AI and Machine Learning | Coursera [Certificate]https://coursera.org/share/8e85001bdf8767ea06a0dbbb67e4b672)
+
 -  Computer Vision Nanodegree | Udacity [Certificate](https://confirm.udacity.com/NZMKY2LX)  
 -  Computer Vision Expert Nanodegree | Udacity [Certificate](https://confirm.udacity.com/TVANSTHS)
 -  Advance Design Patterns | LinkedIn [https://www.linkedin.com/learning/certificates/3235a890288b90bc22ddfef8543d3473bb0458b682a532723a9ac75c97e814af?u=73045713]
