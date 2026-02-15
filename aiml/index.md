@@ -29,7 +29,7 @@ Welcome to the AIML section! This area is dedicated to exploring topics in Artif
 
 ### Tools & Frameworks
 - **TensorFlow**: Google's open-source ML framework
-- **PyTorch**: Facebook's deep learning platform
+- **PyTorch**: Popular deep learning platform
 - **Keras**: High-level neural networks API
 - **Scikit-learn**: Machine learning library for Python
 
