@@ -2,6 +2,9 @@
   <a href="blogs/blogs" style="color: white; text-decoration: none; font-size: 1.5em; padding: 10px 20px; background-color: #2F5C8C; border-radius: 5px; border: 2px solid #2F5C8C; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin-right: 20px;">
     Blog
   </a>
+  <a href="aiml" style="color: white; text-decoration: none; font-size: 1.5em; padding: 10px 20px; background-color: #2F5C8C; border-radius: 5px; border: 2px solid #2F5C8C; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin-right: 20px;">
+    AIML
+  </a>
 </div>
 <br>
 #  Software Architect
