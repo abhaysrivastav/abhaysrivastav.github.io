@@ -1,15 +1,11 @@
-<div align="center" style="width:100%;">
-  <a href="blogs/blogs"><img src="https://img.shields.io/badge/Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
-  <a href="#projects"><img src="https://img.shields.io/badge/Projects-16A085?style=for-the-badge" alt="Projects"></a>
-  <a href="#contact-me"><img src="https://img.shields.io/badge/Contact%20Me-E67E22?style=for-the-badge" alt="Contact Me"></a>
-</div>
-
 <h1 align="center">Hi 👋, I'm Abhay Srivastav</h1>
 <h3 align="center">Software Architect | C++ & AI Engineer | Building Scalable Edge and Intelligent Systems</h3>
 
 <p align="center">
   <a href="https://github.com/abhaysrivastav"><img src="https://img.shields.io/badge/GitHub-abhaysrivastav-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/sriabhay"><img src="https://img.shields.io/badge/LinkedIn-sriabhay-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
+  <a href="blogs/blogs"><img src="https://img.shields.io/badge/Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
+  <a href="aiml"><img src="https://img.shields.io/badge/Explore-AIML-8E44AD?style=for-the-badge" alt="AIML"></a>
 </p>
 
 ---
@@ -64,14 +60,6 @@ I enjoy solving hard engineering problems at the intersection of:
 
 ---
 
-<a id="projects"></a>
-## 🚀 Featured Projects
-
-- **DICOM on Cloud** *(2023)*: Designed and built a cloud-based DICOM platform with upload workflows, role-based login, and slice-view visualization.
-- **ATM Currency Intelligence Pipeline**: Delivered an IP+ML-based recognition and counterfeit-detection workflow integrated with ATM systems.
-- **Edge Runtime Engineering (Siemens)**: Leading architecture and implementation for PLC/edge runtime capabilities with a strong quality-first workflow.
-
-
 ## 🎓 Education
 
 - **PhD (Ongoing)** — Artificial Intelligence
@@ -91,7 +79,6 @@ I enjoy solving hard engineering problems at the intersection of:
 
 ---
 
-<a id="contact-me"></a>
 ## 🤝 Let's Connect
 
 - LinkedIn: [linkedin.com/in/sriabhay](https://www.linkedin.com/in/sriabhay)
