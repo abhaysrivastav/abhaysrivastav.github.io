@@ -1,42 +1,42 @@
 <h1 align="center">Hi 👋, I'm Abhay Srivastav</h1>
-<h3 align="center">Software Architect | C++ & AI Engineer | Building Scalable Edge and Intelligent Systems</h3>
+<h3 align="center">Software Architect · C++ & AI Engineer · Building Scalable Edge & Intelligent Systems</h3>
 
 <p align="center">
   <a href="https://github.com/abhaysrivastav"><img src="https://img.shields.io/badge/GitHub-abhaysrivastav-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/sriabhay"><img src="https://img.shields.io/badge/LinkedIn-sriabhay-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
-  <a href="blogs/blogs"><img src="https://img.shields.io/badge/Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
-  <a href="aiml"><img src="https://img.shields.io/badge/Explore-AIML-8E44AD?style=for-the-badge" alt="AIML"></a>
+  <a href="blogs/blogs"><img src="https://img.shields.io/badge/📝_Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
+  <a href="aiml"><img src="https://img.shields.io/badge/🤖_Explore-AI%2FML-8E44AD?style=for-the-badge" alt="AIML"></a>
 </p>
 
 ---
 
 ## 👨‍💻 About Me
 
-I am a **Software Architect at Siemens Technology & Services** with 13+ years of experience designing and delivering reliable software across healthcare, industrial automation, and embedded/edge systems.
+I am a **Software Architect at Siemens Technology & Services** with **13+ years** of experience designing and delivering reliable software across healthcare, industrial automation, and embedded/edge systems.
 
 I enjoy solving hard engineering problems at the intersection of:
-- **System architecture** (microservices, SOA, MVC)
-- **Modern C++ development** (design patterns, clean architecture, maintainable code)
-- **AI/ML systems** (deep learning and LLM-powered solutions)
-- **Platform engineering** (Docker, Kubernetes, CI-quality workflows)
+- **System architecture** — microservices, SOA, MVC, UML
+- **Modern C++ development** — design patterns, clean architecture, maintainable code
+- **AI/ML systems** — deep learning, LLM-powered solutions, computer vision
+- **Platform engineering** — Docker, Kubernetes, CI/CD quality workflows
 
 ---
 
 ## 🧰 Tech Stack
 
-| Category | Tools / Technologies |
+| Category | Tools & Technologies |
 |---|---|
 | **Languages** | C++, Python |
 | **Architecture** | Microservices, SOA, MVC, UML, Design Patterns |
 | **Cloud & Containers** | Docker, Kubernetes |
-| **AI/ML** | TensorFlow, Keras, OpenCV |
+| **AI / ML** | TensorFlow, Keras, PyTorch, OpenCV |
 | **Quality & Testing** | QtTestLib, CPPUnit, CppCheck, SonarQube, Coverity |
 | **Developer Tools** | Visual Studio, Qt Creator, Eclipse, PyCharm, Anaconda |
 | **Version Control** | Git, Perforce |
 
 ---
 
-## 💼 Professional Experience (Highlights)
+## 💼 Professional Experience
 
 ### **Siemens Technology & Services** — Software Architect *(Jul 2023 – Present)*
 - Leading software architecture for PLC and edge-device products.
@@ -62,9 +62,9 @@ I enjoy solving hard engineering problems at the intersection of:
 
 ## 🎓 Education
 
-- **PhD (Ongoing)** — Artificial Intelligence
-- **M.Tech** — Software Engineering
-- **B.Tech** — Computer Science & Engineering
+- 🎓 **PhD (Ongoing)** — Artificial Intelligence
+- 🎓 **M.Tech** — Software Engineering
+- 🎓 **B.Tech** — Computer Science & Engineering
 
 ---
 
@@ -81,7 +81,8 @@ I enjoy solving hard engineering problems at the intersection of:
 
 ## 🤝 Let's Connect
 
-- LinkedIn: [linkedin.com/in/sriabhay](https://www.linkedin.com/in/sriabhay)
-- GitHub: [github.com/abhaysrivastav](https://github.com/abhaysrivastav)
+- 🔗 LinkedIn: [linkedin.com/in/sriabhay](https://www.linkedin.com/in/sriabhay)
+- 🐙 GitHub: [github.com/abhaysrivastav](https://github.com/abhaysrivastav)
 
 > *Open to collaboration on C++, AI/ML, and scalable system design initiatives.*
+
