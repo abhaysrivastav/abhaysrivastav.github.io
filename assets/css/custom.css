@@ -1,4 +1,263 @@
-.wrapper {
-    max-width: 1200px; /* Adjust width as needed */
-    width: 90%;
+/* ──────────────────────────────────────────────
+   Abhay Srivastava — GitHub Profile Custom CSS
+   Theme base: jekyll-theme-cayman
+────────────────────────────────────────────── */
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --accent:        #4f46e5;   /* indigo-600  */
+  --accent-light:  #818cf8;   /* indigo-400  */
+  --accent-dark:   #3730a3;   /* indigo-800  */
+  --teal:          #0d9488;
+  --surface:       #f8fafc;
+  --card-bg:       #ffffff;
+  --border:        #e2e8f0;
+  --text:          #1e293b;
+  --muted:         #64748b;
+  --radius:        10px;
+  --shadow:        0 2px 12px rgba(0,0,0,.08);
+  --shadow-md:     0 4px 24px rgba(0,0,0,.12);
+}
+
+/* ── Base typography ── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--surface);
+  line-height: 1.7;
+}
+
+/* ── Header / hero ── */
+.page-header {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4338ca 60%, #0d9488 100%);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(129,140,248,.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(13,148,136,.20) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.project-name {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -.5px;
+  color: #ffffff;
+  margin-bottom: .5rem;
+}
+
+.project-tagline {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.82);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ── Main content area ── */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+/* ── Headings ── */
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  font-weight: 700;
+  letter-spacing: -.3px;
+  margin-top: 2.4rem;
+  margin-bottom: .6rem;
+}
+
+.main-content h2 {
+  font-size: 1.45rem;
+  color: var(--accent-dark);
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.main-content h3 {
+  font-size: 1.12rem;
+  color: var(--accent);
+}
+
+/* ── Horizontal rule ── */
+.main-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ── Paragraphs & lists ── */
+.main-content p,
+.main-content li {
+  color: var(--text);
+}
+
+.main-content ul {
+  padding-left: 1.4rem;
+}
+
+.main-content ul li {
+  margin-bottom: .35rem;
+}
+
+/* ── Badge / shield row ── */
+.main-content p > a > img[src*="shields.io"],
+.main-content p > a > img[src*="img.shields.io"] {
+  margin: .25rem .2rem;
+  vertical-align: middle;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.main-content p > a > img[src*="shields.io"]:hover,
+.main-content p > a > img[src*="img.shields.io"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(79,70,229,.3);
+  border-radius: 4px;
+}
+
+/* ── Tech-stack table ── */
+.main-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 1.5rem 0;
+  font-size: .92rem;
+}
+
+.main-content thead tr {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--teal) 100%);
+}
+
+.main-content thead th {
+  color: #fff;
+  font-weight: 600;
+  padding: .75rem 1rem;
+  text-align: left;
+  border: none;
+}
+
+.main-content tbody tr {
+  background: var(--card-bg);
+  transition: background .15s;
+}
+
+.main-content tbody tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.main-content tbody tr:hover {
+  background: #ede9fe;
+}
+
+.main-content tbody td {
+  padding: .65rem 1rem;
+  border: none;
+}
+
+/* Bold category labels in table */
+.main-content tbody td strong {
+  color: var(--accent-dark);
+}
+
+/* ── Blockquote ── */
+.main-content blockquote {
+  border-left: 4px solid var(--accent);
+  background: #eef2ff;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--accent-dark);
+  font-style: italic;
+}
+
+/* ── Experience section – styled like cards ── */
+.main-content h3 + ul,
+.main-content h3 + p {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1.2rem;
+  box-shadow: var(--shadow);
+  margin-top: .5rem;
+}
+
+/* ── Code / inline code ── */
+.main-content code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .15em .45em;
+  font-size: .88em;
+  color: var(--accent-dark);
+}
+
+.main-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.main-content pre {
+  background: #1e1b4b;
+  color: #e0e7ff;
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  overflow-x: auto;
+  box-shadow: var(--shadow-md);
+  font-size: .88rem;
+  margin: 1.2rem 0;
+}
+
+/* ── Links ── */
+.main-content a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .15s;
+}
+
+.main-content a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: #1e1b4b;
+  color: rgba(255,255,255,.7);
+  padding: 1.5rem 2rem;
+  font-size: .85rem;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--accent-light);
+}
+
+/* ── Responsive tweaks ── */
+@media (max-width: 640px) {
+  .project-name    { font-size: 1.8rem; }
+  .project-tagline { font-size: .95rem; }
+  .main-content    { padding: 1.5rem 1rem 3rem; }
+  .main-content table { font-size: .82rem; }
 }
