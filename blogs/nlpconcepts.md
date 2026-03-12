@@ -1,3 +1,9 @@
+---
+layout: page
+title: NLP Concepts
+permalink: /blogs/nlpconcepts/
+---
+
 ## Tokenization
 
 The process of breaking down these documents into set of sentences and each sentence into words is called the Tokenization.  The tokens could be individual words punctuations, or part of short forms of the words. For instance, don’t could be broken down into do and n apostrophe t.

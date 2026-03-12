@@ -1,3 +1,9 @@
+---
+layout: page
+title: Foundation Models
+permalink: /blogs/foundationmodels/
+---
+
 # GPT-1:
 
 # BERT:

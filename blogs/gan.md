@@ -1,3 +1,8 @@
+---
+layout: page
+title: Generative Models (GAN)
+permalink: /blogs/gan/
+---
 
 # Generative Models
 

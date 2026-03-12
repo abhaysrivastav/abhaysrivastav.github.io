@@ -1,3 +1,9 @@
+---
+layout: page
+title: Diffusion Model
+permalink: /blogs/diffusion/
+---
+
 # Diffusion Model 
 
 Diffusion Model is a Generative model , that means It is capable of generating the data. It generates the the data through the process of adding the noise into data and then removing it. It takes the sample of pure noise and iteratively transform it into data like images or audio. It works in following 2 steps: 

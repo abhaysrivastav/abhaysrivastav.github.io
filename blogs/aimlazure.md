@@ -1,3 +1,9 @@
+---
+layout: page
+title: Azure AI/ML Infrastructure
+permalink: /blogs/aimlazure/
+---
+
 # Azure AI/ML Infrastructure
 
 One of the most essential component of Azure's AI ML Infrastructure is the **Azure Machine Learning Service**. This service act act as a backbone of any machine learning project. If offers an integrated enviornment where you can train models, experiment with different algorithms and manage entire machine learning workflow.

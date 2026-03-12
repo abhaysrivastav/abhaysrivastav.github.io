@@ -1,3 +1,9 @@
+---
+layout: page
+title: Transformer Architecture
+permalink: /blogs/transformer/
+---
+
 # Transformer Architecture
 
 ## Basics

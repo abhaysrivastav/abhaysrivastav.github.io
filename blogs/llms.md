@@ -1,3 +1,9 @@
+---
+layout: page
+title: Large Language Models
+permalink: /blogs/llms/
+---
+
 # GPT
 
   - Generative Pre-Training i.e GPT model used transformers as they provide more structured memory for handing long-term dependencies.

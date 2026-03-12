@@ -1,3 +1,9 @@
+---
+layout: page
+title: RAG Model
+permalink: /blogs/rag/
+---
+
 # RAG Model
 
 Retrieval-Augmented Generation (RAG) is a technique that enhances generative AI models by combining them with a retrieval component. It works by retrieving relevant information from a large corpus of documents or knowledge base and then using this information to generate more accurate and contextually rich responses. RAG models leverage both the generative capabilities of AI and the precision of retrieval systems, enabling more informed and coherent outputs, especially in complex or knowledge-intensive tasks.

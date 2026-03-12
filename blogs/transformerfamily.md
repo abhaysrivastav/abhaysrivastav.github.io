@@ -1,3 +1,9 @@
+---
+layout: page
+title: Transformer Family
+permalink: /blogs/transformerfamily/
+---
+
 # Transformer model family
 
 

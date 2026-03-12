@@ -1,3 +1,9 @@
+---
+layout: page
+title: Pre-Trained Model Architectures
+permalink: /blogs/pretrainedmodels/
+---
+
 # Pre-Trained Model Architectures
 
 ### AlexNet
