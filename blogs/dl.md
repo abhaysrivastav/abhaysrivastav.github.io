@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Deep Learning
+permalink: /blogs/dl/
 ---
 
 # Deep Learning

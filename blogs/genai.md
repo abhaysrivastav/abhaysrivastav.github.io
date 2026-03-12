@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Generative AI
+permalink: /blogs/genai/
 ---
 
 # Generative AI
