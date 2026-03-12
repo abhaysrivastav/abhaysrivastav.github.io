@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Diffusion Model
 permalink: /blogs/diffusion/
 ---
