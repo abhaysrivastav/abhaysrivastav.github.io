@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Pre-Trained Model Architectures
 permalink: /blogs/pretrainedmodels/
 ---

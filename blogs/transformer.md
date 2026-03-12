@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Transformer Architecture
 permalink: /blogs/transformer/
 ---

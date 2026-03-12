@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Foundation Models
 permalink: /blogs/foundationmodels/
 ---

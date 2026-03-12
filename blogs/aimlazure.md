@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Azure AI/ML Infrastructure
 permalink: /blogs/aimlazure/
 ---

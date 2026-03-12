@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Generative Models (GAN)
 permalink: /blogs/gan/
 ---

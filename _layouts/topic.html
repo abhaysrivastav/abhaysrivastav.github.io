@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% if site.style %}
+    <link rel="stylesheet" href="{{ site.style | relative_url }}">
+    {% endif %}
+    <style>
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        background: #fff;
+      }
+
+      /* ── Site Header ─────────────────────────────── */
+      .site-header {
+        background: linear-gradient(135deg, #155799, #159957);
+        color: #fff;
+        padding: 10px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      }
+      .site-header .site-title {
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+      }
+      .site-header nav a {
+        color: rgba(255,255,255,0.9);
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 0.9rem;
+      }
+      .site-header nav a:hover { color: #fff; text-decoration: underline; }
+
+      /* ── 3-Column Body ───────────────────────────── */
+      .page-body {
+        display: flex;
+        max-width: 1200px;
+        width: 95%;
+        margin: 0 auto;
+        min-height: calc(100vh - 110px);
+      }
+
+      /* ── Left Sidebar ────────────────────────────── */
+      .left-sidebar {
+        width: 200px;
+        min-width: 180px;
+        padding: 28px 16px 28px 0;
+        border-right: 1px solid #e1e4e8;
+        flex-shrink: 0;
+      }
+      .left-sidebar .sidebar-section { margin-bottom: 20px; }
+      .left-sidebar .sidebar-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #888;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #eee;
+      }
+      .left-sidebar a {
+        display: block;
+        padding: 5px 0;
+        font-size: 0.875rem;
+        color: #555;
+        text-decoration: none;
+      }
+      .left-sidebar a:hover { color: #159957; }
+
+      /* ── Main Content ────────────────────────────── */
+      .main-content {
+        flex: 1;
+        padding: 32px 36px;
+        min-width: 0;
+      }
+      .main-content h1 { font-size: 1.8rem; margin-top: 0; color: #1a1a2e; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+      .main-content h2 { font-size: 1.4rem; color: #1a1a2e; margin-top: 2rem; }
+      .main-content h3 { font-size: 1.15rem; color: #333; }
+      .main-content h4 { font-size: 1rem; color: #444; }
+      .main-content a { color: #159957; }
+      .main-content img { max-width: 100%; border-radius: 6px; }
+      .main-content code {
+        background: #f6f8fa;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 0.875em;
+      }
+      .main-content pre {
+        background: #f6f8fa;
+        padding: 16px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+      .main-content blockquote {
+        border-left: 4px solid #159957;
+        margin-left: 0;
+        padding-left: 16px;
+        color: #666;
+      }
+
+      /* ── Right Sidebar ───────────────────────────── */
+      .right-sidebar {
+        width: 190px;
+        min-width: 170px;
+        padding: 28px 0 28px 16px;
+        border-left: 1px solid #e1e4e8;
+        flex-shrink: 0;
+      }
+      .right-sidebar .sidebar-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #888;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #eee;
+      }
+      .right-sidebar a {
+        display: block;
+        padding: 5px 0;
+        font-size: 0.85rem;
+        color: #555;
+        text-decoration: none;
+      }
+      .right-sidebar a:hover { color: #159957; }
+
+      /* ── Footer ──────────────────────────────────── */
+      .site-footer {
+        background: #f6f8fa;
+        border-top: 1px solid #e1e4e8;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 0.82rem;
+        color: #888;
+      }
+      .site-footer a { color: #555; text-decoration: none; }
+      .site-footer a:hover { color: #159957; }
+
+      /* ── Responsive ──────────────────────────────── */
+      @media (max-width: 900px) {
+        .left-sidebar { width: 160px; min-width: 140px; }
+        .right-sidebar { display: none; }
+        .main-content { padding: 20px 20px; }
+      }
+      @media (max-width: 600px) {
+        .left-sidebar { display: none; }
+        .main-content { padding: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ── Site Header ── -->
+    <div class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: "Home" }}</a>
+      <nav>
+        <a href="{{ '/blogs/blogs/' | relative_url }}">Blogs</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      </nav>
+    </div>
+
+    <!-- ── 3-Column Layout ── -->
+    <div class="page-body">
+
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-label">Navigate</div>
+          <a href="{{ '/' | relative_url }}">&#8962; Home</a>
+          <a href="{{ '/blogs/blogs/' | relative_url }}">&#128196; All Blogs</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-label">Categories</div>
+          <a href="{{ '/blogs/ml/' | relative_url }}">&#129302; Machine Learning</a>
+          <a href="{{ '/blogs/dl/' | relative_url }}">&#129504; Deep Learning</a>
+          <a href="{{ '/blogs/genai/' | relative_url }}">&#10024; Generative AI</a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        {{ content }}
+      </main>
+
+      <!-- Right Sidebar -->
+      <aside class="right-sidebar">
+        <div class="sidebar-label">On this page</div>
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">&#8679; Back to top</a>
+      </aside>
+
+    </div>
+
+    <!-- ── Footer ── -->
+    <div class="site-footer">
+      {{ site.title }} &mdash; Hosted on <a href="https://pages.github.com/">GitHub Pages</a>
+    </div>
+
+  </body>
+</html>

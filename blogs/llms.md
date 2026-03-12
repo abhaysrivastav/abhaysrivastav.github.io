@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Large Language Models
 permalink: /blogs/llms/
 ---

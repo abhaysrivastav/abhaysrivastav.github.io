@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: NLP Concepts
 permalink: /blogs/nlpconcepts/
 ---

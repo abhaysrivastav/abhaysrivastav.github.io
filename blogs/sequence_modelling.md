@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: topic
 title: Sequence Modelling
 permalink: /blogs/sequence_modelling/
 ---
