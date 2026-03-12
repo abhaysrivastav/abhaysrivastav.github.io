@@ -4,15 +4,15 @@
 <p align="center">
   <a href="https://github.com/abhaysrivastav"><img src="https://img.shields.io/badge/GitHub-abhaysrivastav-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/sriabhay"><img src="https://img.shields.io/badge/LinkedIn-sriabhay-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
-  <a href="blogs/blogs"><img src="https://img.shields.io/badge/📝_Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
-  <a href="aiml"><img src="https://img.shields.io/badge/🤖_Explore-AI%2FML-8E44AD?style=for-the-badge" alt="AIML"></a>
+  <a href="blogs/blogs.md"><img src="https://img.shields.io/badge/📝_Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
+  <a href="projects.md"><img src="https://img.shields.io/badge/📁_View-Projects-0F766E?style=for-the-badge" alt="Projects"></a>
 </p>
 
 ---
 
 ## 👨‍💻 About Me
 
-I am a **Software Architect at Siemens Technology & Services** with **13+ years** of experience designing and delivering reliable software across healthcare, industrial automation, and embedded/edge systems.
+I am a **Software Architect at Siemens Technology & Services** with **15+ years** of experience designing and delivering reliable software across healthcare, industrial automation, and embedded/edge systems.
 
 I enjoy solving hard engineering problems at the intersection of:
 - **System architecture** — microservices, SOA, MVC, UML
