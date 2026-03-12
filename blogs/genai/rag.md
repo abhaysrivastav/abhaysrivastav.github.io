@@ -15,7 +15,7 @@ RAG Model is hybrid model that has two components:
 
 In practice, when RAG model is prompted to generate some text or answer of any question , it first retrieves the relevent information from the knowledge base and provides the augmented query. It then uses this context as a direct input to guide the generative process, due to this it also uses real world data and dont fully rely on training data.This dynamic approch allows RAG model to produce more accurate and updated information.
 
-![ RAG :Source Educative.io](assests/RAG.JPG) Source:Educative.io
+![ RAG :Source Educative.io](/blogs/assests/RAG.JPG) Source:Educative.io
 
 ## Retriever Architecture Overview
 

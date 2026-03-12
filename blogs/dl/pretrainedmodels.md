@@ -32,7 +32,7 @@ permalink: /blogs/pretrainedmodels/
 | FC2               | 4096                  |
 | FC3               | 1000 (Softmax Output) |
 
-![AlexNet](assests/alexnet.JPG) Source : Coursera deeplearning.io 
+![AlexNet](/blogs/assests/alexnet.JPG) Source : Coursera deeplearning.io 
 
 ### VGG16
 
@@ -101,7 +101,7 @@ permalink: /blogs/pretrainedmodels/
 | Fully Connected (FC2)           | 4096                    |
 | Output Layer (Softmax, 1000)    | 1000                    |
 
-![VGG16](assests/vgg16.JPG) 
+![VGG16](/blogs/assests/vgg16.JPG) 
 
 ### ResNet
 
@@ -109,7 +109,7 @@ permalink: /blogs/pretrainedmodels/
 In deep networks, as the number of layers increases, the vanishing gradient problem can cause the network to stop learning or degrade performance. ResNet’s key innovation is the residual block, which introduces skip connections (also called shortcuts). These connections allow the network to "skip" one or more layers, which helps to maintain strong gradients and avoid degradation in performance even with very deep networks.
 The input is added directly to the output of the two convolutional layers. This is known as a skip connection.The intuition behind residual blocks is that they allow the network to learn a "residual function" (the difference between the input and the desired output), which is easier to optimize than learning the full mapping directly.
 
-![ResNet](assests/resnet50.JPG) 
+![ResNet](/blogs/assests/resnet50.JPG) 
 
 The most commonly used variant is ResNet-50, which has 50 layers in total. Here's the breakdown of its architecture:
 
@@ -162,7 +162,7 @@ The residual block in ResNet-50 uses a bottleneck design, which consists of thre
 3x3 Convolution: This processes the feature maps.
 1x1 Convolution: This increases the dimensionality back to its original size.
 
-![Resnet](assests/resnet.JPG) 
+![Resnet](/blogs/assests/resnet.JPG) 
 
 ### Inception 
 
@@ -199,4 +199,4 @@ The Inception v1 architecture consists of **9 inception** modules stacked on top
   After the final inception module, a global average pooling layer is applied, which reduces the spatial dimensions to 1x1.
   The output is then passed through a fully connected layer with softmax activation for classification (typically 1000 classes for ImageNet).
 
-![InceptionV1](assests/Inceptionv1.png) 
+![InceptionV1](/blogs/assests/Inceptionv1.png) 

@@ -26,7 +26,7 @@ Now that, we have the tokens and have performed the pre-processing steps, we nee
 
 ### Word2Vec
 Word2Vec Model has two different variants. Continuous Bag-of-Words that is CBOW and Skip-Gram.In CBOW architecture the input layer is the context, that is the surrounding words that is both to the left and the right of the target word and is used to predict the target that is the middle word.In Skip-Gram Architecture, the input layer is the middle word and is used to predict the context that is the words to the left and the right of the target word.
-![Word2Vec](assests/word2vec.jpg)
+![Word2Vec](/blogs/assests/word2vec.jpg)
 
 -  From a large corpus when we capture multiple contexts using different sentences, we could expect the word embeddings of similar words to be similar.
 -  Typically, the embeddings are represented in 50 or higher dimensions, which makes it difficult to visualize the embeddings.However, we could use the **dimension reduction** technique and reduce the dimension to 2
@@ -60,7 +60,7 @@ ULMFiT is a Transfer Learning technique for NLP that involves pre-training a lan
     - Target task language modeling fine-tuning.(LM fine-tuning)
     - Target task classifier fine-tuning.(Classifier fine-tuning)
 
-![alt text](assests/ulmfit.png)
+![alt text](/blogs/assests/ulmfit.png)
 
 - Fine tuning was implemented by introducing the techniques such as 
 *discriminative fine-tuning* and *slanted triangular learning rates*.

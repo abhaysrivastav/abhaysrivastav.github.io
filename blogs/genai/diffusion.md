@@ -16,7 +16,7 @@ Diffusion Model is a Generative model , that means It is capable of generating t
 
 ## Training Process 
 
-![ Training Process Diffusion Model:Source Coursera](assests/DiffusionTraning.JPG) Source : Diffusion Model Training 
+![ Training Process Diffusion Model:Source Coursera](/blogs/assests/DiffusionTraning.JPG) Source : Diffusion Model Training 
 
 **Step1** : 
 The Training process is repeated untill model the converges. 
@@ -39,7 +39,7 @@ Target Noise: True noise will be target for the model's prediction.
 - Training process involves learning to predict the noise added to clean image. Then model is optimized by minimizing the difference between predicted noise and actual noise.
 
 ## Diffusion Sampling 
-![ Training Process Diffusion Model:Source Coursera](assests/DiffusionSampling.JPG) Source : Diffusion Model Sampling
+![ Training Process Diffusion Model:Source Coursera](/blogs/assests/DiffusionSampling.JPG) Source : Diffusion Model Sampling
 
 In this step, we process noise and generates new data. 
 
