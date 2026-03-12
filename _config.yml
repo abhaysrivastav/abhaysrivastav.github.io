@@ -1,5 +1,4 @@
 title: Abhay Srivastava
-description: Software Architect | C++ & AI Engineer | Building Scalable Edge & Intelligent Systems
-logo: Untitled.jpg
-theme: jekyll-theme-cayman
-show_downloads: false
+logo : Untitled.jpg
+theme: jekyll-theme-minimal
+style: /assets/css/custom.css
