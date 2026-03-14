@@ -2,3 +2,7 @@ title: Abhay Srivastava
 logo : Untitled.jpg
 theme: jekyll-theme-minimal
 style: /assets/css/custom.css
+markdown: kramdown
+kramdown:
+	input: GFM
+	math_engine: mathjax
