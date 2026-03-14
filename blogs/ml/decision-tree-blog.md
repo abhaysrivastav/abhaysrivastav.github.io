@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: topic
 title: "Decision Trees: A Complete Conceptual Guide"
+permalink: /blogs/decision-tree-blog/
 date: 2026-03-14
 categories: [machine-learning, algorithms]
 tags: [decision-tree, supervised-learning, classification, regression, ml-series]
