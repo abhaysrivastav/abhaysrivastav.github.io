@@ -1,3 +1,13 @@
+---
+layout: topic
+title: "Random Forest: The Algorithm That Learns Like a Crowd"
+permalink: /blogs/random-forest-blog/
+date: 2026-03-15
+categories: [machine-learning, algorithms]
+tags: [random-forest, ensemble-learning, bagging, classification, regression, ml-series]
+description: "A concept-first guide to Random Forest: bagging, random feature selection, OOB score, feature importance, and practical tuning."
+---
+
 # Random Forest: The Algorithm That Learns Like a Crowd
 
 ##  What Actually Is a Random Forest?
