@@ -1,3 +1,13 @@
+---
+layout: topic
+title: "Linear Regression: The Algorithm That Started It All"
+permalink: /blogs/linear-regression-blog/
+date: 2026-03-15
+categories: [machine-learning, algorithms]
+tags: [linear-regression, gradient-descent, regularization, ml-series]
+description: "A concept-first guide to Linear Regression, MSE, Gradient Descent, assumptions, and practical model selection."
+---
+
 # Linear Regression: The Algorithm That Started It All
 
 *Published by a curious ML practitioner | March 2026 | 15 min read*

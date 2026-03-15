@@ -32,4 +32,10 @@ permalink: /blogs/ml/
     <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">Bagging, OOB, Importance</span>
   </a>
 
+  <a href="/blogs/linear-regression-blog/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#6a1b9a,#8e24aa); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(106,27,154,0.45);">
+    <img src="/blogs/assests/ml-img/fig1_linear_regression_line.png" alt="Linear Regression Blog" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
+    <strong style="font-size:1rem; text-align:center;">Linear Regression</strong>
+    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">MSE, GD, Assumptions</span>
+  </a>
+
 </div>
