@@ -98,15 +98,6 @@ permalink: /projects/
 	<h2 class="project-title">Featured Projects</h2>
 
 	<div class="project-grid">
-		<div class="project-card" style="--c1:#1565c0; --c2:#0d47a1;">
-			<h3>CVML Repository</h3>
-			<p>Computer Vision and Machine Learning repository with practical notebooks and end-to-end project work across deep learning and LLM workflows.</p>
-			<div class="project-stack">
-				<span>Python</span><span>Jupyter</span><span>ML</span><span>Computer Vision</span>
-			</div>
-			<div class="project-link">Repository reference</div>
-		</div>
-
 		<a class="project-card" style="--c1:#00897b; --c2:#00695c;" href="https://github.com/abhaysrivastav/cvml/tree/main/RAG-LangChain-Gemini" target="_blank" rel="noopener noreferrer">
 			<h3>RAG with LangChain and Gemini</h3>
 			<p>Builds an LLM app using Google Gemini and LangChain, including prompt experiments and a retrieval-augmented generation pipeline over PDF content.</p>
