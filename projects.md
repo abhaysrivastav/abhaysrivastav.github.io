@@ -5,67 +5,77 @@ permalink: /projects/
 ---
 
 <style>
-	.project-board {
-		margin: 6px auto 30px;
+	.idx-topic {
+		--topic-heading: #1565c0;
+		margin: 0 auto;
+		padding: 8px 0 34px;
 	}
-
-	.project-title {
-		margin: 0 0 22px;
+	.idx-topic-title {
+		margin: 0 0 24px;
 		text-align: center;
-		color: #0f4c81;
-		font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+		color: var(--topic-heading);
+		font-size: clamp(1.8rem, 2.6vw, 2.5rem);
 		font-weight: 800;
-		letter-spacing: 0.2px;
+		letter-spacing: 0.3px;
 	}
-
-	.project-grid {
+	.idx-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 14px;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 10px;
+		justify-items: center;
+		align-items: stretch;
 	}
-
-	.project-card {
+	.idx-card {
+		--a1: #1e88e5;
+		--a2: #1565c0;
+		--g: 30, 136, 229;
+		position: relative;
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		min-height: 280px;
-		padding: 18px 16px;
-		border-radius: 16px;
-		color: #ffffff !important;
+		align-items: center;
+		width: 100%;
+		min-height: 210px;
+		padding: 17px 14px 14px;
+		border-radius: 18px;
 		text-decoration: none;
-		border: 1px solid rgba(255, 255, 255, 0.24);
-		background: linear-gradient(150deg, var(--c1, #1565c0), var(--c2, #1e88e5));
-		box-shadow: 0 10px 24px rgba(10, 35, 64, 0.24);
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		color: #fff !important;
+		border: 1px solid rgba(255, 255, 255, 0.28);
+		background: radial-gradient(circle at 12% 8%, rgba(255,255,255,0.28), rgba(255,255,255,0) 42%), linear-gradient(150deg, var(--a1), var(--a2));
+		box-shadow: 0 10px 22px rgba(var(--g), 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+		transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
 	}
-
-	.project-card:hover,
-	.project-card:focus-visible {
-		transform: translateY(-3px);
-		box-shadow: 0 14px 28px rgba(10, 35, 64, 0.33);
+	.idx-card:hover,
+	.idx-card:focus-visible {
+		transform: translateY(-4px);
+		box-shadow: 0 14px 28px rgba(var(--g), 0.38), inset 0 1px 0 rgba(255,255,255,0.25);
+		filter: saturate(1.08);
 	}
-
-	.project-card h3 {
-		margin: 0 0 8px;
-		color: #ffffff;
-		font-size: 1.15rem;
-		line-height: 1.3;
+	.idx-thumb-wrap {
+		width: 98px;
+		height: 98px;
+		margin-bottom: 14px;
+		border-radius: 14px;
+		border: 1px solid rgba(255,255,255,0.42);
+		background: rgba(255,255,255,0.18);
 	}
-
-	.project-card p {
-		margin: 0;
-		color: rgba(255, 255, 255, 0.95);
-		font-size: 0.93rem;
-		line-height: 1.45;
+	.idx-thumb {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 13px;
+		display: block;
 	}
-
-	.project-stack {
+	.idx-title { font-size: 1.19rem; text-align: center; line-height: 1.28; }
+	.idx-sub { margin-top: 6px; text-align: center; font-size: .94rem; opacity: .94; line-height: 1.4; }
+	.idx-stack {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 6px;
-		margin-top: 12px;
+		margin-top: 10px;
 	}
-
-	.project-stack span {
+	.idx-stack span {
 		font-size: 0.74rem;
 		font-weight: 700;
 		padding: 5px 8px;
@@ -74,46 +84,38 @@ permalink: /projects/
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		color: #ffffff;
 	}
-
-	.project-link {
-		margin-top: auto;
-		padding-top: 14px;
-		font-size: 0.82rem;
-		font-weight: 700;
-		letter-spacing: 0.4px;
-		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.95);
-	}
-
-	@media (max-width: 1050px) {
-		.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	}
-
-	@media (max-width: 640px) {
-		.project-grid { grid-template-columns: 1fr; }
-	}
+	.idx-cta { margin-top: auto; padding-top: 11px; font-size: .88rem; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
+	@media (max-width: 1100px) { .idx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+	@media (max-width: 760px) { .idx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
+	@media (max-width: 480px) { .idx-grid { grid-template-columns: 1fr; } }
 </style>
 
-<section class="project-board">
-	<h2 class="project-title">Featured Projects</h2>
+<section class="idx-topic">
+	<h2 class="idx-topic-title">Featured Projects</h2>
 
-	<div class="project-grid">
-		<a class="project-card" style="--c1:#00897b; --c2:#00695c;" href="https://github.com/abhaysrivastav/cvml/tree/main/RAG-LangChain-Gemini" target="_blank" rel="noopener noreferrer">
-			<h3>RAG with LangChain and Gemini</h3>
-			<p>Builds an LLM app using Google Gemini and LangChain, including prompt experiments and a retrieval-augmented generation pipeline over PDF content.</p>
-			<div class="project-stack">
+	<div class="idx-grid">
+		<a class="idx-card" style="--a1:#00897b; --a2:#00695c; --g:0,137,123;" href="https://github.com/abhaysrivastav/cvml/tree/main/RAG-LangChain-Gemini" target="_blank" rel="noopener noreferrer">
+			<span class="idx-thumb-wrap">
+				<img src="/blogs/assests/RAG.JPG" alt="RAG with LangChain and Gemini" class="idx-thumb">
+			</span>
+			<strong class="idx-title">RAG with LangChain and Gemini</strong>
+			<span class="idx-sub">LLM app with Gemini, prompt tuning, and retrieval-augmented generation over PDF content.</span>
+			<div class="idx-stack">
 				<span>LangChain</span><span>Gemini</span><span>RAG</span><span>Chroma</span>
 			</div>
-			<div class="project-link">Open project folder</div>
+			<div class="idx-cta">Open project folder</div>
 		</a>
 
-		<a class="project-card" style="--c1:#8e24aa; --c2:#5e35b1;" href="https://github.com/abhaysrivastav/cvml/tree/main/image-captioning-project" target="_blank" rel="noopener noreferrer">
-			<h3>Image Captioning Project</h3>
-			<p>Deep learning project for automatic image caption generation with dataset preprocessing, CNN-RNN training, and inference notebooks.</p>
-			<div class="project-stack">
+		<a class="idx-card" style="--a1:#8e24aa; --a2:#5e35b1; --g:142,36,170;" href="https://github.com/abhaysrivastav/cvml/tree/main/image-captioning-project" target="_blank" rel="noopener noreferrer">
+			<span class="idx-thumb-wrap">
+				<img src="/blogs/assests/encoderdecoder.jpg" alt="Image Captioning Project" class="idx-thumb">
+			</span>
+			<strong class="idx-title">Image Captioning Project</strong>
+			<span class="idx-sub">Automatic image caption generation with dataset preprocessing, CNN-RNN training, and inference notebooks.</span>
+			<div class="idx-stack">
 				<span>PyTorch</span><span>CNN-RNN</span><span>MS COCO</span><span>NLP</span>
 			</div>
-			<div class="project-link">Open project folder</div>
+			<div class="idx-cta">Open project folder</div>
 		</a>
 	</div>
 </section>
