@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog
-permalink: /blogs/blogs/
+permalink: /blogs/
 ---
 
 <h2 style="text-align:center; color:#2F5C8C; margin-bottom:28px;">Blog Topics</h2>

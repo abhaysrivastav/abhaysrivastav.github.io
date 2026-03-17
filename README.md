@@ -4,7 +4,7 @@
 <p align="center">
   <a href="https://github.com/abhaysrivastav"><img src="https://img.shields.io/badge/GitHub-abhaysrivastav-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/sriabhay"><img src="https://img.shields.io/badge/LinkedIn-sriabhay-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
-  <a href="/blogs/blogs/"><img src="https://img.shields.io/badge/📝_Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
+  <a href="/blogs/"><img src="https://img.shields.io/badge/📝_Read-Blogs-2F80ED?style=for-the-badge" alt="Blogs"></a>
   <a href="/projects/"><img src="https://img.shields.io/badge/📁_View-Projects-0F766E?style=for-the-badge" alt="Projects"></a>
 </p>
 
