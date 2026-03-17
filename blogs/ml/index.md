@@ -33,8 +33,8 @@ permalink: /blogs/ml/
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 250px;
-    padding: 18px 16px 16px;
+    min-height: 300px;
+    padding: 24px 20px 20px;
     border-radius: 18px;
     text-decoration: none;
     color: #fff !important;
@@ -50,10 +50,10 @@ permalink: /blogs/ml/
     filter: saturate(1.08);
   }
   .idx-thumb-wrap {
-    width: 84px;
-    height: 84px;
-    margin-bottom: 12px;
-    border-radius: 14px;
+    width: 112px;
+    height: 112px;
+    margin-bottom: 16px;
+    border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.42);
     background: rgba(255,255,255,0.18);
   }
@@ -61,12 +61,12 @@ permalink: /blogs/ml/
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 13px;
+    border-radius: 15px;
     display: block;
   }
-  .idx-title { font-size: 1.03rem; text-align: center; line-height: 1.32; }
-  .idx-sub { margin-top: 6px; text-align: center; font-size: .84rem; opacity: .92; line-height: 1.4; }
-  .idx-cta { margin-top: auto; padding-top: 14px; font-size: .82rem; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
+  .idx-title { font-size: 1.22rem; text-align: center; line-height: 1.28; }
+  .idx-sub { margin-top: 8px; text-align: center; font-size: .96rem; opacity: .94; line-height: 1.4; }
+  .idx-cta { margin-top: auto; padding-top: 16px; font-size: .9rem; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
   @media (max-width: 1100px) { .idx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 760px) { .idx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
   @media (max-width: 480px) { .idx-grid { grid-template-columns: 1fr; } }

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: topic
 title: "K-Means Clustering: Algorithm, Intuition, and Practice"
 permalink: /blogs/k-means-clustering/
 date: 2025-01-01
