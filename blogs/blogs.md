@@ -33,8 +33,9 @@ permalink: /blogs/blogs/
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 300px;
-    padding: 24px 20px 20px;
+    width: 70%;
+    min-height: 210px;
+    padding: 17px 14px 14px;
     border-radius: 18px;
     text-decoration: none;
     color: #fff !important;
@@ -50,10 +51,10 @@ permalink: /blogs/blogs/
     filter: saturate(1.08);
   }
   .idx-thumb-wrap {
-    width: 112px;
-    height: 112px;
-    margin-bottom: 16px;
-    border-radius: 16px;
+    width: 78px;
+    height: 78px;
+    margin-bottom: 11px;
+    border-radius: 11px;
     border: 1px solid rgba(255,255,255,0.44);
     background: rgba(255,255,255,0.18);
   }
@@ -61,11 +62,11 @@ permalink: /blogs/blogs/
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 10px;
     display: block;
   }
   .idx-title {
-    font-size: 1.35rem;
+    font-size: 0.95rem;
     text-align: center;
     line-height: 1.25;
     letter-spacing: 0.5px;
@@ -73,14 +74,14 @@ permalink: /blogs/blogs/
   .idx-sub {
     margin-top: 8px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
     opacity: .94;
     line-height: 1.4;
   }
   .idx-cta {
     margin-top: auto;
-    padding-top: 16px;
-    font-size: .92rem;
+    padding-top: 11px;
+    font-size: .64rem;
     font-weight: 700;
     letter-spacing: .4px;
     text-transform: uppercase;
