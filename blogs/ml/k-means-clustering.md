@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "K-Means Clustering: Algorithm, Intuition, and Practice"
+permalink: /blogs/k-means-clustering/
 date: 2025-01-01
 categories: [Machine Learning, Unsupervised Learning]
 tags: [k-means, clustering, unsupervised-learning, scikit-learn]
