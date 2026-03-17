@@ -4,32 +4,45 @@ title: Deep Learning
 permalink: /blogs/dl/
 ---
 
-<h2 style="text-align:center; color:#5e35b1; margin-bottom:24px;">Deep Learning</h2>
+<section class="topic-index" style="--topic-heading:#5e35b1;">
+  <h2 class="topic-index-title">Deep Learning</h2>
+  <div class="flash-card-grid">
 
-<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; padding:10px 0 30px;">
+    <a href="/blogs/sequence_modelling/" class="flash-card" style="--card-accent:#7b1fa2; --card-accent-2:#5e35b1; --card-glow:123,31,162;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/RNN1.jpg" alt="Sequence Modelling" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">Sequence Modelling</strong>
+      <span class="flash-card-subtitle">RNN, LSTM, GRU</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/sequence_modelling/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#5e35b1,#7b1fa2); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(94,53,177,0.45);">
-    <img src="/blogs/assests/RNN1.jpg" alt="Sequence Modelling" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">Sequence Modelling</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">RNN, LSTM, GRU</span>
-  </a>
+    <a href="/blogs/transformer/" class="flash-card" style="--card-accent:#8e24aa; --card-accent-2:#6a1b9a; --card-glow:142,36,170;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/transformer.JPG" alt="Transformer" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">Transformer</strong>
+      <span class="flash-card-subtitle">Architecture and attention</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/transformer/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#6a1b9a,#8e24aa); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(106,27,154,0.45);">
-    <img src="/blogs/assests/transformer.JPG" alt="Transformer" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">Transformer</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">Architecture &amp; Attention</span>
-  </a>
+    <a href="/blogs/transformerfamily/" class="flash-card" style="--card-accent:#5e35b1; --card-accent-2:#4527a0; --card-glow:94,53,177;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/multihead.JPG" alt="Transformer Family" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">Transformer Family</strong>
+      <span class="flash-card-subtitle">Vision and language models</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/transformerfamily/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#4527a0,#5e35b1); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(69,39,160,0.45);">
-    <img src="/blogs/assests/multihead.JPG" alt="Transformer Family" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">Transformer Family</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">Vision &amp; Language Models</span>
-  </a>
+    <a href="/blogs/pretrainedmodels/" class="flash-card" style="--card-accent:#3949ab; --card-accent-2:#283593; --card-glow:57,73,171;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/vgg16.JPG" alt="Pretrained Models" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">Pretrained Models</strong>
+      <span class="flash-card-subtitle">AlexNet, VGG, ResNet</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/pretrainedmodels/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#283593,#3949ab); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(40,53,147,0.45);">
-    <img src="/blogs/assests/vgg16.JPG" alt="Pretrained Models" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">Pretrained Models</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">AlexNet, VGG, ResNet</span>
-  </a>
-
-</div>
+  </div>
+</section>

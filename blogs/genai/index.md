@@ -4,38 +4,54 @@ title: Generative AI
 permalink: /blogs/genai/
 ---
 
-<h2 style="text-align:center; color:#00695c; margin-bottom:24px;">Generative AI</h2>
+<section class="topic-index" style="--topic-heading:#00695c;">
+  <h2 class="topic-index-title">Generative AI</h2>
+  <div class="flash-card-grid">
 
-<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; padding:10px 0 30px;">
+    <a href="/blogs/llms/" class="flash-card" style="--card-accent:#00a896; --card-accent-2:#00796b; --card-glow:0,168,150;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/softmax.JPG" alt="LLMs" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">LLMs</strong>
+      <span class="flash-card-subtitle">GPT, Language Models</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/llms/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#00695c,#00796b); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(0,105,92,0.45);">
-    <img src="/blogs/assests/softmax.JPG" alt="LLMs" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">LLMs</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">GPT, Language Models</span>
-  </a>
+    <a href="/blogs/foundationmodels/" class="flash-card" style="--card-accent:#00acc1; --card-accent-2:#00838f; --card-glow:0,172,193;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/BERT.JPG" alt="Foundation Models" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">Foundation Models</strong>
+      <span class="flash-card-subtitle">GPT-1, BERT, T5</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/foundationmodels/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#00838f,#0097a7); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(0,131,143,0.45);">
-    <img src="/blogs/assests/BERT.JPG" alt="Foundation Models" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">Foundation Models</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">GPT-1, BERT, T5</span>
-  </a>
+    <a href="/blogs/rag/" class="flash-card" style="--card-accent:#00897b; --card-accent-2:#00574b; --card-glow:0,137,123;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/RAG.JPG" alt="RAG" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">RAG</strong>
+      <span class="flash-card-subtitle">Retrieval-Augmented Generation</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/rag/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#004d40,#00695c); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(0,77,64,0.45);">
-    <img src="/blogs/assests/RAG.JPG" alt="RAG" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">RAG</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">Retrieval-Augmented Gen</span>
-  </a>
+    <a href="/blogs/diffusion/" class="flash-card" style="--card-accent:#26a69a; --card-accent-2:#00796b; --card-glow:38,166,154;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/DiffusionTraning.JPG" alt="Diffusion" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">Diffusion Models</strong>
+      <span class="flash-card-subtitle">Image generation</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/diffusion/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#00695c,#00897b); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(0,105,92,0.45);">
-    <img src="/blogs/assests/DiffusionTraning.JPG" alt="Diffusion" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">Diffusion Models</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">Image Generation</span>
-  </a>
+    <a href="/blogs/gan/" class="flash-card" style="--card-accent:#43a047; --card-accent-2:#1b5e20; --card-glow:67,160,71;">
+      <span class="flash-card-thumb-wrap">
+        <img src="/blogs/assests/gan.JPG" alt="GAN" class="flash-card-thumb">
+      </span>
+      <strong class="flash-card-title">GAN</strong>
+      <span class="flash-card-subtitle">Generative Adversarial Networks</span>
+      <span class="flash-card-cta">Read article -></span>
+    </a>
 
-  <a href="/blogs/gan/" style="display:inline-flex; flex-direction:column; align-items:center; width:210px; padding:22px 16px; background:linear-gradient(145deg,#1b5e20,#2e7d32); border-radius:14px; text-decoration:none; color:white; box-shadow:0 6px 18px rgba(27,94,32,0.45);">
-    <img src="/blogs/assests/gan.JPG" alt="GAN" style="width:72px; height:72px; object-fit:cover; border-radius:8px; margin-bottom:12px; border:2px solid rgba(255,255,255,0.4);">
-    <strong style="font-size:1rem; text-align:center;">GAN</strong>
-    <span style="font-size:0.8rem; margin-top:4px; opacity:0.88; text-align:center;">Generative Adversarial Networks</span>
-  </a>
-
-</div>
+  </div>
+</section>
