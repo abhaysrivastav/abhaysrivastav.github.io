@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: topic
 title: "Gradient Descent: The Engine Behind Machine Learning Optimization"
 date: 2025-01-01
 categories: [machine-learning, optimization]

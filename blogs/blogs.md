@@ -6,7 +6,7 @@ permalink: /blogs/blogs/
 
 <style>
   .idx-topic {
-    --topic-heading: #2f5c8c;
+    --topic-heading: #1565c0;
     margin: 0 auto;
     padding: 8px 0 34px;
   }
@@ -14,7 +14,7 @@ permalink: /blogs/blogs/
     margin: 0 0 24px;
     text-align: center;
     color: var(--topic-heading);
-    font-size: clamp(1.9rem, 2.8vw, 2.7rem);
+    font-size: clamp(1.8rem, 2.6vw, 2.5rem);
     font-weight: 800;
     letter-spacing: 0.3px;
   }
@@ -34,7 +34,8 @@ permalink: /blogs/blogs/
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 10px);
+    max-width: 260px;
     min-height: 210px;
     padding: 17px 14px 14px;
     border-radius: 18px;
@@ -42,13 +43,13 @@ permalink: /blogs/blogs/
     color: #fff !important;
     border: 1px solid rgba(255,255,255,0.28);
     background: radial-gradient(circle at 12% 8%, rgba(255,255,255,0.28), rgba(255,255,255,0) 42%), linear-gradient(150deg, var(--a1), var(--a2));
-    box-shadow: 0 10px 24px rgba(var(--g), 0.32), inset 0 1px 0 rgba(255,255,255,0.22);
+    box-shadow: 0 10px 22px rgba(var(--g), 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
     transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
   }
   .idx-card:hover,
   .idx-card:focus-visible {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 30px rgba(var(--g), 0.4), inset 0 1px 0 rgba(255,255,255,0.28);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(var(--g), 0.38), inset 0 1px 0 rgba(255,255,255,0.25);
     filter: saturate(1.08);
   }
   .idx-thumb-wrap {
@@ -56,7 +57,7 @@ permalink: /blogs/blogs/
     height: 98px;
     margin-bottom: 14px;
     border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.44);
+    border: 1px solid rgba(255,255,255,0.42);
     background: rgba(255,255,255,0.18);
   }
   .idx-thumb {
@@ -66,30 +67,28 @@ permalink: /blogs/blogs/
     border-radius: 13px;
     display: block;
   }
-  .idx-title {
-    font-size: 1.33rem;
-    text-align: center;
-    line-height: 1.25;
-    letter-spacing: 0.5px;
-  }
+  .idx-title { font-size: 1.19rem; text-align: center; line-height: 1.28; }
   .idx-sub {
-    margin-top: 8px;
+    margin-top: 6px;
     text-align: center;
-    font-size: 0.98rem;
+    font-size: .94rem;
     opacity: .94;
     line-height: 1.4;
   }
   .idx-cta {
     margin-top: auto;
     padding-top: 11px;
-    font-size: .9rem;
+    font-size: .88rem;
     font-weight: 700;
-    letter-spacing: .4px;
+    letter-spacing: .35px;
     text-transform: uppercase;
   }
   @media (max-width: 1100px) { .idx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 760px) { .idx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
-  @media (max-width: 480px) { .idx-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) {
+    .idx-grid { grid-template-columns: 1fr; }
+    .idx-card { width: 100%; max-width: 100%; }
+  }
 </style>
 
 <section class="idx-topic">
