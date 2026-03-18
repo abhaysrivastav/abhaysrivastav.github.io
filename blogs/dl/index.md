@@ -34,7 +34,8 @@ permalink: /blogs/dl/
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 10px);
+    max-width: 260px;
     min-height: 210px;
     padding: 17px 14px 14px;
     border-radius: 18px;
@@ -58,7 +59,10 @@ permalink: /blogs/dl/
   .idx-cta { margin-top: auto; padding-top: 11px; font-size: .88rem; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
   @media (max-width: 1100px) { .idx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 760px) { .idx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
-  @media (max-width: 480px) { .idx-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) {
+    .idx-grid { grid-template-columns: 1fr; }
+    .idx-card { width: 100%; max-width: 100%; }
+  }
 </style>
 
 <section class="idx-topic">

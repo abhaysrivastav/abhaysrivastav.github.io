@@ -34,7 +34,8 @@ permalink: /blogs/ml/
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 10px);
+    max-width: 260px;
     min-height: 210px;
     padding: 17px 14px 14px;
     border-radius: 18px;
@@ -71,7 +72,10 @@ permalink: /blogs/ml/
   .idx-cta { margin-top: auto; padding-top: 11px; font-size: .88rem; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
   @media (max-width: 1100px) { .idx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 760px) { .idx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
-  @media (max-width: 480px) { .idx-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) {
+    .idx-grid { grid-template-columns: 1fr; }
+    .idx-card { width: 100%; max-width: 100%; }
+  }
 </style>
 
 <section class="idx-topic">
@@ -129,6 +133,15 @@ permalink: /blogs/ml/
       </span>
       <strong class="idx-title">K-Means Clustering</strong>
       <span class="idx-sub">WCSS, Elbow, K-Means++</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
+    <a href="/blogs/gradient-descent/" class="idx-card" style="--a1:#26a69a; --a2:#00695c; --g:38,166,154;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/ml-img/01_cost_surface.png" alt="Gradient Descent Blog" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Gradient Descent</strong>
+      <span class="idx-sub">Learning Rate, Scaling, Convergence</span>
       <span class="idx-cta">Read article -></span>
     </a>
 
