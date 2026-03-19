@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building a RAG Pipeline with Amazon Bedrock & Aurora PostgreSQL"
+permalink: /blogs/aws/rag-bedrock-lab/
 date: 2026-03-19
 categories: [aws, bedrock, rag, machine-learning]
 tags: [amazon-bedrock, aurora-postgresql, pgvector, rag, knowledge-base, titan-embeddings, nova-micro, secrets-manager, s3]
