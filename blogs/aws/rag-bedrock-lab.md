@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: topic
 title: "Building a RAG Pipeline with Amazon Bedrock & Aurora PostgreSQL"
 permalink: /blogs/aws/rag-bedrock-lab/
 date: 2026-03-19
