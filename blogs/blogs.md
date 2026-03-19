@@ -122,5 +122,14 @@ permalink: /blogs/blogs/
       <span class="idx-cta">Explore track -></span>
     </a>
 
+    <a href="/blogs/aws/rag-bedrock-lab/" class="idx-card" style="--a1:#f57c00; --a2:#ef6c00; --g:245,124,0;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/aws-img/arch.png" alt="AWS Lab" class="idx-thumb">
+      </span>
+      <strong class="idx-title">AWS</strong>
+      <span class="idx-sub">RAG Lab</span>
+      <span class="idx-cta">Explore lab -></span>
+    </a>
+
   </div>
 </section>
