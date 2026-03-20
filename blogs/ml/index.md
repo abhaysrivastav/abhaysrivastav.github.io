@@ -145,5 +145,14 @@ permalink: /blogs/ml/
       <span class="idx-cta">Read article -></span>
     </a>
 
+    <a href="/blogs/anomaly-detection/" class="idx-card" style="--a1:#ef6c00; --a2:#bf360c; --g:239,108,0;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/ml-img/anomaly-detection/gaussian_anomaly.png" alt="Anomaly Detection Blog" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Anomaly Detection</strong>
+      <span class="idx-sub">Outliers, Thresholds, Isolation Forest</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
   </div>
 </section>
