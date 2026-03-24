@@ -122,7 +122,7 @@ permalink: /blogs/blogs/
       <span class="idx-cta">Explore track -></span>
     </a>
 
-    <a href="/blogs/aws/" class="idx-card" style="--a1:#f57c00; --a2:#ef6c00; --g:245,124,0;">
+    <a href="/blogs/aws/index.html" class="idx-card" style="--a1:#f57c00; --a2:#ef6c00; --g:245,124,0;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/aws-img/arch.png" alt="AWS Lab" class="idx-thumb">
       </span>
