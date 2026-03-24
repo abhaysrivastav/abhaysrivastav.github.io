@@ -1,3 +1,13 @@
+---
+layout: topic
+title: "Working with Relational Databases: A Beginner's Guide to AWS RDS"
+permalink: /blogs/aws/aws-rds-lab/
+date: 2026-03-24
+categories: [aws, rds, databases, cloud-lab]
+tags: [amazon-rds, mysql, vpc, ec2, multi-az, read-replica]
+description: "Hands-on AWS RDS Cloud Lab walkthrough: create VPC, launch EC2, deploy MySQL RDS, enable Multi-AZ, and create read replicas."
+---
+
 # Working with Relational Databases: A Beginner's Guide to AWS RDS
 
 > **Lab Completion** — This blog is based on a hands-on Cloud Lab I completed on [AWS](https://aws.amazon.com/). It walks through everything I did — from spinning up a VPC to creating Read Replicas — so you can follow along and build the same setup yourself.
