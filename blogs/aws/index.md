@@ -97,7 +97,7 @@ permalink: /blogs/aws/
 
     <a href="/blogs/aws/rag-bedrock-lab/" class="idx-card" style="--a1:#f57c00; --a2:#ef6c00; --g:245,124,0;">
       <span class="idx-thumb-wrap">
-        <img src="/blogs/assests/aws-img/arch.png" alt="AWS Lab 1" class="idx-thumb">
+        <img src="/blogs/assests/aws-img/lab1/arch.png" alt="AWS Lab 1" class="idx-thumb">
       </span>
       <strong class="idx-title">Lab 1</strong>
       <span class="idx-sub">RAG with Bedrock and Aurora PostgreSQL</span>

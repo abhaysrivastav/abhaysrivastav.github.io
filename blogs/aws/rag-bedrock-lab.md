@@ -48,7 +48,7 @@ In this lab we assembled a complete production-grade RAG pipeline on AWS, using 
 
 ## Architecture overview
 
-![RAG architecture diagram](/blogs/assests/aws-img/arch.png)
+![RAG architecture diagram](/blogs/assests/aws-img/lab1/arch.png)
 *Full AWS architecture — ingestion pipeline on the left, query pipeline on the right*
 
 The architecture sits entirely within **us-east-1**. Aurora PostgreSQL lives inside a VPC Availability Zone with the RDS Data API exposed so Bedrock can reach it over HTTP. Secrets Manager holds database credentials — no hardcoded passwords anywhere in the pipeline.
@@ -79,23 +79,23 @@ Amazon S3 serves as the document repository. We create a general-purpose bucket 
 
 Navigate to **S3 → Create bucket**. Choose *General purpose* type, enter `data-bucket-rag-demo` as the bucket name, and keep *Block all public access* selected.
 
-![S3 bucket creation screen](/blogs/assests/aws-img/s3-create.png)
+![S3 bucket creation screen](/blogs/assests/aws-img/lab1/s3-create.png)
 *S3 bucket creation — General purpose, Global namespace, region: us-east-1*
 
-![Block all public access enabled](/blogs/assests/aws-img/s3-block-access.png)
+![Block all public access enabled](/blogs/assests/aws-img/lab1/s3-block-access.png)
 *Block all public access enabled — Bedrock accesses S3 via IAM roles, not public URLs*
 
-![S3 bucket successfully created](/blogs/assests/aws-img/s3-success.png)
+![S3 bucket successfully created](/blogs/assests/aws-img/lab1/s3-success.png)
 *Bucket successfully created in us-east-1*
 
 ### Upload the 3D printer manual
 
 Open the bucket → **Upload → Add files** → select `3DPrinter_Manual.pdf` → click Upload.
 
-![3DPrinter_Manual.pdf queued at 61.0 KB](/blogs/assests/aws-img/pdf-ready.png)
+![3DPrinter_Manual.pdf queued at 61.0 KB](/blogs/assests/aws-img/lab1/pdf-ready.png)
 *3DPrinter_Manual.pdf queued — 61.0 KB, application/pdf*
 
-![Upload succeeded](/blogs/assests/aws-img/pdf-done.png)
+![Upload succeeded](/blogs/assests/aws-img/lab1/pdf-done.png)
 *Upload succeeded — 1 file, 61 KB, 100%*
 
 > **Why this file?** At 61 KB the manual produces ~20–50 chunks at default 300-token chunk size — ideal for demonstrating retrieval without long ingestion times.
@@ -108,21 +108,21 @@ Aurora PostgreSQL with the `pgvector` extension serves as the vector store. Serv
 
 Navigate to **RDS → Databases → Create database**. Select *Aurora (PostgreSQL Compatible)*, *Full configuration*, *Dev/Test* template, *Serverless v2*, capacity 1–2 ACUs.
 
-![Aurora PostgreSQL engine selected](/blogs/assests/aws-img/rds-engine.png)
+![Aurora PostgreSQL engine selected](/blogs/assests/aws-img/lab1/rds-engine.png)
 *Engine: Aurora (PostgreSQL Compatible)*
 
-![Full config Dev/Test Serverless v2 selected](/blogs/assests/aws-img/rds-method.png)
+![Full config Dev/Test Serverless v2 selected](/blogs/assests/aws-img/lab1/rds-method.png)
 *Full configuration · Dev/Test template · Serverless v2 cluster*
 
-![Aurora cluster settings](/blogs/assests/aws-img/rds-settings.png)
+![Aurora cluster settings](/blogs/assests/aws-img/lab1/rds-settings.png)
 *Cluster ID: `educative-aurora-cluster` · Master username: `postgres`*
 
-![Initial database name bedrock_integration](/blogs/assests/aws-img/rds-dbname.png)
+![Initial database name bedrock_integration](/blogs/assests/aws-img/lab1/rds-dbname.png)
 *Initial database name: `bedrock_integration`*
 
 > **Critical checkbox:** Under *Connectivity*, enable **RDS Data API**. Bedrock communicates with Aurora over HTTP via this API — without it the Knowledge Base cannot connect.
 
-![Aurora cluster and instance Creating status](/blogs/assests/aws-img/rds-creating.png)
+![Aurora cluster and instance Creating status](/blogs/assests/aws-img/lab1/rds-creating.png)
 *Both cluster and instance show Creating — takes 10–15 minutes to become Available*
 
 ---
@@ -131,7 +131,7 @@ Navigate to **RDS → Databases → Create database**. Select *Aurora (PostgreSQ
 
 Once the cluster is Available, connect via the RDS Query Editor and run five SQL statements to set up the vector store. Run them **one at a time** in order.
 
-![RDS Query Editor connection dialog](/blogs/assests/aws-img/query-connect.png)
+![RDS Query Editor connection dialog](/blogs/assests/aws-img/lab1/query-connect.png)
 *RDS Query Editor — cluster: educative-aurora-cluster, db: bedrock_integration*
 
 ### Step 1 — Enable pgvector extension
@@ -140,7 +140,7 @@ Once the cluster is Available, connect via the RDS Query Editor and run five SQL
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
-![pgvector extension enabled successfully](/blogs/assests/aws-img/pgvector.png)
+![pgvector extension enabled successfully](/blogs/assests/aws-img/lab1/pgvector.png)
 *pgvector enabled — status: success, 1250ms*
 
 ### Step 2 — Create schema
@@ -183,7 +183,7 @@ CREATE INDEX ON bedrock_integration.bedrock_kb
 
 The RDS Query Editor automatically stored your database credentials in Secrets Manager when you first connected. Navigate to **Secrets Manager → Secrets** and copy the full Secret ARN — you'll need it in the next task.
 
-![Secrets Manager showing auto-created RDS secret](/blogs/assests/aws-img/secrets.png)
+![Secrets Manager showing auto-created RDS secret](/blogs/assests/aws-img/lab1/secrets.png)
 *Auto-created secret: `rds-db-credentials/cluster-.../postgres/...` — click to copy the ARN*
 
 ---
@@ -194,25 +194,25 @@ This step ties everything together — S3 as the document source, Titan V2 as th
 
 Navigate to **Amazon Bedrock → Knowledge Bases → Create → Knowledge Base with vector store**.
 
-![Knowledge Base name and IAM role](/blogs/assests/aws-img/kb-name.png)
+![Knowledge Base name and IAM role](/blogs/assests/aws-img/lab1/kb-name.png)
 *KB name: `knowledge-base-printer` · IAM role: `Bedrock-Role-For-KnowledgeBase`*
 
-![Parsing and chunking strategy](/blogs/assests/aws-img/kb-parsing.png)
+![Parsing and chunking strategy](/blogs/assests/aws-img/lab1/kb-parsing.png)
 *Parser: Bedrock default · Chunking: Default (~300 tokens per chunk)*
 
 ### Embedding model — Titan Text Embeddings V2
 
-![Titan V2 selected with 1024 dimensions](/blogs/assests/aws-img/kb-titan.png)
+![Titan V2 selected with 1024 dimensions](/blogs/assests/aws-img/lab1/kb-titan.png)
 *Titan Text Embeddings V2 · 1024 dimensions · Floating-point — matches `VECTOR(1024)` in Aurora*
 
 ### Vector store — Aurora PostgreSQL Serverless
 
-![Vector store configuration with Aurora cluster ARN and secret ARN](/blogs/assests/aws-img/kb-vectorstore.png)
+![Vector store configuration with Aurora cluster ARN and secret ARN](/blogs/assests/aws-img/lab1/kb-vectorstore.png)
 *Aurora cluster ARN + database `bedrock_integration` + table `bedrock_integration.bedrock_kb` + Secret ARN*
 
 ### Index & metadata field mapping
 
-![Field mapping for embedding chunks metadata id](/blogs/assests/aws-img/kb-fieldmap.png)
+![Field mapping for embedding chunks metadata id](/blogs/assests/aws-img/lab1/kb-fieldmap.png)
 *Column mapping: `embedding` → VECTOR(1024) · `chunks` → TEXT · `metadata` → JSON · `id` → UUID PK*
 
 ---
@@ -223,7 +223,7 @@ Navigate to **Amazon Bedrock → Knowledge Bases → Create → Knowledge Base w
 
 Once the Knowledge Base shows **Available**, open the data source and click **Sync**. Bedrock reads the PDF from S3, chunks it, sends each chunk to Titan V2 for embedding, and writes results into the `bedrock_kb` table in Aurora.
 
-![Knowledge Base status Available](/blogs/assests/aws-img/kb-available.png)
+![Knowledge Base status Available](/blogs/assests/aws-img/lab1/kb-available.png)
 *Knowledge Base status: Available · ID: FYO05MIXKX · RAG type: Vector store*
 
 ### Live query test
@@ -232,7 +232,7 @@ Click **Test Knowledge Base**, select **Amazon Nova Micro**, and send a query.
 
 **Query:** `What are the specifications of the TechPrint Pro 3000?`
 
-![Live RAG response with 8 citations](/blogs/assests/aws-img/kb-test-result.png)
+![Live RAG response with 8 citations](/blogs/assests/aws-img/lab1/kb-test-result.png)
 *Nova Micro returns a fully grounded answer with 8 citations back to the source PDF*
 
 **Response summary (8 chunks cited):**
@@ -280,3 +280,4 @@ Click **Test Knowledge Base**, select **Amazon Nova Micro**, and send a query.
 ---
 
 *Aurora PostgreSQL 17.4 · Bedrock Knowledge Bases · Titan Embeddings V2 · Nova Micro · pgvector HNSW*
+
