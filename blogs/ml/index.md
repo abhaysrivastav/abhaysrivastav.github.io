@@ -127,21 +127,30 @@ permalink: /blogs/ml/
       <span class="idx-cta">Read article -></span>
     </a>
 
-    <a href="/blogs/k-means-clustering/" class="idx-card" style="--a1:#ff9800; --a2:#ef6c00; --g:255,152,0;">
-      <span class="idx-thumb-wrap">
-        <img src="/blogs/assests/ml-img/01_intuition.png" alt="K-Means Clustering Blog" class="idx-thumb">
-      </span>
-      <strong class="idx-title">K-Means Clustering</strong>
-      <span class="idx-sub">WCSS, Elbow, K-Means++</span>
-      <span class="idx-cta">Read article -></span>
-    </a>
-
     <a href="/blogs/gradient-descent/" class="idx-card" style="--a1:#26a69a; --a2:#00695c; --g:38,166,154;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/ml-img/01_cost_surface.png" alt="Gradient Descent Blog" class="idx-thumb">
       </span>
       <strong class="idx-title">Gradient Descent</strong>
       <span class="idx-sub">Learning Rate, Scaling, Convergence</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
+    <a href="/blogs/logistic-regression/" class="idx-card" style="--a1:#00acc1; --a2:#006064; --g:0,172,193;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/ml-img/logistic-regression/decision_boundary.png" alt="Logistic Regression Blog" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Logistic Regression</strong>
+      <span class="idx-sub">Sigmoid, Log-Loss, Regularization</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
+    <a href="/blogs/k-means-clustering/" class="idx-card" style="--a1:#ff9800; --a2:#ef6c00; --g:255,152,0;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/ml-img/01_intuition.png" alt="K-Means Clustering Blog" class="idx-thumb">
+      </span>
+      <strong class="idx-title">K-Means Clustering</strong>
+      <span class="idx-sub">WCSS, Elbow, K-Means++</span>
       <span class="idx-cta">Read article -></span>
     </a>
 
