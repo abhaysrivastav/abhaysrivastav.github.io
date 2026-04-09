@@ -78,11 +78,11 @@ permalink: /blogs/dl/
       <span class="idx-cta">Read article -></span>
     </a>
 
-    <a href="/blogs/transformer/" class="idx-card" style="--a1:#8e24aa; --a2:#6a1b9a; --g:142,36,170;">
+    <a href="/blogs/transformer-architecture/" class="idx-card" style="--a1:#8e24aa; --a2:#6a1b9a; --g:142,36,170;">
       <span class="idx-thumb-wrap">
-        <img src="/blogs/assests/transformer.JPG" alt="Transformer" class="idx-thumb">
+        <img src="/blogs/assests/dl-img/transformer_architecture.png" alt="Transformer Architecture" class="idx-thumb">
       </span>
-      <strong class="idx-title">Transformer</strong>
+      <strong class="idx-title">Transformer Architecture</strong>
       <span class="idx-sub">Architecture and attention</span>
       <span class="idx-cta">Read article -></span>
     </a>
