@@ -14,11 +14,6 @@
 
 I am a **Software Architect at Siemens Technology & Services** with **15+ years** of experience designing and delivering reliable software across healthcare, industrial automation, and embedded/edge systems.
 
-I enjoy solving hard engineering problems at the intersection of:
-- **System architecture** — microservices, SOA, MVC, UML
-- **Modern C++ development** — design patterns, clean architecture, maintainable code
-- **AI/ML systems** — deep learning, LLM-powered solutions, computer vision
-- **Platform engineering** — Docker, Kubernetes, CI/CD quality workflows
 
 ---
 
@@ -29,10 +24,10 @@ I enjoy solving hard engineering problems at the intersection of:
 | **Languages** | C++, Python |
 | **Architecture** | Microservices, SOA, MVC, UML, Design Patterns |
 | **Cloud & Containers** | Docker, Kubernetes |
-| **AI / ML** | TensorFlow, Keras, PyTorch, OpenCV |
+| **AI / ML** | PyTorch, OpenCV |
 | **Quality & Testing** | QtTestLib, CPPUnit, CppCheck, SonarQube, Coverity |
 | **Developer Tools** | Visual Studio, Qt Creator, Eclipse, PyCharm, Anaconda |
-| **Version Control** | Git, Perforce |
+| **AI/ML** | Generative AI, LLMs, PyTorch, Computer Vision, Machine & Deep Learning  |
 
 ---
 
@@ -62,7 +57,7 @@ I enjoy solving hard engineering problems at the intersection of:
 
 ## 🎓 Education
 
-- 🎓 **PhD (Ongoing)** — Artificial Intelligence
+
 - 🎓 **M.Tech** — Software Engineering
 - 🎓 **B.Tech** — Computer Science & Engineering
 
