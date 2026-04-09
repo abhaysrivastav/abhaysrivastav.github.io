@@ -1,10 +1,7 @@
 ---
-layout: post
+layout: topic
 title: "Transformer Architecture: The Engine Behind Modern AI"
 permalink: /blogs/transformer-architecture/
-date: 2025-01-01
-categories: [deep-learning, nlp]
-tags: [transformer, attention, encoder, decoder, nlp, deep-learning]
 ---
 
 # Transformer Architecture: The Engine Behind Modern AI
@@ -31,8 +28,8 @@ The Transformer solves both problems in one move: it throws away recurrence enti
 
 Before diving into components, here is the full architecture at a glance.
 
-![Transformer Architecture](https://upload.wikimedia.org/wikipedia/commons/8/8f/The-Transformer-model-architecture.png)
-*Full Transformer Architecture — Encoder (left) processes the input sequence; Decoder (right) generates the output. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The-Transformer-model-architecture.png), CC BY-SA 4.0.*
+![Transformer Architecture](/blogs/assests/dl-img/transformer_architecture.png)
+*Full Transformer Architecture — Encoder (left) processes the input sequence; Decoder (right) generates the output sequence. The cyan arrow shows encoder output flowing as Keys and Values into the decoder's cross-attention layer.*
 
 The architecture has two halves:
 
@@ -104,8 +101,8 @@ Step by step:
 3. **softmax(...)** — Normalize across the key dimension so scores sum to 1. These are the attention weights.
 4. **× V** — Weighted sum of values. Each output token is a blend of all values, weighted by how much it attended to each key.
 
-![Scaled Dot-Product and Multi-Head Attention](https://upload.wikimedia.org/wikipedia/commons/1/10/Attention_Is_All_You_Need_Scaled_Dot_Product_%26_Multi-Head_Attention.png)
-*Left: Scaled Dot-Product Attention — Q, K, V go through MatMul → Scale → optional Mask → Softmax → MatMul with V. Right: Multi-Head Attention runs h parallel attention heads and concatenates their outputs through a final linear layer. Source: Vaswani et al. (2017), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Attention_Is_All_You_Need_Scaled_Dot_Product_%26_Multi-Head_Attention.png), CC BY-SA 4.0.*
+![Multi-Head Attention](/blogs/assests/dl-img/multi_head_attention.png)
+*Multi-Head Attention: Q, K, V are projected into h different subspaces. Each head performs its own Scaled Dot-Product Attention independently. Outputs are concatenated and linearly projected to produce the final result.*
 
 ### Worked Example
 
@@ -196,8 +193,7 @@ x₂ = LayerNorm(x₁ + FFN(x₁))
 
 The **Feed-Forward Network** is a simple two-layer MLP applied identically to each position:
 
-![Feed-Forward Network Module](https://upload.wikimedia.org/wikipedia/commons/0/09/Transformer_architecture_-_FFN_module.png)
-*The position-wise Feed-Forward Network — two linear transformations with a ReLU activation in between, applied independently at every token position. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Transformer_architecture_-_FFN_module.png), CC BY-SA 4.0.*
+The feed-forward block is position-wise: the same two-layer MLP is applied independently to every token position.
 
 ```python
 FFN(x) = max(0, x·W₁ + b₁)·W₂ + b₂
