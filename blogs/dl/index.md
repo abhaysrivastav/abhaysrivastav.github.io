@@ -78,6 +78,15 @@ permalink: /blogs/dl/
       <span class="idx-cta">Read article -></span>
     </a>
 
+    <a href="/blogs/rnn/" class="idx-card" style="--a1:#6a1b9a; --a2:#4527a0; --g:106,27,154;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/dl-img/rnn_types.png" alt="RNN" class="idx-thumb">
+      </span>
+      <strong class="idx-title">RNN</strong>
+      <span class="idx-sub">Memory over sequences</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
     <a href="/blogs/transformer-architecture/" class="idx-card" style="--a1:#8e24aa; --a2:#6a1b9a; --g:142,36,170;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/dl-img/transformer_architecture.png" alt="Transformer Architecture" class="idx-thumb">
