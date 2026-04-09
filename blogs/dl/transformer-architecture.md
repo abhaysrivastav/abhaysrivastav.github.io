@@ -1,14 +1,17 @@
 ---
-layout: topic
+layout: post
 title: "Transformer Architecture: The Engine Behind Modern AI"
 permalink: /blogs/transformer-architecture/
+date: 2025-01-01
+categories: [deep-learning, nlp]
+tags: [transformer, attention, encoder, decoder, nlp, deep-learning]
 ---
 
 # Transformer Architecture: The Engine Behind Modern AI
 
-If you have used ChatGPT, GitHub Copilot, or Google Translate in the last few years, you have been on the receiving end of the Transformer — arguably the most impactful neural network architecture of the last decade. Originally introduced in the 2017 paper *"Attention Is All You Need"* by Vaswani et al., the Transformer completely replaced recurrent networks for sequence modeling tasks. 
+If you have used ChatGPT, GitHub Copilot, or Google Translate in the last few years, you have been on the receiving end of the Transformer — arguably the most impactful neural network architecture of the last decade. Originally introduced in the 2017 paper *"Attention Is All You Need"* by Vaswani et al., the Transformer completely replaced recurrent networks for sequence modeling tasks. Understanding how it works is no longer optional for anyone serious about ML.
 
-This post walks through the full architecture from the ground up — positional encoding, the three types of attention, the encoder, the decoder, and how they connect.
+This post walks through the full architecture from the ground up — positional encoding, the three types of attention, the encoder, the decoder, and how they all connect.
 
 ---
 
@@ -28,15 +31,15 @@ The Transformer solves both problems in one move: it throws away recurrence enti
 
 Before diving into components, here is the full architecture at a glance.
 
-![Transformer Architecture](/blogs/assests/dl-img/transformer_architecture.png)
-*Full Transformer Architecture — Encoder (left) processes the input sequence; Decoder (right) generates the output sequence. The cyan arrow shows encoder output flowing as Keys and Values into the decoder's cross-attention layer.*
+![Transformer Architecture](https://upload.wikimedia.org/wikipedia/commons/8/8f/The-Transformer-model-architecture.png)
+*Full Transformer Architecture — Encoder (left) processes the input sequence; Decoder (right) generates the output. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The-Transformer-model-architecture.png), CC BY-SA 4.0.*
 
 The architecture has two halves:
 
 - **Encoder** — reads the entire input sequence and produces a rich, context-aware representation of it.
 - **Decoder** — generates the output sequence token by token, using both what it has generated so far and the encoder's representation of the input.
 
-Both the encoder and decoder are stacked N times (N = 6 in the original paper). Each layer refines the representation produced by the previous one.
+Both halves are stacked N times (N = 6 in the original paper). Each layer refines the representation produced by the previous one.
 
 ---
 
@@ -59,8 +62,8 @@ PE(pos, 2i+1) = cos(pos / 10000^(2i / d_model))
 
 Where `pos` is the position and `i` is the dimension index. Even dimensions use sine, odd dimensions use cosine. Different frequencies at different dimensions mean every position gets a unique signature.
 
-![Positional Encoding](/blogs/assests/dl-img/positional_encoding.png)
-*Left: The full positional encoding matrix — each row is a position, each column a dimension. The wave-like patterns are clearly visible. Right: PE values for selected dimensions across positions — lower dimensions oscillate fast (fine-grained position), higher dimensions oscillate slowly (coarse-grained position).*
+![Positional Encoding Visualization](/blogs/assests/dl-img/positional_encoding.png)
+*Left: The full positional encoding matrix — each row is a position, each column a dimension. The sinusoidal wave patterns are clearly visible. Right: PE values for four selected dimensions across 50 positions — lower dimensions oscillate fast (fine-grained position), higher dimensions oscillate slowly (coarse-grained position).*
 
 The elegant property of this design is that `PE(pos + k)` can be expressed as a linear function of `PE(pos)` — so the model can learn to attend by relative positions, not just absolute ones.
 
@@ -96,30 +99,35 @@ Attention(Q, K, V) = softmax(Q · Kᵀ / √dₖ) · V
 
 Step by step:
 
-1. **Q · Kᵀ** — Compute raw compatibility scores between every query and every key. This gives a matrix of shape `(seq_len × seq_len)`.
+1. **Q · Kᵀ** — Compute raw compatibility scores between every query and every key. Produces a matrix of shape `(seq_len × seq_len)`.
 2. **÷ √dₖ** — Scale by the square root of the key dimension. Without this, dot products grow large in magnitude for high-dimensional vectors, pushing softmax into regions with near-zero gradients.
 3. **softmax(...)** — Normalize across the key dimension so scores sum to 1. These are the attention weights.
 4. **× V** — Weighted sum of values. Each output token is a blend of all values, weighted by how much it attended to each key.
 
-![Scaled Dot-Product Attention](/blogs/assests/dl-img/scaled_dot_product_attention.png)
-*Left: The computation graph of Scaled Dot-Product Attention. Right: An example attention heatmap for "The cat sat on mat" — brighter cells indicate stronger attention between token pairs.*
+![Scaled Dot-Product and Multi-Head Attention](https://upload.wikimedia.org/wikipedia/commons/1/10/Attention_Is_All_You_Need_Scaled_Dot_Product_%26_Multi-Head_Attention.png)
+*Left: Scaled Dot-Product Attention — Q, K, V go through MatMul → Scale → optional Mask → Softmax → MatMul with V. Right: Multi-Head Attention runs h parallel attention heads and concatenates their outputs through a final linear layer. Source: Vaswani et al. (2017), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Attention_Is_All_You_Need_Scaled_Dot_Product_%26_Multi-Head_Attention.png), CC BY-SA 4.0.*
 
 ### Worked Example
 
-Suppose you have the sentence "The cat sat" with `dₖ = 4`. After linear projection, the Q and K for the word "cat" might look like:
+Suppose you have the sentence "The cat sat" with `dₖ = 4`. After linear projection, the Q and K for "cat" might look like:
 
 ```
 Q_cat = [0.2, 0.8, 0.1, 0.5]
-K_the = [0.1, 0.3, 0.2, 0.4]   →  Q·K = 0.02+0.24+0.02+0.20 = 0.48
-K_cat = [0.8, 0.9, 0.1, 0.7]   →  Q·K = 0.16+0.72+0.01+0.35 = 1.24
-K_sat = [0.3, 0.5, 0.6, 0.2]   →  Q·K = 0.06+0.40+0.06+0.10 = 0.62
+K_the = [0.1, 0.3, 0.2, 0.4]   →  Q·K = 0.48
+K_cat = [0.8, 0.9, 0.1, 0.7]   →  Q·K = 1.24
+K_sat = [0.3, 0.5, 0.6, 0.2]   →  Q·K = 0.62
 ```
 
 After scaling by `√4 = 2`:  `[0.24, 0.62, 0.31]`
 
-After softmax: `[0.18, 0.52, 0.30]` — "cat" attends most to itself (0.52) and somewhat to "sat" (0.30), which is sensible because "cat" is the subject of "sat."
+After softmax: `[0.18, 0.52, 0.30]` — "cat" attends most to itself (0.52) and somewhat to "sat" (0.30), which makes sense because "cat" is the subject of "sat."
 
-The output for "cat" is then `0.18 × V_the + 0.52 × V_cat + 0.30 × V_sat` — a context-aware representation of "cat."
+The output for "cat" is then `0.18 × V_the + 0.52 × V_cat + 0.30 × V_sat` — a context-aware representation.
+
+Here is what that looks like as an attention weight heatmap:
+
+![Attention Heatmap](/blogs/assests/dl-img/scaled_dot_product_attention.png)
+*Left: The Scaled Dot-Product Attention computation graph. Right: Attention weight heatmap for "The cat sat on mat" — brighter cells = stronger attention. "cat" attends most strongly to itself and to "sat."*
 
 ---
 
@@ -130,17 +138,14 @@ A single attention operation captures one type of relationship between tokens. B
 **Multi-head attention** runs `h` attention operations in parallel, each with different learned projections of Q, K, and V:
 
 ```
-head_i = Attention(Q · Wᵢᴼ, K · Wᵢᴷ, V · WᵢᵛV)
+head_i = Attention(Q · WᵢQ, K · WᵢK, V · WᵢV)
 
-MultiHead(Q, K, V) = Concat(head₁, ..., headₕ) · Wᴼ
+MultiHead(Q, K, V) = Concat(head₁, ..., headₕ) · WO
 ```
-
-Where `Wᵢᴼ`, `Wᵢᴷ`, `WᵢᵛV` are learned projection matrices per head, and `Wᴼ` is a final learned output projection.
 
 Each head learns to focus on different aspects of the input. One head might track syntactic structure while another tracks long-range semantic dependencies. The original paper uses `h = 8` heads with `dₖ = d_model / h = 64`.
 
-![Multi-Head Attention](/blogs/assests/dl-img/multi_head_attention.png)
-*Multi-Head Attention: Q, K, V are projected into h different subspaces. Each head performs its own Scaled Dot-Product Attention independently. Outputs are concatenated and linearly projected to produce the final result.*
+The right panel of the figure above shows this clearly: h heads run in parallel, each produces its own attention output, then all are concatenated and projected through a final linear layer.
 
 ---
 
@@ -148,58 +153,41 @@ Each head learns to focus on different aspects of the input. One head might trac
 
 The Transformer uses attention in three distinct configurations, each serving a different purpose.
 
-![Attention Types](/blogs/assests/dl-img/attention_types.png)
-*The three configurations of attention: Self-Attention (encoder), Masked Self-Attention (decoder), and Cross-Attention (encoder-decoder bridge).*
+![Three Attention Types](/blogs/assests/dl-img/attention_types.png)
+*The three configurations of attention in the Transformer: Encoder Self-Attention (all-to-all), Masked Decoder Self-Attention (causal — future tokens blocked), and Cross-Attention (Q from decoder, K/V from encoder output).*
 
 ### 6.1 Encoder Self-Attention
 
-In the encoder, Q, K, and V all come from the same sequence (the input). Every token attends to every other token — no restrictions.
-
-This is how the model builds context. The word "bank" in "river bank" versus "bank account" will produce different representations because the surrounding tokens it attends to carry different signals. After self-attention, each token's representation is enriched by the entire surrounding context.
+In the encoder, Q, K, and V all come from the same sequence (the input). Every token attends to every other token — no restrictions. This is how the model builds context. The word "bank" in "river bank" versus "bank account" will produce different representations because the surrounding tokens it attends to carry different signals.
 
 ### 6.2 Masked Decoder Self-Attention
 
-In the decoder, we also apply self-attention over the output sequence being generated. But there is a critical constraint: during training, the model receives the full target sequence at once (teacher forcing). If it could attend to future tokens, it would trivially learn to copy — no real learning happens.
-
-The solution is **masking**. Before the softmax step, attention scores for future positions are set to `-∞`, which become 0 after softmax. Token at position `t` can only attend to positions `0` through `t`.
+In the decoder, self-attention is applied over the output sequence being generated, but with a critical constraint: token at position `t` can only attend to positions `0` through `t`. Future positions are set to `-∞` before softmax.
 
 ```
-                     Mask matrix (upper triangle = -∞):
+Mask matrix (upper triangle = -∞):
       The   cat   sat
 The  [ 0    -∞    -∞  ]
 cat  [ 0     0    -∞  ]
 sat  [ 0     0     0  ]
 ```
 
-This preserves the autoregressive property at training time — the model can only use information from the past to predict the next token.
+This preserves the autoregressive property — the model cannot peek at tokens it has not generated yet.
 
 ### 6.3 Cross-Attention (Encoder-Decoder Attention)
 
-This is the bridge between the two halves of the architecture. In cross-attention:
-
-- **Q** comes from the decoder's current representation
-- **K and V** come from the encoder's output
-
-Every decoder position can attend to every encoder position. This is how the decoder "reads" the encoded input while generating the output. In a translation task, when generating the Spanish word "encanta," the decoder's query attends most strongly to the English encoder tokens "love" — exactly the alignment you would want.
+This is the bridge between the two halves. Q comes from the decoder's current representation; K and V come from the encoder's output. Every decoder position can attend to every encoder position. In a translation task, when generating the Spanish word "encanta," the decoder's query attends most strongly to the English encoder tokens "love."
 
 ---
 
 ## 7. The Encoder
-
-Now that we have the attention building blocks, the encoder's structure is straightforward.
 
 Each encoder layer consists of two sub-layers:
 
 1. **Multi-Head Self-Attention**
 2. **Position-wise Feed-Forward Network**
 
-Around each sub-layer, there are two additional operations:
-
-**Residual connection (Add):** The input to each sub-layer is added to its output. Formally: `output = sublayer(x) + x`. This prevents vanishing gradients and makes it easier for the model to learn identity functions in early training.
-
-**Layer Normalization (Norm):** Normalizes across the feature dimension of each token independently. This stabilizes training.
-
-The full formula for one encoder layer:
+Each sub-layer is wrapped with a **residual connection** (`output = sublayer(x) + x`) and **Layer Normalization**. The full formula for one encoder layer:
 
 ```
 x₁ = LayerNorm(x + MultiHeadAttention(x, x, x))
@@ -208,25 +196,28 @@ x₂ = LayerNorm(x₁ + FFN(x₁))
 
 The **Feed-Forward Network** is a simple two-layer MLP applied identically to each position:
 
+![Feed-Forward Network Module](https://upload.wikimedia.org/wikipedia/commons/0/09/Transformer_architecture_-_FFN_module.png)
+*The position-wise Feed-Forward Network — two linear transformations with a ReLU activation in between, applied independently at every token position. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Transformer_architecture_-_FFN_module.png), CC BY-SA 4.0.*
+
 ```python
 FFN(x) = max(0, x·W₁ + b₁)·W₂ + b₂
 ```
 
-The inner dimension is typically 4× the model dimension (2048 for `d_model = 512`). This is where the model stores factual and associative knowledge — the attention layers figure out *which* tokens to consider, the FFN processes *what* to do with that information.
+The inner dimension is typically 4× the model dimension (2048 for `d_model = 512`). The attention layers figure out *which* tokens to consider; the FFN processes *what* to do with that information.
 
-This encoder layer is stacked N = 6 times. The final encoder output is a sequence of context vectors, one per input token, each shaped `(1, d_model)`. These context vectors encode not just the individual tokens but their full relational context.
+This encoder layer is stacked N = 6 times. The final encoder output is a sequence of context vectors — one per input token — each carrying the full contextual meaning of that token.
 
 ---
 
 ## 8. The Decoder
 
-The decoder has three sub-layers per layer (compared to two in the encoder):
+The decoder has three sub-layers per layer:
 
 1. **Masked Multi-Head Self-Attention** — attends to previously generated output tokens
 2. **Multi-Head Cross-Attention** — attends to the encoder output
 3. **Position-wise Feed-Forward Network**
 
-Each sub-layer is again wrapped with Add & Norm. The decoder layer formula:
+Each wrapped with Add & Norm, just like the encoder. The decoder layer formula:
 
 ```
 x₁ = LayerNorm(x + MaskedMultiHeadAttention(x, x, x))
@@ -234,31 +225,25 @@ x₂ = LayerNorm(x₁ + MultiHeadCrossAttention(x₁, enc_output, enc_output))
 x₃ = LayerNorm(x₂ + FFN(x₂))
 ```
 
-After N = 6 decoder layers, the output goes through:
-
-- **Linear layer** — projects from `d_model` to vocabulary size (e.g., 32,000 dimensions)
-- **Softmax** — converts logits to a probability distribution over the vocabulary
-
-At inference time, the token with the highest probability (or a sampled token) is selected, appended to the output sequence, and fed back into the decoder for the next step. This continues until a special `[EOS]` token is generated.
+After N = 6 decoder layers, the output goes through a **Linear layer** (projects to vocabulary size) and **Softmax** (converts logits to token probabilities). The highest-probability token is selected and fed back as input for the next decoding step, until `[EOS]` is generated.
 
 ---
 
-## 9. Putting It All Together: Information Flow
+## 9. End-to-End: Information Flow
 
-To make the end-to-end flow concrete, here is what happens during a translation from English to Spanish for the sentence "I love NLP":
+Here is a concrete walkthrough for translating "I love NLP" into Spanish:
 
 **Encoder pass:**
-1. "I", "love", "NLP" are tokenized and converted to embeddings.
-2. Positional encodings are added — each token now carries position information.
-3. Through 6 encoder layers, self-attention refines each token's representation using the full context. "love" knows it relates to "I" and "NLP"; "NLP" knows it is the object being loved.
-4. The encoder outputs 3 context vectors `(K, V)` — one per input token.
+1. Tokens "I", "love", "NLP" → embeddings + positional encodings.
+2. Through 6 encoder layers, self-attention refines each token using full context. "love" knows it relates to both "I" and "NLP."
+3. Encoder outputs 3 context vectors `(K, V)` — one per input token.
 
 **Decoder pass:**
-1. The decoder starts with just the `[SOS]` (start of sequence) token.
-2. In each decoder layer, masked self-attention over generated tokens → cross-attention to encoder `K, V` → FFN.
-3. The linear + softmax projects to vocabulary probabilities. "Me" is selected (highest probability).
-4. "Me" is appended to the output, fed back in. Now the decoder generates "encanta" conditioned on "[SOS] Me" and the full encoder context.
-5. This repeats until `[EOS]` is generated: "Me encanta el NLP."
+1. Decoder starts with `[SOS]`.
+2. Masked self-attention → cross-attention to encoder `K, V` → FFN → softmax. First token: "Me."
+3. Feed "Me" back in. Next: "encanta." Then "el NLP." Finally `[EOS]`.
+
+The cross-attention layer is what makes this work — at every decoder step, it looks up which encoder tokens are most relevant for the next output word.
 
 ---
 
@@ -272,11 +257,11 @@ To make the end-to-end flow concrete, here is what happens during a translation 
 | **Context window** | Attention is O(n²) in sequence length — expensive for very long sequences |
 | **Data hunger** | Requires large datasets to train from scratch |
 | **Positional encoding** | Fixed sinusoidal encoding has limitations; later work (RoPE, ALiBi) improved this |
-| **Interpretability** | Attention weights are partially interpretable but not a complete explanation of model behavior |
+| **Interpretability** | Attention weights are partially interpretable but not a complete explanation |
 
 ---
 
-## 11. Quick Reference: Key Hyperparameters
+## 11. Key Hyperparameters at a Glance
 
 | Hyperparameter | Original Paper | Meaning |
 |----------------|---------------|---------|
@@ -291,23 +276,21 @@ To make the end-to-end flow concrete, here is what happens during a translation 
 
 ## 12. Using Transformers in Practice (HuggingFace)
 
-You do not need to build a Transformer from scratch. HuggingFace's `transformers` library gives you pretrained models with a few lines of code.
-
 ```python
 from transformers import pipeline
 
-# Translation
+# Translation (encoder-decoder Transformer)
 translator = pipeline("translation_en_to_fr", model="Helsinki-NLP/opus-mt-en-fr")
 result = translator("I love machine learning.")
 print(result[0]['translation_text'])
 # Output: "J'adore l'apprentissage automatique."
 
-# Text generation with a GPT-style decoder-only Transformer
+# Text generation (decoder-only Transformer — GPT-style)
 generator = pipeline("text-generation", model="gpt2")
 output = generator("The Transformer architecture works by", max_length=50)
 print(output[0]['generated_text'])
 
-# Sentence embeddings (encoder output)
+# Encoder output / sentence embeddings (BERT-style)
 from transformers import AutoTokenizer, AutoModel
 import torch
 
@@ -318,8 +301,7 @@ inputs = tokenizer("The cat sat on the mat", return_tensors="pt")
 with torch.no_grad():
     outputs = model(**inputs)
 
-# outputs.last_hidden_state: shape (1, seq_len, 768)
-# Each row is the encoder's context vector for that token
+# shape: (1, seq_len, 768) — one 768-dim context vector per token
 encoder_output = outputs.last_hidden_state
 print(f"Encoder output shape: {encoder_output.shape}")
 # torch.Size([1, 9, 768])
@@ -329,41 +311,43 @@ print(f"Encoder output shape: {encoder_output.shape}")
 
 ## 13. Glossary
 
-**Attention weight** — A scalar between 0 and 1 representing how much one token attends to another. Produced by softmax over Q·Kᵀ scores.
+**Attention weight** — A scalar (0 to 1) representing how much one token attends to another. Produced by softmax over Q·Kᵀ scores.
 
-**Context vector** — The output of an attention layer for a given query. A weighted sum of Value vectors encoding information from attended tokens.
+**Context vector** — Output of an attention layer for a given query. A weighted sum of Value vectors.
 
-**Cross-attention** — Attention where Queries come from the decoder and Keys/Values come from the encoder. Bridges the two halves of the model.
+**Cross-attention** — Attention where Q comes from the decoder and K/V from the encoder. Bridges the two halves.
 
-**d_model** — The dimensionality of all embeddings and hidden representations in the model.
+**d_model** — The dimensionality of all embeddings and hidden representations.
 
-**dₖ** — The dimension of each attention head's Query and Key vectors. Equal to `d_model / h`.
+**dₖ** — Dimension per attention head. Equal to `d_model / h`.
 
-**Feed-forward network (FFN)** — A two-layer MLP applied identically and independently to each token position after the attention sub-layer.
+**Feed-forward network (FFN)** — A two-layer MLP applied identically and independently to each token position.
 
-**Layer normalization** — Normalization applied across feature dimensions of a single token, stabilizing training.
+**Layer normalization** — Normalization across the feature dimension of a single token, stabilizing training.
 
-**Masked attention** — Attention where future positions are masked (set to -∞) before softmax, enforcing left-to-right generation in the decoder.
+**Masked attention** — Attention where future positions are masked (-∞) before softmax, enforcing left-to-right generation.
 
-**Multi-head attention** — Running `h` attention operations in parallel over different linear projections of Q, K, V, then concatenating outputs.
+**Multi-head attention** — h attention operations in parallel over different linear projections, concatenated at the output.
 
-**Positional encoding** — A fixed or learned vector added to token embeddings to inject sequence order information.
+**Positional encoding** — A vector added to token embeddings to inject sequence order information.
 
-**Query / Key / Value (Q, K, V)** — The three projections of the input used in attention. Q is what you are looking for, K is what tokens offer, V is what they contain.
+**Q / K / V** — Query, Key, Value. Q is what you look for, K is what tokens offer, V is what they contain.
 
-**Residual connection** — Adding the sub-layer input directly to its output (`x + sublayer(x)`), enabling gradients to flow without vanishing.
+**Residual connection** — Adding sub-layer input to its output: `x + sublayer(x)`.
 
-**Scaled dot-product attention** — The core attention operation: `softmax(Q·Kᵀ / √dₖ) · V`.
+**Self-attention** — Q, K, V all from the same sequence — every token attends to every other.
 
-**Self-attention** — Attention where Q, K, and V all come from the same sequence, allowing every token to attend to every other token.
-
-**Teacher forcing** — A training technique where the ground-truth previous token is fed as input to the decoder at each step, rather than the model's own prediction.
+**Teacher forcing** — Feeding ground-truth previous tokens to the decoder during training instead of its own predictions.
 
 ---
 
 ## 14. Further Reading
 
-- Vaswani et al. (2017). *Attention Is All You Need.* [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762) — the original paper. Read the architecture section carefully; it is well-written and precise.
-- Alammar, J. *The Illustrated Transformer.* [jalammar.github.io](https://jalammar.github.io/illustrated-transformer/) — the best visual walkthrough available. If any part of this post was unclear, this will clarify it.
-- HuggingFace. *Transformers documentation.* [huggingface.co/docs/transformers](https://huggingface.co/docs/transformers) — practical entry point for working with pre-trained Transformer models.
-- Huang et al. (2022). *Are Transformers Effective for Time Series Forecasting?* [arxiv.org/abs/2205.13504](https://arxiv.org/abs/2205.13504) — a useful sanity check on where Transformers do and do not dominate.
+- Vaswani et al. (2017). *Attention Is All You Need.* [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+- Alammar, J. *The Illustrated Transformer.* [jalammar.github.io](https://jalammar.github.io/illustrated-transformer/) — the best visual companion to this post.
+- HuggingFace. *Transformers documentation.* [huggingface.co/docs/transformers](https://huggingface.co/docs/transformers)
+- Huang et al. (2022). *Are Transformers Effective for Time Series Forecasting?* [arxiv.org/abs/2205.13504](https://arxiv.org/abs/2205.13504)
+
+---
+
+*Image attributions: Full architecture and Scaled Dot-Product / Multi-Head Attention diagrams from Vaswani et al. (2017) via [Wikimedia Commons](https://commons.wikimedia.org), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). FFN module diagram from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Transformer_architecture_-_FFN_module.png), CC BY-SA 4.0. Positional encoding heatmap, attention heatmap, and attention types diagram are original illustrations.*
