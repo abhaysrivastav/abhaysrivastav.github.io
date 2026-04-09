@@ -87,6 +87,15 @@ permalink: /blogs/dl/
       <span class="idx-cta">Read article -></span>
     </a>
 
+    <a href="/blogs/lstm-gru/" class="idx-card" style="--a1:#512da8; --a2:#3f51b5; --g:81,45,168;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/dl-img/lstm_gru_rnn_comparison.png" alt="LSTM and GRU" class="idx-thumb">
+      </span>
+      <strong class="idx-title">LSTM and GRU</strong>
+      <span class="idx-sub">Gating and long-term memory</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
     <a href="/blogs/transformer-architecture/" class="idx-card" style="--a1:#8e24aa; --a2:#6a1b9a; --g:142,36,170;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/dl-img/transformer_architecture.png" alt="Transformer Architecture" class="idx-thumb">
