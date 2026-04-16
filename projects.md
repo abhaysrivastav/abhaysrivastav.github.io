@@ -133,5 +133,17 @@ permalink: /projects/
 			</div>
 			<span class="idx-cta">Explore project -></span>
 		</a>
+
+		<a class="idx-card" style="--a1:#ef6c00; --a2:#d84315; --g:239,108,0;" href="https://github.com/abhaysrivastav/cvml/tree/main/Predict-Traffic-Volume" target="_blank" rel="noopener noreferrer">
+			<span class="idx-thumb-wrap">
+				<img src="/blogs/assests/ml-img/fig1_linear_regression_line.png" alt="Predict Traffic Volume" class="idx-thumb">
+			</span>
+			<strong class="idx-title">Predict Traffic Volume</strong>
+			<span class="idx-sub">Forecast traffic trends using machine learning models and feature-driven volume prediction.</span>
+			<div class="idx-stack">
+				<span>Regression</span><span>Forecasting</span><span>Python</span><span>ML</span>
+			</div>
+			<span class="idx-cta">Explore project -></span>
+		</a>
 	</div>
 </section>
