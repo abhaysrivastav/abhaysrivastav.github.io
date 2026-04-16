@@ -34,7 +34,8 @@ permalink: /projects/
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 100%;
+		width: calc(100% - 10px);
+		max-width: 260px;
 		min-height: 210px;
 		padding: 17px 14px 14px;
 		border-radius: 18px;
@@ -87,7 +88,10 @@ permalink: /projects/
 	.idx-cta { margin-top: auto; padding-top: 11px; font-size: .88rem; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
 	@media (max-width: 1100px) { .idx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 	@media (max-width: 760px) { .idx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
-	@media (max-width: 480px) { .idx-grid { grid-template-columns: 1fr; } }
+	@media (max-width: 480px) {
+		.idx-grid { grid-template-columns: 1fr; }
+		.idx-card { width: 100%; max-width: 100%; }
+	}
 </style>
 
 <section class="idx-topic">
@@ -103,7 +107,7 @@ permalink: /projects/
 			<div class="idx-stack">
 				<span>LangChain</span><span>Gemini</span><span>RAG</span><span>Chroma</span>
 			</div>
-			<div class="idx-cta">Open project folder</div>
+			<span class="idx-cta">Explore project -></span>
 		</a>
 
 		<a class="idx-card" style="--a1:#8e24aa; --a2:#5e35b1; --g:142,36,170;" href="https://github.com/abhaysrivastav/cvml/tree/main/image-captioning-project" target="_blank" rel="noopener noreferrer">
@@ -115,7 +119,19 @@ permalink: /projects/
 			<div class="idx-stack">
 				<span>PyTorch</span><span>CNN-RNN</span><span>MS COCO</span><span>NLP</span>
 			</div>
-			<div class="idx-cta">Open project folder</div>
+			<span class="idx-cta">Explore project -></span>
+		</a>
+
+		<a class="idx-card" style="--a1:#039be5; --a2:#0277bd; --g:3,155,229;" href="https://github.com/abhaysrivastav/cvml/tree/main/Semantic-Search-Transformers" target="_blank" rel="noopener noreferrer">
+			<span class="idx-thumb-wrap">
+				<img src="/blogs/assests/search1.png" alt="Semantic Search with Transformers" class="idx-thumb">
+			</span>
+			<strong class="idx-title">Semantic Search Transformers</strong>
+			<span class="idx-sub">Transformer-based semantic retrieval with embedding similarity for smarter document search.</span>
+			<div class="idx-stack">
+				<span>Transformers</span><span>Embeddings</span><span>Semantic Search</span><span>NLP</span>
+			</div>
+			<span class="idx-cta">Explore project -></span>
 		</a>
 	</div>
 </section>
