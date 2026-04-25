@@ -1,299 +1,553 @@
 ---
 layout: topic
-title: Large Language Models
+title: "Large Language Models: Architecture, Training, and Practical Use"
 permalink: /blogs/llms/
+date: 2026-04-25
+categories: [generative-ai, llms, transformers]
+tags: [llm, gpt, transformers, tokenization, attention, prompting, fine-tuning, rag, evaluation]
+description: "A practical guide to Large Language Models covering transformer architecture, GPT-style decoder models, tokenization, pretraining, instruction tuning, sampling, RAG, fine-tuning, evaluation, hallucination, and deployment lifecycle."
+image: /blogs/assests/softmax.JPG
 ---
 
-# GPT
+# Large Language Models: Architecture, Training, and Practical Use
 
-  - Generative Pre-Training i.e GPT model used transformers as they provide more structured memory for handing long-term dependencies.
-  - GPT consist of 2 stages:
-    
-    -  Learning a high capicity language model on a large unlabeled corpus of text.
+Large Language Models (LLMs) are neural networks trained to understand and generate human language. They power chatbots, summarization tools, code assistants, search experiences, document question answering systems, and many modern Generative AI applications.
 
-    - Fine-tuning stage. where we adapt the model.
+At their core, most modern LLMs are based on the **Transformer** architecture. Transformers use attention to understand relationships between tokens, which allows them to model long-range dependencies better than older sequence models.
 
-  - The first stage is learning a high capacity language model on a large unlabeled Corpus of text.
+![Softmax and language model probability distribution](/blogs/assests/softmax.JPG)
 
-  - Second, fine-tuning stage where we adapt the model, that is the learn 
-parameters to a target task using the corresponding supervised objective.
+---
 
-  - This model is a 12-layer decoder-only transformer with masked self-attention heads.
+## What Is an LLM?
 
-  - The reason to use only decoder is that, the feature of the self-attention layer preventing positions from attending to subsequent positions by masking fits well for language modeling task, in which we predict the next word using the previous words.
+An LLM is a model trained on very large text datasets to predict and generate language. During training, it learns statistical patterns, grammar, facts, reasoning traces, code structures, and many task formats from text.
 
-# LLMs – Characteristics
+In simple terms:
 
-  1. General purpose models :
-     - Handles a wide range of NLP tasks.
-     - Trained on diverse text datasets. 
+```text
+Input text -> Tokenizer -> Transformer model -> Probability distribution -> Next token
+```
 
-2. Learn and memorizes:
-    - LLMs understand syntax and semantics.
-    - Memorizes details from training data.
-    - Provides factual information based on learned data. 
-3. Stateless : 
-     - LLMs process each input independently.
-     - No memory of previous interaction.
-     - Each query is treated as seperate instance.
-4. Stochastic:
-   - LLMs exhibit variability in their outputs.
-    - Responses can differe with the same input. 
-    - Ensures diverse and contextually appropriate responses. 
+The model generates text one token at a time. After each token is produced, that token becomes part of the next input context.
 
-# Parameters
+---
 
- Model Parameters
-These are learned during training and represent the actual "knowledge" of the model.
+## GPT in One Page
 
-**Weights and Biases**
-These are the primary parameters.
-Found in the layers of the neural network (attention layers, feedforward layers, etc.).
-For example, GPT-3 has 175 billion such parameters.
+GPT stands for **Generative Pre-trained Transformer**.
 
-**Hyperparameters**
-These are set before training and control the architecture and learning process:
+A GPT-style model is usually a **decoder-only Transformer** trained with causal language modeling. This means it predicts the next token using only the tokens that came before it.
 
-**1. Model Architecture Parameters**
-Number of layers (depth) – e.g., 12, 24, 96 transformer blocks.
-Hidden size (width) – e.g., 768, 1024, 12288 (dimensionality of embeddings).
-Number of attention heads – e.g., 12, 16, 96.
-Intermediate feedforward size – typically 4× hidden size.
-Vocabulary size – size of the token set (e.g., 50k tokens).
-Position embeddings – to capture word order.
+```text
+The capital of India is -> New
+The capital of India is New -> Delhi
+```
 
-**2. Training Hyperparameters**
-Learning rate
-Batch size
-Optimizer type – e.g., Adam, AdamW
-Dropout rate
-Weight decay
-Gradient clipping
-**3. Tokenizer-related Parameters**
-Type of tokenizer – e.g., Byte-Pair Encoding (BPE), WordPiece, SentencePiece.
-Max sequence length – maximum number of tokens the model can process (e.g., 512, 2048, 8192).
+GPT training has two major stages:
 
-# Top-k Vs. Top-p Sampling:
+| Stage | Purpose | Data type |
+|---|---|---|
+| Pretraining | Learn general language patterns and knowledge | Large unlabeled text corpus |
+| Fine-tuning or alignment | Adapt model behavior for useful tasks | Instruction-response, preference, or task data |
 
-* At each step of text generation, the model predicts a probability distribution over the entire vocabulary (all possible words). Top-k sampling selects the k most likely words from this distribution and then resamples from only those k words.
+The original GPT model used a 12-layer decoder-only Transformer with masked self-attention. The decoder-only design fits language generation because the model must not look ahead at future tokens while predicting the next token.
 
-* Instead of selecting a fixed number of words (like Top-k), Top-p sampling selects the smallest set of most likely words whose cumulative probability exceeds a threshold p.
+---
 
+## Why Transformers Matter
 
-# Temperature - Impact of Probabilities distribution
+Before Transformers, many NLP systems used RNNs and LSTMs. These models processed text sequentially, which made long context difficult and training slower.
 
-* Its a hyperparameter that controls the **randomness** or **creativity** of a language model. It adjust the model confidence in selecting the next word in sequence.
+Transformers introduced self-attention, allowing each token to attend to other relevant tokens in the sequence.
 
-* Essentially, it modifies how "confident" the model is in its prediction. 
+```text
+Sentence: The dog chased the ball because it was excited.
 
-* In case of Low Temperature Values the model becomes more confident and deteministic. 
+The model can learn that "it" likely refers to "the dog" by attending to earlier tokens.
+```
 
-* In case of High Temperature Value model becomes more diverse and creative. 
+The Transformer block usually contains:
 
-# GenAI Project life cycle
+1. Token embeddings
+2. Positional information
+3. Multi-head self-attention
+4. Feed-forward neural network
+5. Residual connections
+6. Layer normalization
 
-1) Identify the use case.
-  - Text Generation.
-  - Coversational AI
-  - Text Summarization
-  - Sentiment Analysis
-  - Question Answering
-  - Machine Translation
-  - Text to Speech
-  - Code Generation
-  - Image Generation
-  - Audio Generation
-  - Text to Image
+---
 
+## Tokenization
 
-2) Choose a foundation Model.
-3) Prompting or Tuning
-4) Evalution
-5) Deployment
+LLMs do not read raw words exactly the way humans do. They convert text into tokens.
 
-# RAG
+A token may be:
 
-[Link to RAG Model](rag.md)
+- A full word
+- Part of a word
+- A punctuation symbol
+- A whitespace pattern
+- A code fragment
 
+Common tokenizer families include Byte-Pair Encoding (BPE), WordPiece, and SentencePiece.
 
-# LangChain 
+Example:
 
-  * Framework for building apps with large language models.
-  * Integrates with models like GPT.
-  * Enables context-aware, data-driven NLP application.
+```text
+"unbelievable" -> ["un", "believ", "able"]
+```
 
-### Key features of LangChain:
+Tokenization matters because model cost, context length, and generation behavior are usually measured in tokens.
 
-  * Prompt Template
-  * Memory
-  * Agents
-  * Tools
+---
 
+## Self-Attention Intuition
 
-### LangChain works by:
+Self-attention lets the model decide which previous tokens are important for understanding the current token.
 
-  * Building Blocks
-  * Combining Components
-  * Executing Chains
+For each token, the model computes three vectors:
 
+| Vector | Meaning |
+|---|---|
+| Query (Q) | What this token is looking for |
+| Key (K) | What this token offers to other tokens |
+| Value (V) | The information passed forward |
 
-The memory system in LangChain handles 2 actions:
-  
-  1) **Reading** : Retrieving relevent information from past interactions.
-  
-  2) **Writing** : Storing new information for future use.  
+The attention score is based on how well a query matches a key. The matching values are then combined to produce a context-aware representation.
 
-These actions are integrated in **chain execution process**, ensuring that each interactions is performed by past events and future interactions can be build upon which has already been established.
+```text
+Attention(Q, K, V) = softmax(QK^T / sqrt(d_k))V
+```
 
-In Langchain, different types of memory systems used to manage and retain conversational context across interactions. These memory system decides how past interactions are stored. Each type of memory serves different purpose based on the need of the application. 
+Multi-head attention runs several attention mechanisms in parallel, so different heads can focus on different relationships such as syntax, entities, topic, or code structure.
 
-**Conversation Buffer Memory** stores all messages in a session. Provides access to the entire conversation.Everytime user interacts with the system both user query and response are stored in a buffer. When the application need to follow a new input, it can access to entire conversation history. Entire history is available in a variable. 
+---
 
-**Conversation Buffer Window Memory** stores the last K interactions. It is useful for recent context and discards older interactions. 
+## Causal Masking
 
-**Coversation Token Buffer Memory** manages context based on token count. Idieal for controlling text length within token limits. 
+GPT-style models use causal masking. This prevents a token from attending to future tokens.
 
-**Conversation Summary Memory** creates and maintains a summary of the conversation. Provides a condensed version of essential points.Avoid referencing every individual interactions.
+```text
+Allowed:
+Token 4 can attend to tokens 1, 2, 3, and 4.
 
+Blocked:
+Token 4 cannot attend to tokens 5, 6, or 7.
+```
 
+This is essential for next-token prediction. If the model could see future tokens during training, it would cheat and fail during real generation.
 
-**Chunking Strategy** refers to the methods used to divide large piece of data into smaller chunks.It goal is to breakdown the text in such a way that each chunk is still meaningful and retain enough context for the model to process it effectively. **Chunk size** is no of tokens in each chunk. It determines how large each piece of text will be when it splits. **Chunk overlap** is no of characters or tokens that are repeated between consecutive chunks.
-**CharacterTextSplitter** is method of splitting text based on a Character.
+---
 
-**Recursive Character Text Splitting Process** using the seperators breakdown a text into smaller chunks by applying these separators in order of significance. 
+## Model Parameters vs Hyperparameters
 
-1. First text split at paragraph and each paragraph becomes a chunk.
+### Model Parameters
 
-2. Second, if any chunk is still too large, the process splits those chunks further inti lines.
+Model parameters are learned during training. They include the weights and biases inside attention layers, feed-forward layers, embeddings, and output layers.
 
-3. If the chunk is still large then , it divides based on spaces. 
+These parameters store the model's learned patterns.
 
-4. If still large then into characters. 
+### Hyperparameters
 
+Hyperparameters are chosen before or during training. They control the model architecture and training process.
 
-## Instruction Tuned Model 
+| Type | Examples |
+|---|---|
+| Architecture | Number of layers, hidden size, attention heads, vocabulary size, context length |
+| Training | Learning rate, batch size, optimizer, weight decay, dropout, gradient clipping |
+| Inference | Temperature, top-k, top-p, max tokens, stop sequences |
 
-In LLMs primary training is unsupervised where the model learn from vast amount of text data without any specific task oriented guidance.LLMs may not be good in following the complex instructions unless they are not tuned in a specific way. Instruction tuned model are fine tuned model where they are trained on a specific instruction-response data. This process trained model to better follow the user's instructions. 
+A larger parameter count can increase capability, but model quality also depends on data quality, architecture, training method, context length, alignment, and inference settings.
 
-These models are better in **following specific commands**, understand the intent behind the user's instructions. It provides more accurate and contextual appropriate responses. These are more user friendly, accurate and task oriented than their counter parts.
+---
 
-These models are fine-tuned on supervised datasets, which contains instructions and correct responses. 
+## Pretraining
 
-Application of Instruction tuned model:
-  - Summerization
-  - Translation 
-  - Coding 
-  - Answering specific queries.  
+Pretraining is the phase where the model learns general language ability from massive text datasets.
 
-### How does instruction tuned model work ?
+The common objective is next-token prediction:
 
-  - It works by fine-tuning LLMs on a labelled dataset of tasks that involve following instractions. Instruction datasets can be created by humans or another LLM.
-  - Each sample in the dataset has 3 parts:
-    - An instruction
-    - Additional Context
-    - Desired output
-  The model learns to match its answers with the target outputs.
+```text
+Given:  The quick brown fox
+Predict: jumps
+```
 
-  - Adding more tasks to the instruction tuning process improves the model's performance, even on the task it has not seen before.
+The model repeats this process billions or trillions of times. Over time, it learns grammar, common facts, reasoning patterns, programming syntax, and many types of document structure.
 
+Pretraining is expensive, but it creates a general-purpose foundation model.
 
-## Fine Tuned Model 
+---
 
-It involves updating all the parameters of a pre-trained model for task-specific dataset. This process talors the model for a specific task. Updating all the parameters in large language model is computational expensive.**Catatrophic Forgetting** is a significant challenge in full fine-tuning, where it may loose previously acquired knowledge when adopted for new task. It may degrade its general abilities. To handle this we can perform **Parameter-Efficient Fine Tuning**.
+## Instruction Tuning
 
-## Parameter-Efficient Fine Tuning
+A pretrained model is good at continuing text, but it may not naturally follow instructions. Instruction tuning teaches the model to respond to user requests.
 
-Is it the method that fine-tunes only a small subset of a model's parameters, rather the entire model to reduce computational cost and memory usage.  
+Instruction tuning uses examples like:
 
-[ Resources ](<resources/Mandatory Readings_ Week 6.pdf>)
+```text
+Instruction: Summarize this paragraph in three bullet points.
+Context: ...
+Expected response: ...
+```
 
+Each training sample often contains:
 
-In PEFT, there is a technique called **Adapters** that enables task-specific adaptations by adding and training small modules within the model, making it both computationally and storage efficient while preserving the model's ability to generalize well.
+1. Instruction
+2. Optional context
+3. Desired output
 
-Adapters are small modules or layers inserted within each layer of a pre-trained model.Typically within the each layer of transformation.In Training process , instead of updating all the parameters , we only need to train parameters related to these adapters only and parameters for rest of the model remain frozen. 
+Instruction-tuned models are better at tasks such as summarization, translation, coding, question answering, rewriting, and structured output generation.
 
-During fine-tuning, the input passes through the pre-trained layers as usual, but at specific points where adapters are inserted, they are trained on the new task. This allows the model to adapt to the new task without affecting the rest of the model. As a result, it requires less memory and computational power since only the adapters, not the entire model, need to be stored.
+---
 
-### LoRA (Low Rank Adaptation)
+## Alignment and Human Preference Training
 
-Technique to enable efficient fine-tuning of large transformers.It uses low-rank matrix factorization.The goal is to *reduce the number of parameters that need to be updated* during the fine-tuning making it less expensive.In Transformer Model, most of the computation happens in Self attention layer and Feedforward layer. 
+Instruction tuning teaches the model what a good answer format looks like. Alignment techniques help the model become more helpful, safe, honest, and consistent with human preferences.
 
-In Transformer models, LoRA (Low-Rank Adaptation) is typically applied to the Attention and Feed-Forward layers. These layers are computationally expensive and contain a large number of parameters, making them the ideal candidates for parameter-efficient fine-tuning techniques like LoRA.
+Common alignment approaches include:
 
-1. Attention Layers (Self-Attention or Multi-Head Attention):
-The attention layers are the most parameter-heavy components in a Transformer.
+| Method | Idea |
+|---|---|
+| Supervised fine-tuning | Train on high-quality instruction-response examples |
+| RLHF | Use human preference feedback to train a reward model |
+| DPO | Directly optimize the model from preference pairs |
+| Constitutional or rule-based methods | Guide responses using written principles or policies |
 
-Specifically, LoRA is used to fine-tune the projection matrices involved in:
+Alignment does not make a model perfect, but it improves how the model behaves in real applications.
 
-  - Query
-  - Key 
-  - Value
+---
 
-2. Feed-Forward Layers (MLP layers):
-Transformers also have Feed-Forward Neural Networks (FFNs) after each attention block.
+## Inference: How LLMs Generate Text
 
-These FFNs are linear transformations with large weight matrices.
+During inference, the model produces a probability distribution over the vocabulary for the next token.
 
-LoRA decomposes these weight matrices as well, applying the same principle:
+```text
+Input: "Machine learning is"
 
-𝑊′=𝑊+𝐴×𝐵
+Possible next tokens:
+- " a"       0.42
+- " the"     0.12
+- " used"    0.08
+- " when"    0.03
+```
 
-Fine-tuning these matrices helps the model adapt to new tasks without updating the entire model.
-Model uses its merged weight matrices W' in place of original weight matrices W. Process of creating W' 
-from W is known as re-parameterization. Here A and B are learnable parameters. W' has the same dimentions as of W. 
-So it keeps the model architecture remains unchanged. 
+The decoding strategy decides which token to pick.
 
-Why Not Use LoRA Everywhere?
-LoRA is mainly beneficial in layers where weight matrices are large and computationally expensive to fine-tune.
+---
 
-Embedding layers or LayerNorm layers usually don’t benefit from LoRA because:
+## Temperature
 
-  - They have relatively fewer parameters.
+Temperature controls randomness.
 
-  - They are less critical in terms of task-specific adaptation.
+| Temperature | Behavior | Best for |
+|---|---|---|
+| Low | More deterministic and focused | Factual answers, code, extraction |
+| Medium | Balanced | General chat and writing |
+| High | More creative and diverse | Brainstorming, story ideas |
 
+Low temperature sharpens the probability distribution. High temperature flattens it, making less likely tokens more available.
 
-## Evalution of LLMs
+---
 
-* Qualitative evaluation through human verification.
-* Quantitative Evalution through Metrics:
-    
-    * **ROUGE (mainly used for summerization task)** : Set of metrics used to evaluate the quality of summaries generated by machine learning model in the context 
-    of NLP. It compares the machine generated summeries to one or more reference summary (mainly created by human) and then find the overlap in term of words and its sequence.
-    **ROUGE-N** measures the overlap of N-grams between the generated summary and reference summaries.
+## Top-K and Top-P Sampling
 
-    * BLEU
-    * METEOR 
+### Top-K Sampling
 
-## Biases
+Top-k sampling keeps only the `k` most likely next tokens and samples from that smaller set.
 
-Biases in data, particularly in terms of data representation, refer to the issue where certain groups are depicted in a
-less favorable or inaccurate manner compared to others, even if there is a sufficient amount of data for each group.
-This means that while there may be ample data available for various groups, the way these groups are represented
-can still be skewed or biased, affecting the fairness and accuracy of analyses and outcomes
+```text
+If k = 5, the model samples only from the top 5 tokens.
+```
 
+### Top-P Sampling
+
+Top-p, also called nucleus sampling, keeps the smallest set of tokens whose cumulative probability reaches a threshold `p`.
+
+```text
+If p = 0.9, keep enough tokens to cover 90% of probability mass.
+```
+
+Top-p is adaptive. It may keep many tokens when the model is uncertain and only a few tokens when the model is confident.
+
+---
+
+## Prompting
+
+Prompting is the practice of giving the model instructions, examples, constraints, and context so it produces the desired output.
+
+Useful prompt elements include:
+
+- Role or task definition
+- Input data
+- Output format
+- Constraints
+- Examples
+- Evaluation criteria
+
+Example:
+
+```text
+You are a technical writer.
+Explain self-attention in simple terms.
+Use one analogy and one short formula.
+Keep the answer under 150 words.
+```
+
+Prompting is often the first step before fine-tuning because it is fast and inexpensive to iterate.
+
+---
+
+## RAG: Connecting LLMs to External Knowledge
+
+LLMs may not know private, recent, or domain-specific information. Retrieval-Augmented Generation (RAG) solves this by retrieving relevant documents at query time and adding them to the prompt.
+
+```text
+User question -> Retrieve relevant chunks -> Add context to prompt -> Generate grounded answer
+```
+
+RAG is useful when you need:
+
+- Current knowledge
+- Private company data
+- Citations
+- Lower hallucination risk
+- Answers grounded in source documents
+
+Read more here: [RAG Architecture](/blogs/rag/)
+
+---
+
+## Fine-Tuning
+
+Fine-tuning adapts a pretrained model to a specific task, style, domain, or output format.
+
+Full fine-tuning updates all model parameters. It can be powerful, but it is expensive and may cause catastrophic forgetting, where the model loses some general ability while adapting to a narrow task.
+
+Fine-tuning is useful when:
+
+- You need consistent output format
+- You have many high-quality examples
+- Prompting is not enough
+- You need domain-specific behavior, not just domain-specific facts
+
+For fresh factual knowledge, RAG is often a better first choice than fine-tuning.
+
+---
+
+## Parameter-Efficient Fine-Tuning
+
+Parameter-Efficient Fine-Tuning (PEFT) updates only a small number of additional parameters while keeping most of the base model frozen.
+
+Common PEFT methods include:
+
+| Method | Idea |
+|---|---|
+| Adapters | Insert small trainable layers inside the model |
+| LoRA | Add trainable low-rank matrices to existing weight matrices |
+| Prefix tuning | Train special prompt-like vectors prepended to activations |
+| Prompt tuning | Train soft prompt embeddings |
+
+PEFT reduces memory cost and makes it easier to store multiple task-specific adaptations.
+
+---
+
+## LoRA: Low-Rank Adaptation
+
+LoRA is one of the most popular PEFT techniques. Instead of updating a large weight matrix `W`, LoRA learns two smaller matrices `A` and `B`.
+
+```text
+W' = W + A x B
+```
+
+The original model weights remain frozen. Only `A` and `B` are trained.
+
+LoRA is commonly applied to attention projection matrices such as query, key, value, and output projections. It can also be applied to feed-forward layers.
+
+Benefits:
+
+- Fewer trainable parameters
+- Lower GPU memory usage
+- Faster fine-tuning
+- Easy to store and swap task-specific adapters
+
+---
+
+## LangChain and LLM Application Frameworks
+
+Frameworks like LangChain help developers build applications around LLMs. They provide building blocks for:
+
+- Prompt templates
+- Chains and workflows
+- Tools
+- Agents
+- Memory
+- Document loading
+- Chunking
+- Vector stores
+- RAG pipelines
+
+LangChain is not the LLM itself. It is an orchestration framework that helps connect models, data, tools, and application logic.
+
+---
+
+## Memory in LLM Applications
+
+Base LLMs are stateless. They do not remember earlier conversations unless those messages are included in the current context or stored externally.
+
+Application-level memory can be implemented in several ways:
+
+| Memory type | How it works |
+|---|---|
+| Buffer memory | Stores the full conversation history |
+| Window memory | Stores only the last `k` interactions |
+| Token buffer memory | Keeps as much history as fits within a token budget |
+| Summary memory | Stores a running summary of the conversation |
+| Vector memory | Retrieves relevant past interactions semantically |
+
+Memory should be designed carefully because too much irrelevant history can reduce answer quality.
+
+---
+
+## Chunking for LLM Applications
+
+Chunking divides large documents into smaller pieces so they can be embedded, retrieved, and added to prompts.
+
+Important chunking settings:
+
+| Setting | Meaning |
+|---|---|
+| Chunk size | Number of tokens or characters in each chunk |
+| Chunk overlap | Repeated content between neighboring chunks |
+| Separator strategy | Paragraph, sentence, line, space, or character boundaries |
+
+Recursive character splitting is a common strategy. It tries larger boundaries first, then falls back to smaller boundaries:
+
+```text
+Paragraph -> Line -> Sentence -> Word -> Character
+```
+
+Good chunking preserves meaning. Bad chunking splits important context and hurts retrieval quality.
+
+---
+
+## LLM Evaluation
+
+LLMs should be evaluated both qualitatively and quantitatively.
+
+| Evaluation type | Examples |
+|---|---|
+| Human review | Accuracy, helpfulness, tone, safety |
+| Task metrics | ROUGE, BLEU, METEOR, exact match, F1 |
+| LLM-as-judge | Automated rubric-based review |
+| RAG metrics | Retrieval recall, faithfulness, citation accuracy |
+| Production metrics | Latency, cost, user satisfaction, error rate |
+
+ROUGE is often used for summarization because it measures overlap between generated summaries and reference summaries. BLEU is common in translation. Exact match and F1 are common in question answering.
+
+For modern LLM applications, evaluation should include real user examples, not only benchmark-style metrics.
+
+---
 
 ## Hallucination
 
-AI hallucination refers to a phenomenon where a large language model (LLM), such as a generative AI chatbot or
-computer vision tool, produces outputs that are nonsensical or inaccurate because it perceives patterns or objects that
-don’t actually exist or are imperceptible to humans.
+A hallucination happens when an LLM produces an answer that sounds plausible but is unsupported or false.
 
-AI hallucinations arise from issues like overfitting, data bias, or complex model behavior.
+Common causes include:
 
+- Missing context
+- Ambiguous prompts
+- Weak retrieval
+- Outdated training knowledge
+- Overconfident decoding settings
+- Model limitations
 
-----------------
-```
-Research Paper 1 : Language Models are Few-Shot Learners 
-Link :   https://arxiv.org/abs/2005.14165
+Ways to reduce hallucination:
 
-Research Paper 2 : GPT-4 Technical Report
-Link : https://arxiv.org/pdf/2303.08774
+- Use RAG for knowledge-heavy tasks
+- Ask the model to cite sources
+- Use stricter prompts
+- Lower temperature for factual tasks
+- Validate outputs with tools or rules
+- Let the model say "I do not know" when evidence is missing
 
-Research Paper 3 : BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-Link : https://arxiv.org/pdf/1810.04805
+---
 
+## Bias and Safety
 
-```
+LLMs learn from large datasets that may contain social bias, stereotypes, incorrect claims, and uneven representation. Even if a dataset is large, some groups or viewpoints may be represented unfairly.
 
+Responsible LLM applications should include:
 
+- Bias testing
+- Safety filters where appropriate
+- Human review for sensitive workflows
+- Transparent limitations
+- Monitoring after deployment
+- Clear escalation paths when the model is uncertain
+
+LLMs are powerful, but they should not be treated as unquestionable sources of truth.
+
+---
+
+## GenAI Project Lifecycle
+
+A practical Generative AI project usually follows this lifecycle:
+
+1. Identify the use case
+2. Choose the foundation model
+3. Decide between prompting, RAG, fine-tuning, or agents
+4. Build a prototype
+5. Evaluate with real examples
+6. Add safety, monitoring, and logging
+7. Deploy the application
+8. Continuously improve from feedback
+
+Common use cases include:
+
+- Text generation
+- Conversational AI
+- Summarization
+- Sentiment analysis
+- Question answering
+- Translation
+- Code generation
+- Document search
+- Text-to-speech
+- Image generation
+
+---
+
+## Practical Design Checklist
+
+Before deploying an LLM application, ask:
+
+- What task should the model perform?
+- What data does it need?
+- Does it require RAG?
+- What output format is expected?
+- What should happen when the model is uncertain?
+- How will quality be evaluated?
+- What are the latency and cost limits?
+- What safety risks exist?
+- What logs are needed for debugging?
+- How will feedback improve the system?
+
+---
+
+## Final Takeaway
+
+LLMs are not just large autocomplete systems, and they are not magic knowledge databases either. They are Transformer-based models that generate text by predicting tokens from context.
+
+To use them well, you need to understand the full stack: tokenization, attention, pretraining, instruction tuning, prompting, sampling, RAG, fine-tuning, evaluation, hallucination control, and deployment discipline.
+
+The best LLM applications combine a capable model with strong system design.
+
+---
+
+## Further Reading
+
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- [GPT-4 Technical Report](https://arxiv.org/abs/2303.08774)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
