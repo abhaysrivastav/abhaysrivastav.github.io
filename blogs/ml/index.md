@@ -163,5 +163,14 @@ permalink: /blogs/ml/
       <span class="idx-cta">Read article -></span>
     </a>
 
+    <a href="/blogs/class-imbalance/" class="idx-card" style="--a1:#ff5f8f; --a2:#7c4dff; --g:255,95,143;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/ml-img/imbalance/01_class_distribution.png" alt="Class Imbalance Blog" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Class Imbalance</strong>
+      <span class="idx-sub">Metrics, SMOTE, Thresholds</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
   </div>
 </section>
