@@ -82,6 +82,15 @@ permalink: /blogs/ml/
   <h2 class="idx-topic-title">Machine Learning</h2>
   <div class="idx-grid">
 
+    <a href="/blogs/visual-search-system/" class="idx-card" style="--a1:#00bcd4; --a2:#006064; --g:0,188,212;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/ml-img/visual-search-system/01_system_pipeline.jpg" alt="Visual Search System" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Visual Search System</strong>
+      <span class="idx-sub">Embeddings, ANN, ranking</span>
+      <span class="idx-cta">Read article -&gt;</span>
+    </a>
+
     <a href="/blogs/aimlazure/" class="idx-card" style="--a1:#1e88e5; --a2:#1565c0; --g:30,136,229;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/BERT.JPG" alt="Azure AI/ML" class="idx-thumb">
