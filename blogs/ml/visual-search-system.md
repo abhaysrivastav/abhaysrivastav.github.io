@@ -226,7 +226,6 @@ We use a **contrastive loss** computed in 3 steps:
 3. **Cross-entropy** — penalize the model when it doesn't rank the positive image highest
 
 ```
-Similarities → [0.95 (positive), 0.02, 0.01, 0.003]
 After Softmax → [0.95, 0.02, 0.01, 0.003]  
 Cross-entropy with Label [1, 0, 0, 0] → Loss
 ```
@@ -389,10 +388,3 @@ If you had extra time in an interview (or extra engineering resources), here's w
 10. Contrastive Loss — [Dimensionality Reduction by Learning an Invariant Mapping](https://yann.lecun.com/exdb/publis/pdf/hadsell-chopra-lecun-06.pdf) (Hadsell et al., 2006)
 11. ANNOY (Spotify) — [GitHub: spotify/annoy](https://github.com/spotify/annoy)
 
----
-
-*This blog is based on Chapter 2 of "Machine Learning System Design Interview" by Ali Aminian & Alex Xu. Highly recommended if you're preparing for ML system design interviews.*
-
----
-
-*If you found this useful, feel free to star the repo or connect with me on LinkedIn!*
