@@ -91,15 +91,6 @@ permalink: /blogs/ml/
       <span class="idx-cta">Read article -&gt;</span>
     </a>
 
-    <a href="/blogs/aimlazure/" class="idx-card" style="--a1:#1e88e5; --a2:#1565c0; --g:30,136,229;">
-      <span class="idx-thumb-wrap">
-        <img src="/blogs/assests/BERT.JPG" alt="Azure AI/ML" class="idx-thumb">
-      </span>
-      <strong class="idx-title">Azure AI/ML</strong>
-      <span class="idx-sub">Azure ML Infrastructure</span>
-      <span class="idx-cta">Read article -></span>
-    </a>
-
     <a href="/blogs/nlpconcepts/" class="idx-card" style="--a1:#0288d1; --a2:#0277bd; --g:2,136,209;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/word2vec.jpg" alt="NLP Concepts" class="idx-thumb">
