@@ -14,17 +14,19 @@ excerpt: >
 
 # Building a Visual Search System Like Pinterest: A Deep Dive into ML System Design
 
-> *"A picture is worth a thousand words — but only if you can find the right picture."*
+> *"A picture is worth a thousand words — if your search system can understand what it sees."*
 
 ---
 
-## The Story Begins: You're Scrolling Pinterest at 2 AM
+## Why Visual Search Matters
 
-It's late. You're scrolling Pinterest and you spot a gorgeous mid-century modern chair in someone's living room photo. You don't know the brand. You don't know the name. All you have is... the image.
+Visual search makes discovery feel instant and intuitive: you show the system an image, and it returns visually similar results in milliseconds.
 
-You tap the chair. Pinterest zooms in, and within milliseconds, a grid of visually similar chairs floods your screen — from Wayfair, from IKEA, from obscure Etsy sellers you'd never have found otherwise.
+That simple experience sits on top of a surprisingly deep stack of ML and infrastructure work.
 
-**That's a Visual Search System.** And in this post, we're going to design one from scratch — the same way you'd walk through it in a senior ML system design interview.
+In this post, I break down how to build that system end to end: data, embeddings, contrastive learning, evaluation, and approximate nearest neighbor search at scale.
+
+If you’ve ever tapped an item on Pinterest and instantly seen visually similar results, you’ve already used the kind of system we’re building here.
 
 ---
 
@@ -39,7 +41,7 @@ The key design decisions:
 - ~100–200 billion images on the platform
 - Training data constructed from **user interactions** (clicks, impressions)
 
-Think of it like Google Image Search, but instead of typing "white Eames chair", you just *show* it one.
+Think of it like Google Image Search, but instead of typing "white Eames chair", you just *show* the system an image.
 
 ---
 
@@ -247,7 +249,7 @@ We have an evaluation dataset where each query image has candidate images with *
 - **Recall@k** — ratio of relevant items retrieved. Useless when there are millions of relevant items in a database of billions. *Discarded.*
 - **Precision@k** — fraction of top-k results that are relevant. Ignores ranking order. *Discarded.*
 - **mAP (Mean Average Precision)** — considers ranking, but only works for binary relevance. *Discarded.*
-- **nDCG (Normalized Discounted Cumulative Gain)** ✅ — handles **graded relevance** (0–5 scores), rewards putting the best results first, normalized for fair comparison. **Winner.**
+- **nDCG (Normalized Discounted Cumulative Gain)** — handles **graded relevance** (0–5 scores), rewards putting the best results first, normalized for fair comparison. **Winner.**
 
 **nDCG Formula:**
 
