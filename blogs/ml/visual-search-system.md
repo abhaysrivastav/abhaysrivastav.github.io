@@ -74,20 +74,74 @@ This is called **representation learning** (or embedding learning). We train a n
 The system stores three types of data:
 
 **Images** — with metadata:
-| ID | Owner | Upload Time | Tags |
-|----|-------|-------------|------|
-| 1  | 8     | 1658451341  | Zebra |
-| 2  | 5     | 1658451841  | Pasta, Food, Kitchen |
-| 3  | 19    | 1658821820  | Children, Family, Party |
+<table>
+        <thead>
+                <tr>
+                        <th>ID</th>
+                        <th>Owner</th>
+                        <th>Upload Time</th>
+                        <th>Tags</th>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                        <td>1</td>
+                        <td>8</td>
+                        <td>1658451341</td>
+                        <td>Zebra</td>
+                </tr>
+                <tr>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>1658451841</td>
+                        <td>Pasta, Food, Kitchen</td>
+                </tr>
+                <tr>
+                        <td>3</td>
+                        <td>19</td>
+                        <td>1658821820</td>
+                        <td>Children, Family, Party</td>
+                </tr>
+        </tbody>
+</table>
 
 **Users** — demographics (age, location, etc.)
 
 **User-Image Interactions** — the gold mine:
-| User ID | Query Image | Displayed Image | Position | Interaction Type |
-|---------|-------------|-----------------|----------|-----------------|
-| 8       | 2           | 6               | 1        | Click |
-| 6       | 3           | 9               | 2        | Click |
-| 91      | 5           | 1               | 2        | Impression |
+<table>
+        <thead>
+                <tr>
+                        <th>User ID</th>
+                        <th>Query Image</th>
+                        <th>Displayed Image</th>
+                        <th>Position</th>
+                        <th>Interaction Type</th>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>1</td>
+                        <td>Click</td>
+                </tr>
+                <tr>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>2</td>
+                        <td>Click</td>
+                </tr>
+                <tr>
+                        <td>91</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>Impression</td>
+                </tr>
+        </tbody>
+</table>
 
 These clicks tell us: *"When a user searched with image X and clicked on image Y, they believed Y was visually similar to X."* That's our implicit training signal.
 
