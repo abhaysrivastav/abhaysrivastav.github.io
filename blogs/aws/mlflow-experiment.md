@@ -1,5 +1,3 @@
-# Tracking ML Experiments with MLflow: A Hands-On Walkthrough
-
 ---
 layout: topic
 title: "Tracking ML Experiments with MLflow: A Hands-On Walkthrough"
@@ -9,6 +7,8 @@ categories: [aws, mlflow, mlops]
 tags: [mlflow, tracking, model-registry, model-serving]
 description: "Hands-on walkthrough for tracking experiments, versioning models, and serving with MLflow."
 ---
+
+# Tracking ML Experiments with MLflow: A Hands-On Walkthrough
 
 *A practical guide to experiment tracking, model versioning, and deployment using MLflow*
 
