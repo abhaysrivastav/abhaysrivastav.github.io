@@ -49,10 +49,6 @@ mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("iris-classification")
 ```
 
-> 📸 **Screenshot here:** After running the cell, refresh the MLflow UI. Capture the **"iris-classification" experiment** appearing in the left sidebar. This confirms the server is connected and the experiment is registered.
-
----
-
 ## Step 2 — Log parameters, metrics, and artifacts
 
 An MLflow **Run** represents a single execution of an experiment. Within a run you can log parameters (hyperparameters, data sizes), metrics (accuracy, loss), and arbitrary artifacts (figures, reports, pickled objects). The MLflow docs describe this as the core [logging API](https://mlflow.org/docs/latest/tracking/tracking-server.html).
