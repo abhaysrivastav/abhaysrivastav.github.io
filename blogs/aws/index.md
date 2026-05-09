@@ -113,5 +113,14 @@ permalink: /blogs/aws/
       <span class="idx-cta">Open lab -></span>
     </a>
 
+    <a href="/blogs/aws/mlflow-experiment/" class="idx-card" style="--a1:#6a1b9a; --a2:#8e24aa; --g:106,27,154;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/aws-img/lab3/mlflow-models.jpg" alt="AWS Lab 3 - MLflow" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Lab 3</strong>
+      <span class="idx-sub">Tracking, versioning and serving models with MLflow</span>
+      <span class="idx-cta">Open lab -></span>
+    </a>
+
   </div>
 </section>
