@@ -124,3 +124,18 @@ permalink: /blogs/aws/
 
   </div>
 </section>
+
+<section class="idx-topic">
+  <div class="idx-grid">
+
+    <a href="/blogs/aws/crewai-bedrock-lab/" class="idx-card" style="--a1:#00838f; --a2:#006064; --g:0,131,143;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/aws-img/lab4/screenshot_35.jpg" alt="CrewAI Bedrock Lab" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Lab 4</strong>
+      <span class="idx-sub">Building AI Agents with CrewAI and Amazon Bedrock Knowledge Base</span>
+      <span class="idx-cta">Open lab -></span>
+    </a>
+
+  </div>
+</section>
