@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: topic
 title: "How to Evaluate a RAG System: Metrics, Frameworks, and Production Signals"
 date: 2025-05-19
 permalink: /blogs/genai/rag-evaluation/
