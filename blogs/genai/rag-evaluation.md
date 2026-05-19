@@ -2,6 +2,7 @@
 layout: post
 title: "How to Evaluate a RAG System: Metrics, Frameworks, and Production Signals"
 date: 2025-05-19
+permalink: /blogs/genai/rag-evaluation/
 categories: [generative-ai, rag, evaluation]
 tags: [RAG, RAGAS, TruLens, LLM evaluation, retrieval, faithfulness]
 author: Abhay Srivastava
