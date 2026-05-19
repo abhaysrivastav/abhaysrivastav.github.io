@@ -96,6 +96,15 @@ permalink: /blogs/genai/
       <span class="idx-cta">Read article -></span>
     </a>
 
+    <a href="/blogs/genai/rag-evaluation/" class="idx-card" style="--a1:#1e88e5; --a2:#0d47a1; --g:30,136,229;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/RAG.JPG" alt="RAG Evaluation" class="idx-thumb">
+      </span>
+      <strong class="idx-title">RAG Evaluation</strong>
+      <span class="idx-sub">Metrics, Frameworks, Signals</span>
+      <span class="idx-cta">Read article -></span>
+    </a>
+
     <a href="/blogs/diffusion/" class="idx-card" style="--a1:#26a69a; --a2:#00796b; --g:38,166,154;">
       <span class="idx-thumb-wrap">
         <img src="/blogs/assests/DiffusionTraning.JPG" alt="Diffusion" class="idx-thumb">
