@@ -130,5 +130,14 @@ permalink: /blogs/aws/
       <span class="idx-cta">Open lab -></span>
     </a>
 
+    <a href="/blogs/aws/sagemaker-heart-attack-prediction/" class="idx-card" style="--a1:#1565c0; --a2:#0d47a1; --g:21,101,192;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/aws-img/lab5/image18.png" alt="SageMaker Heart Attack Prediction" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Lab 5</strong>
+      <span class="idx-sub">End-to-End ML: SageMaker, Lambda & API Gateway</span>
+      <span class="idx-cta">Open lab -></span>
+    </a>
+
   </div>
 </section>
