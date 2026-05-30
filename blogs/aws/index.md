@@ -139,5 +139,14 @@ permalink: /blogs/aws/
       <span class="idx-cta">Open lab -></span>
     </a>
 
+    <a href="/blogs/aws/build-multi-agent-app-langgraph/" class="idx-card" style="--a1:#2e7d32; --a2:#1b5e20; --g:46,125,50;">
+      <span class="idx-thumb-wrap">
+        <img src="/blogs/assests/aws-img/lab6/image1.png" alt="Multi-Agent Customer Support System" class="idx-thumb">
+      </span>
+      <strong class="idx-title">Lab 6</strong>
+      <span class="idx-sub">Multi-Agent Customer Support with LangGraph and AWS</span>
+      <span class="idx-cta">Open lab -></span>
+    </a>
+
   </div>
 </section>
